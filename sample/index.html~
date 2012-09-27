@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Page Title</title> 
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	
+<link href='testmvc.css' rel='stylesheet' type='text/css'></link>
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+
+<script type="text/javascript" src="lib/jquery.populate.js"></script>
+<script type="text/javascript" src="lib/jquery.routes.js"></script>
+<script type="text/javascript" src="lib/jquery.materialize.js"></script>
+<script type="text/javascript" src="lib/modernizr.custom.js"></script>
+<script type="text/javascript" src="testmvc.js"></script>
+		
+<script type="text/javascript">
+  $(document).ready(function(){  
+	
+  });
+</script>
+
+<style type='text/css'>	
+</style>
+
+</head> 
+<body class='testmvc'> 
+<header id='header'>
+	<h1>Test MVC</h1>
+</header>
+<ul id='menu'>
+	<li><a href='#/people' data-transition='fade'>People management</a></li>
+	<li><a href='#/task' data-transition='fade'>Task management</a></li>
+</ul>
+<header class='band'></header>
+<div class='stretchable views'>
+<section id='people' class='view out'>
+</section>
+
+<section id='task' class='a view'>
+</section>
+</div>
+
+
+</body>
+</html>
