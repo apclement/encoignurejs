@@ -42,6 +42,7 @@ $.fn.initViews = function(){
 	var $views = $(this).find('.view')
 	$views.filter(':gt(0)').addClass('out')
 	$views.filter(':first').addClass('in')
+	return $(this)
 }
 
 
@@ -89,9 +90,8 @@ $.fn.view = function(event, args){
 	return $.Deferred(function(viewing){		
 		$.Deferred(function(fetching){			
 			if ($section.children().length == 0){
-				$.get(url, function(data){		
-					//var html = data.replace(/(<html?>)|(<head?>)/, '')
-					$section.append($('<div>').html(data).children().children()).initViews()						
+				$section.load(url, function(){		
+					$(this).initViews()						
 					$.ajax({
 						crossDomain: true, dataType: "script", url: url.replace('.html', '.js'),
 						success: function(){
