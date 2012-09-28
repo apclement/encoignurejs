@@ -90,7 +90,8 @@ $.fn.view = function(event, args){
 		$.Deferred(function(fetching){			
 			if ($section.children().length == 0){
 				$.get(url, function(data){		
-					$section.append($('<div>').html(data).children().children()).initViews()						
+					var html = data.replace(/(<html?>)|(<head?>)/, '')
+					$section.append($('<div>').html(html).children().children()).initViews()						
 					$.ajax({
 						crossDomain: true, dataType: "script", url: url.replace('.html', '.js'),
 						success: function(){
