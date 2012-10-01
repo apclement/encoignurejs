@@ -102,9 +102,9 @@ $.fn.view = function(event, args){
 			} else {			
 				fetching.resolve()
 			}	
-		}).done(function(){		
-			$section.switchTo()		
-			viewing.resolve()		
+		}).done(function(){	
+			viewing.resolve()
+			$section.switchTo()					
 			event && $section.trigger(event, [args]);
 		})	
 	});
