@@ -103,9 +103,8 @@ $.fn.view = function(event, args){
 				fetching.resolve()
 			}	
 		}).done(function(){		
-			$section.switchTo().done(function(){ 			
-				viewing.resolve()
-			})
+			$section.switchTo()		
+			viewing.resolve()		
 			event && $section.trigger(event, [args]);
 		})	
 	});
