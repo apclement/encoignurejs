@@ -118,7 +118,7 @@ overflow-x: hidden;
 
 .testmvc .itemlist {  
   margin: 1em 0;
-  box-shadow: 0 0 15px #777;
+  box-shadow: 0 0 10px #333;
    border-radius: 5px;
 }
 
