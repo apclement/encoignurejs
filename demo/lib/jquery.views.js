@@ -111,7 +111,7 @@ $.fn.view = function(event, args){
 }
 
 $(document).ready(function(){
-	$(document).on('click', 'a[data-transition]', function(){
+	$(document).on('click', 'a', function(){
 		current = $(this).attr('data-transition') || 'fade'
 	})
 	$('body').initViews()
