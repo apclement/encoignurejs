@@ -7,13 +7,13 @@ App = {
 $.routes.add('!/people/{id:int}', function(args){ 
 	require('people/people', function(){
 		App.controllers.people.view(args)
-	}
+	})
 });
 
 $.routes.add('!/people/people', function(args){ 
 	require('people/people', function(){
 		App.controllers.people.list()
-	}
+	})
 }); 
 
 $.routes.add('/task/{id:int}', function(){ $('#task').view('view', this) });
