@@ -40,8 +40,8 @@ $.fn.rebind = function(e, func) {
 
 $.fn.initViews = function(){
 	var $views = $(this).find('.view')
-	$views.filter(':gt(0)').addClass('out')
-	$views.filter(':first').addClass('in')
+	$views.addClass('out')
+	
 	return $(this)
 }
 
