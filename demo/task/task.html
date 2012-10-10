@@ -1,7 +1,11 @@
-<div id='task'>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html> 
+<html> 
+<body>
+<div id='task' class='view'>
 
 <script id="taskTemplate" type="text/x-jquery-tmpl">
-	<li><a href='#/task/${id}'>Task: <b>${name} ${description}</b></a></li>		
+	<li><a href='#!/task/${id}'>Task: <b>${name} ${description}</b></a></li>		
 </script>
 
 <h1>Task management</h1>
@@ -21,8 +25,11 @@
 
 </form>
 <p>
-<a href='#/people' data-transition='fade'>People management</a>
+<a href='#!/people' data-transition='fade'>People management</a>
 </p>
 </article>
 
 </div>
+
+</body>
+</html>
