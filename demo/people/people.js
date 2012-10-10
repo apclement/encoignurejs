@@ -24,14 +24,14 @@ App.controllers.people = {
 	renderList: function(){
 		var $section = $('#people')		
 		var $peoplelist = $section.find('#peoplelist')	
-		var content = $section.find('#peopleTemplate').tmpl(items)		
-		$peoplelist.data('people', items).hide().empty().append(content).fadeIn(300);
+		var content = $section.find('#peopleTemplate').tmpl(this.items)		
+		$peoplelist.data('people', this.items).hide().empty().append(content).fadeIn(300);
 	},
 	
 	buildList: function(){
-		if (!items){
-			items = defaultItems
-			renderList()
+		if (!this.items){
+			this.items = this.defaultItems
+			this.renderList()
 		}
 	},
 
@@ -48,7 +48,7 @@ App.controllers.people = {
 		$('#viewholder').loadOnce('people/people.html', function(){
 			that.buildList()
 			console.debug('view is called on people')				
-			var person = $.grep(items, function(it){return it.id == args.id})[0];
+			var person = $.grep(that.items, function(it){return it.id == args.id})[0];
 			
 			$('#peopledetails').find('#peopleform').populate(person).data('item', person).find('input#firstname').hide().show()
 			$('#peopledetails').view()
