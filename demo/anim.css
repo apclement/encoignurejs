@@ -119,7 +119,7 @@
   width: 100%;
   margin: 0;
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
   overflow-x: hidden; 
 }
 
@@ -127,7 +127,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-    overflow: hidden;
+  overflow: hidden;
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
 }
