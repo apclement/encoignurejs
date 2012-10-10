@@ -21,7 +21,7 @@ App.controllers.task = {
 			var $section = $('#task')			
 			!$section.find('#tasklist').data('task') && that.list()
 			
-			var task = $.grep(items, function(it){
+			var task = $.grep(that.items, function(it){
 				return it.id == args.id
 			})[0];
 			
