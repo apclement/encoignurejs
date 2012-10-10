@@ -10,7 +10,7 @@ $.routes.add('!/people/{id:int}', function(args){
 	})
 });
 
-$.routes.add('!/people/people', function(args){ 
+$.routes.add('!/people', function(args){ 
 	require('people/people', function(){
 		App.controllers.people.list()
 	})
