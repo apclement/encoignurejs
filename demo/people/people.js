@@ -21,10 +21,9 @@ App.controllers.people = {
 			
 	items: null,
 	
-	renderList: function(){
-		var $section = $('#people')		
-		var $peoplelist = $section.find('#peoplelist')	
-		var content = $section.find('#peopleTemplate').tmpl(this.items)		
+	renderList: function(){		
+		var $peoplelist = $('#peoplelist')	
+		var content = $('#peopleTemplate').tmpl(this.items)		
 		$peoplelist.data('people', this.items).hide().empty().append(content).fadeIn(300);
 	},
 	
