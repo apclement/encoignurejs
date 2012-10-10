@@ -17,7 +17,7 @@
 <script type="text/javascript" src="lib/jquery.views.js"></script>
 <script type="text/javascript" src="lib/jquery.routes.js"></script>
 <script type="text/javascript" src="lib/jquery.serialize.js"></script>
-<script type="text/javascript" src="demo.js"></script>
+<script type="text/javascript" data-main='demo.js' src="lib/require.js"></script>
 		
 <script type="text/javascript">
   $(document).ready(function(){  
@@ -34,16 +34,12 @@
 	<h1>JQuery Views Demo</h1>
 </header>
 <ul id='menu'>
-	<li><a href='#/people' data-transition='flip-r'>People management</a></li>
+	<li><a href='#!/people' data-transition='flip-r'>People management</a></li>
 	<li><a href='#/task' data-transition='flip'>Task management</a></li>
 </ul>
 <header class='band'></header>
-<div class='stretchable views'>
-<section id='people' class='view' data-url='people/people.html'>
-</section>
+<div id='viewholder' class='stretchable views'>
 
-<section id='task' class='a view' data-url='task/task.html'>
-</section>
 </div>
 
 
