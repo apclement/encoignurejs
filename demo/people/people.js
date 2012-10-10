@@ -26,7 +26,7 @@ App.controllers.people = {
 		var $peoplelist = $section.find('#peoplelist')	
 		var content = $section.find('#peopleTemplate').tmpl(items)		
 		$peoplelist.data('people', items).hide().empty().append(content).fadeIn(300);
-	}
+	},
 	
 	buildList: function(){
 		if (!items){
