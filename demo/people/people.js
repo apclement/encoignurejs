@@ -38,7 +38,7 @@ App.controllers.people = {
 		var that = this
 		$('#viewholder').loadOnce('people/people.html', function(){
 			that.buildList()
-			$('#peoplelist').view()
+			$('#peoplelistview').view()
 		})		
 	},
 	
