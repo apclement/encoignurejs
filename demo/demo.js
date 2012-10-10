@@ -16,8 +16,17 @@ $.routes.add('\!/people', function(args){
 	})
 }); 
 
-$.routes.add('/task/{id:int}', function(){ $('#task').view('view', this) });
-$.routes.add('/task', function(){ $('#task').view('list', this) }); 
+$.routes.add('\!/task/{id:int}', function(args){ 
+	require(['task/task'], function(){
+		App.controllers.task.view(args)
+	})
+});
+
+$.routes.add('\!/task', function(){ 
+	require(['task/task'], function(){
+		App.controllers.task.list()
+	})
+}); 
  
 $(document).ready(function(){
 	
