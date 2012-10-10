@@ -47,7 +47,7 @@ $.fn.initViews = function(){
 
 
 
-$.fn.switchTo = function() {
+$.fn.view = function() {
 	var view = this
 	var $view = $(this)	
 	var effect = current
@@ -82,38 +82,25 @@ $.fn.switchTo = function() {
 	});
 }
 
+var loadedFragments = {}
 
-$.fn.view = function(event, args){
-	var $section = $(this)
-	var url = $section.data('url')
-	
-	return $.Deferred(function(viewing){		
-		$.Deferred(function(fetching){			
-			if ($section.children().length == 0){
-				$section.load(url, function(){		
-					$(this).initViews()						
-					$.ajax({
-						crossDomain: true, dataType: "script", url: url.replace('.html', '.js'),
-						success: function(){
-							fetching.resolve()
-						}
-					})
-				});	
-			} else {			
-				fetching.resolve()
-			}	
-		}).done(function(){	
-			viewing.resolve()
-			$section.switchTo()					
-			event && $section.trigger(event, [args]);
-		})	
-	});
+$.fn.loadOnce = function(url, cb){
+	var $holder = $(this)			
+		
+	if (!loadedFragments[url]){
+		var $content = $('<div>')
+		$content.load(url, function(){		
+			loadedFragments[url] = true;
+			$(this).initViews()
+			$holder.append($content.children())
+			cb()
+		});	
+	} else {			
+		cb()
+	}
 }
 
 $(document).ready(function(){
-	$(document).on('click', 'a', function(){
-		current = $(this).attr('data-transition') || 'fade'
-	})
 	$('body').initViews()
 })
 

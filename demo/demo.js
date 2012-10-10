@@ -1,11 +1,20 @@
 (function( $ ) {
 
 App = {	
-
+	controllers: {}
 }
 
-$.routes.add('/people/{id:int}', function(args){ $('#people').view().done(function(){ $('#peopledetails').view('view', args) }) });
-$.routes.add('/people', function(args){ $('#people').view().done(function(){ $('#peoplelistview').view('list', args) }) }); 
+$.routes.add('!/people/{id:int}', function(args){ 
+	require('people/people', function(){
+		App.controllers.people.view(args)
+	}
+});
+
+$.routes.add('!/people/people', function(args){ 
+	require('people/people', function(){
+		App.controllers.people.list()
+	}
+}); 
 
 $.routes.add('/task/{id:int}', function(){ $('#task').view('view', this) });
 $.routes.add('/task', function(){ $('#task').view('list', this) }); 
