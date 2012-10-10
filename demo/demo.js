@@ -4,13 +4,13 @@ App = {
 	controllers: {}
 }
 
-$.routes.add('/people/{id:int}', function(args){ 
+$.routes.add('\!/people/{id:int}', function(args){ 
 	require('people/people', function(){
 		App.controllers.people.view(args)
 	})
 });
 
-$.routes.add('/people', function(args){ 
+$.routes.add('\!/people', function(args){ 
 	require('people/people', function(){
 		App.controllers.people.list()
 	})
