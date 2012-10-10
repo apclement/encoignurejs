@@ -114,7 +114,7 @@
   visibility: visible !important;
 }
 
-.view, .views {
+.view {
   position: absolute; 
   width: 100%;
   margin: 0;
@@ -125,6 +125,8 @@
 
 .views {
   position: relative;
+  width: 100%;
+  height: 100%;
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
 }
