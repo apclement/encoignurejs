@@ -37,7 +37,7 @@ App.controllers.people = {
 
 	list: function(){
 		var that = this
-		$('#viewholder').loadOnce('people.html', function(){
+		$('#viewholder').loadOnce('people/people.html', function(){
 			that.buildList()
 			$('#peoplelist').view()
 		})		
@@ -45,7 +45,7 @@ App.controllers.people = {
 	
 	view: function(args){		
 		var that = this
-		$('#viewholder').loadOnce('people.html', function(){
+		$('#viewholder').loadOnce('people/people.html', function(){
 			that.buildList()
 			console.debug('view is called on people')				
 			var person = $.grep(items, function(it){return it.id == args.id})[0];
