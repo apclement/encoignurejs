@@ -42,7 +42,9 @@ App.controllers.people = {
 			that.buildList()				
 						
 			$('#people').view()
-			$('#peoplelistview').view()				
+			$('#peoplelistview').view()		
+			
+			$('#peoplelistview').find('a').attr('href', function(){ return $(this).data('href') })
 		})		
 	},
 	
@@ -79,7 +81,7 @@ $(document).on('init', '#peopledetails', function(){
 $(document).on('init', '#peoplelistview', function(){
 	var $view = $(this)
 	$view.find('a').click(function(){
-		$(this).blur()
+		$view.find('a').data('href', function(){ return $(this).attr('href') }).removeAttr('href')
 	})
 })
 
