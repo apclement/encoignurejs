@@ -40,8 +40,7 @@ App.controllers.people = {
 			that.buildList()			
 			
 			$('#peopledetails').find(':input').attr('disabled', true)
-			alert('disabled')			
-			
+						
 			$('#people').view()
 			$('#peoplelistview').view()			
 		})		
@@ -54,11 +53,12 @@ App.controllers.people = {
 			console.debug('view is called on people')				
 			var person = $.grep(that.items, function(it){return it.id == args.id})[0];
 			
-			$('#peopledetails').find('#peopleform').populate(person).data('item', person).find('input#firstname').hide().show()
+			$('#peopledetails').find('#peopleform').populate(person).data('item', person).find('input#firstname').hide().show()			
 			
-			$('#peopledetails').find(':input').attr('disabled', false)		
 			$('#people').view()
 			$('#peopledetails').view()
+			
+			//$('#peopledetails').find(':input').attr('disabled', false)		
 		});		
 	}
 };
