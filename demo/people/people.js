@@ -72,7 +72,14 @@ $(document).on('init', '#peopledetails', function(){
 	})
 	
 	$view.find('a').click(function(){
-		$('#peopledetails').find('input').attr('disabled', true)
+		$view.find('input').attr('disabled', true)
+	})
+})
+
+$(document).on('init', '#peoplelistview', function(){
+	var $view = $(this)
+	$view.find('a').change(function(){
+		$(this).blur()
 	})
 })
 
