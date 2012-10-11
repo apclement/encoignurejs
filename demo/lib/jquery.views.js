@@ -73,7 +73,7 @@ $.fn.view = function() {
 		
 		switching.done(function(){
 			$view.removeClass('visible').removeClass(effectClass)									
-			otherViews.removeClass('visible').removeClass(effectClass)									
+			otherViews.removeClass('visible')//.removeClass(effectClass)									
 		});
 		
 		if (effect == 'none'){
