@@ -39,10 +39,10 @@ App.controllers.people = {
 		$('#viewholder').loadOnce('people/people.html', function(){
 			that.buildList()
 			
-			$('#peoplelistview').find('a').show()
-			$('#peopledetails').find(':input').attr('disabled', true)
+			//$('#peoplelistview').find('a').css()			
 			$('#people').view()
 			$('#peoplelistview').view()
+			$('#peopledetails').find(':input').attr('disabled', true)
 		})		
 	},
 	
@@ -56,9 +56,9 @@ App.controllers.people = {
 			$('#peopledetails').find('#peopleform').populate(person).data('item', person).find('input#firstname').hide().show()
 			
 			$('#people').view()
-			$('#peoplelistview').find('a').hide()
-			$('#peopledetails').find(':input').attr('disabled', false)
-			$('#peopledetails').view()			
+			//$('#peoplelistview').find('a').hide()		
+			$('#peopledetails').find(':input').attr('disabled', false)			
+			$('#peopledetails').view()						
 		});		
 	}
 };
