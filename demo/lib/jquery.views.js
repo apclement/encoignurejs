@@ -92,7 +92,7 @@ $.fn.loadOnce = function(url, cb){
 		$content.load(url, function(){		
 			loadedFragments[url] = true;
 			$(this).initViews()
-			$holder.append($content.children())
+			$content.children().appendTo($holder).trigger('init')
 			cb()
 		});	
 	} else {			

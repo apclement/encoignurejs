@@ -57,9 +57,12 @@ App.controllers.people = {
 	}
 };
 	
-$('#peopledetails').find('input').change(function(){		
-	$(this.form).data('item')[$(this).attr('name')] = $(this).val()
-	renderList()
+$(document).on('init', '#peopledetails', function(){
+	var $view = $(this)
+	$view.find('input').change(function(){
+		$(this.form).data('item')[$(this).attr('name')] = $(this).val()
+		App.controllers.people.renderList()
+	})
 })
 
 })(jQuery);  
