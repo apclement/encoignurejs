@@ -58,8 +58,7 @@ App.controllers.people = {
 			$('#people').view()
 			$('#peopledetails').view()
 			
-			$('#peopledetails').find(':input').attr('disabled', true)	
-			$('#peopledetails').find(':input').removeAttr('disabled')	
+			$('#peopledetails').find(':input').hide().show()
 			
 		});		
 	}
