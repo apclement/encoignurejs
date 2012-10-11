@@ -40,6 +40,7 @@ App.controllers.people = {
 			that.buildList()			
 			
 			$('#peopledetails').find(':input').attr('disabled', true)
+			alert('disabkled')
 						
 			$('#people').view()
 			$('#peoplelistview').view()			
