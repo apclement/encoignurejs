@@ -78,7 +78,7 @@ $(document).on('init', '#peopledetails', function(){
 
 $(document).on('init', '#peoplelistview', function(){
 	var $view = $(this)
-	$view.find('a').change(function(){
+	$view.find('a').click(function(){
 		$(this).blur()
 	})
 })
