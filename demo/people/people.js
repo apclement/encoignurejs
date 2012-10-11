@@ -58,7 +58,7 @@ App.controllers.people = {
 			$('#people').view()
 			$('#peopledetails').view()
 			
-			$('#peopledetails').find(':input').attr('disabled', false)		
+			$('#peopledetails').find(':input').attr('disabled', false).first().focus()	
 		});		
 	}
 };
