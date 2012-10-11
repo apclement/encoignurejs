@@ -80,7 +80,7 @@ $(document).on('init', '#peopledetails', function(){
 
 $(document).on('init', '#peoplelistview', function(){
 	var $view = $(this)
-	$view.find('a').click(function(){
+	$view.on('click', 'a', function(){
 		$view.find('a').data('href', function(){ return $(this).attr('href') }).removeAttr('href')
 	})
 })
