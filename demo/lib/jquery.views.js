@@ -54,12 +54,21 @@ $.fn.view = function() {
 	if (!Modernizr[effects[effect].test]){
 		effect = 'none'
 	}	
+
+	var inDone, outDone = false, false;
 	
 	return $.Deferred(function(switching){		
 		var endHandler = function(e){	
-			$(this).removeClass('visible')
+
 			if ($(this).hasClass('in')){
-				$(this).removeClass(effectClass)	
+				inDone = true
+			}
+			if ($(this).hasClass('out')){
+				outDone = true
+			}
+			if (inDone && outDone){
+				$(this).removeClass(effectClass).removeClass('visible')
+				$(this).parent().children('.view').removeClass(effectClass).removeClass('visible')
 			}
 			
 			switching.resolve()
