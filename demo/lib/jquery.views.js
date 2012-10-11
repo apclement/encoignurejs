@@ -56,7 +56,8 @@ $.fn.view = function() {
 	}	
 	
 	return $.Deferred(function(switching){		
-		var endHandler = function(e){				
+		var endHandler = function(e){		
+			$(this).removeClass('visible')
 			switching.resolve()
 		}	
 		
@@ -72,8 +73,8 @@ $.fn.view = function() {
 		$view.rebind(endEvents, endHandler).addClass(visibleClass).removeClass(effectClass + ' out').addClass(effect+' in')
 		
 		switching.done(function(){
-			$view.removeClass('visible')//.removeClass(effectClass)									
-			otherViews.removeClass('visible')//.removeClass(effectClass)									
+			//$view.removeClass('visible').removeClass(effectClass)									
+			//otherViews.removeClass('visible').removeClass(effectClass)									
 		});
 		
 		if (effect == 'none'){
