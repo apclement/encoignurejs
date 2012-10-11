@@ -54,24 +54,9 @@ $.fn.view = function() {
 	if (!Modernizr[effects[effect].test]){
 		effect = 'none'
 	}	
-
-	var inDone = false;
-	var outDone = false;
 	
 	return $.Deferred(function(switching){		
-		var endHandler = function(e){	
-
-			if ($(this).hasClass('in')){
-				inDone = true
-			}
-			if ($(this).hasClass('out')){
-				outDone = true
-			}
-			if (inDone && outDone){
-				$(this).removeClass(effectClass).removeClass('visible')
-				$(this).parent().children('.view').removeClass(effectClass).removeClass('visible')
-			}
-			
+		var endHandler = function(e){				
 			switching.resolve()
 		}	
 		
@@ -87,8 +72,8 @@ $.fn.view = function() {
 		$view.rebind(endEvents, endHandler).addClass(visibleClass).removeClass(effectClass + ' out').addClass(effect+' in')
 		
 		switching.done(function(){
-			//$view.removeClass('visible').removeClass(effectClass)									
-			//otherViews.removeClass('visible').removeClass(effectClass)									
+			$view.removeClass('visible').removeClass(effectClass)									
+			otherViews.removeClass('visible').removeClass(effectClass)									
 		});
 		
 		if (effect == 'none'){
