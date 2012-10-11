@@ -38,10 +38,12 @@ App.controllers.people = {
 		var that = this
 		$('#viewholder').loadOnce('people/people.html', function(){			
 			that.buildList()			
-						
-			$('#people').view()
-			$('#peoplelistview').view()
+			
 			$('#peopledetails').find(':input').attr('disabled', true)
+			alert('disabled')			
+			
+			$('#people').view()
+			$('#peoplelistview').view()			
 		})		
 	},
 	
