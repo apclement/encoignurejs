@@ -4,19 +4,19 @@ App.controllers.people = {
 	defaultItems: [{id: 1, firstname: 'Alain', lastname: 'Bernard'},
 			{id: 2, firstname: 'Kamel', lastname: 'Malek'},
 			{id: 3, firstname: 'Jean', lastname: 'Tazon'},
-			// {id: 4, firstname: 'Pine', lastname: 'Dhuitre'},
-			// {id: 5, firstname: 'Jean', lastname: 'Tazon'},
-			// {id: 6, firstname: 'Jean', lastname: 'Tazon'},
-			// {id: 7, firstname: 'Jean', lastname: 'Tazon'},
-			// {id: 8, firstname: 'Jean', lastname: 'Tazon'},
-			// {id: 9, firstname: 'Jean', lastname: 'Tazon'},
-			// {id: 10, firstname: 'Jean', lastname: 'Tazon'},
-			// {id: 11, firstname: 'Jean', lastname: 'Tazon'},
-			// {id: 12, firstname: 'Jean', lastname: 'Tazon'},
-			// {id: 13, firstname: 'Jean', lastname: 'Tazon'},
-			// {id: 14, firstname: 'Jean', lastname: 'Tazon'},
-			// {id: 15, firstname: 'Jean', lastname: 'Tazon'},
-			// {id: 16, firstname: 'Jean', lastname: 'Tazon'},
+			{id: 4, firstname: 'Pine', lastname: 'Dhuitre'},
+			{id: 5, firstname: 'Jean', lastname: 'Tazon'},
+			{id: 6, firstname: 'Jean', lastname: 'Tazon'},
+			{id: 7, firstname: 'Jean', lastname: 'Tazon'},
+			{id: 8, firstname: 'Jean', lastname: 'Tazon'},
+			{id: 9, firstname: 'Jean', lastname: 'Tazon'},
+			{id: 10, firstname: 'Jean', lastname: 'Tazon'},
+			{id: 11, firstname: 'Jean', lastname: 'Tazon'},
+			{id: 12, firstname: 'Jean', lastname: 'Tazon'},
+			{id: 13, firstname: 'Jean', lastname: 'Tazon'},
+			{id: 14, firstname: 'Jean', lastname: 'Tazon'},
+			{id: 15, firstname: 'Jean', lastname: 'Tazon'},
+			{id: 16, firstname: 'Jean', lastname: 'Tazon'},
 			{id: 17, firstname: 'Jean', lastname: 'Jeannot'}],
 			
 	items: null,
@@ -39,7 +39,7 @@ App.controllers.people = {
 		$('#viewholder').loadOnce('people/people.html', function(){
 			$('#people').view()
 			$('#peoplelistview').view()
-		//	that.buildList()
+			that.buildList()
 			
 			//$('#peoplelistview').find('a').css()			
 			
@@ -55,11 +55,11 @@ App.controllers.people = {
 			//$('#peoplelistview').find('a').hide()		
 			//$('#peopledetails').find(':input').attr('disabled', false)						
 		
-		//	that.buildList()
+			that.buildList()
 			console.debug('view is called on people')				
 			var person = $.grep(that.items, function(it){return it.id == args.id})[0];
 			
-		//	$('#peopledetails').find('#peopleform').populate(person).data('item', person).find('input#firstname').hide().show()
+			$('#peopledetails').find('#peopleform').populate(person).data('item', person).find('input#firstname').hide().show()
 			
 							
 		});		
