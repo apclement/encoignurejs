@@ -53,8 +53,8 @@ App.controllers.people = {
 			$('#peopledetails').find('#peopleform').populate(person).data('item', person).find('input#firstname').hide().show()
 			$('#people').view()
 			$('#peoplelistview').find(':input').attr('disabled', true)
-			$('#peopledetails').find(':input').attr('disabled', false).view()
-			
+			$('#peopledetails').find(':input').attr('disabled', false)
+			$('#peopledetails').view()			
 		});		
 	}
 };
