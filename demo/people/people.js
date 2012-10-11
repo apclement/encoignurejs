@@ -39,7 +39,7 @@ App.controllers.people = {
 		$('#viewholder').loadOnce('people/people.html', function(){
 			$('#people').view()
 			$('#peoplelistview').view()
-			that.buildList()
+		//	that.buildList()
 			
 			//$('#peoplelistview').find('a').css()			
 			
@@ -55,11 +55,11 @@ App.controllers.people = {
 			//$('#peoplelistview').find('a').hide()		
 			//$('#peopledetails').find(':input').attr('disabled', false)						
 		
-			that.buildList()
+		//	that.buildList()
 			console.debug('view is called on people')				
 			var person = $.grep(that.items, function(it){return it.id == args.id})[0];
 			
-			$('#peopledetails').find('#peopleform').populate(person).data('item', person).find('input#firstname').hide().show()
+		//	$('#peopledetails').find('#peopleform').populate(person).data('item', person).find('input#firstname').hide().show()
 			
 							
 		});		
