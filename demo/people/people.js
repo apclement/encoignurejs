@@ -42,7 +42,7 @@ App.controllers.people = {
 			$('#people').view()
 			$('#peoplelistview').view()		
 			
-			
+			$('#peopledetails').find(':input').hide()
 		})		
 	},
 	
