@@ -57,7 +57,10 @@ $.fn.view = function() {
 	
 	return $.Deferred(function(switching){		
 		var endHandler = function(e){	
-			$(this).removeClass('visible').removeClass(effectClass)	
+			if (($this).hasClass('in')){
+				$(this).removeClass(effectClass)	
+			}
+			$(this).removeClass('visible')
 			switching.resolve()
 		}	
 		
