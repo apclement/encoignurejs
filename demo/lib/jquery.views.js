@@ -55,7 +55,8 @@ $.fn.view = function() {
 		effect = 'none'
 	}	
 
-	var inDone, outDone = false, false;
+	var inDone = false;
+	var outDone = false;
 	
 	return $.Deferred(function(switching){		
 		var endHandler = function(e){	
