@@ -68,8 +68,9 @@ $.fn.view = function() {
 		var visibleClass = effect != 'none' ? 'visible' : ''
 			
 		var otherViews = $view.parent().children('.view.in')
-		otherViews.rebind(endEvents, endHandler).removeClass(effectClass + ' in').addClass(effect+' out')
-		$view.rebind(endEvents, endHandler).removeClass(effectClass + ' out').addClass(effect+' in')
+		$view.removeClass(effectClass + ' out').addClass(effect+' in')
+		otherViews.removeClass(effectClass + ' in').addClass(effect+' out')
+		
 		
 		switching.done(function(){
 			//$view.css('visibility', '')//.removeClass(effectClass)									
