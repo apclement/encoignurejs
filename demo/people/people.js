@@ -39,7 +39,7 @@ App.controllers.people = {
 		$('#viewholder').loadOnce('people/people.html', function(){			
 			that.buildList()			
 			
-			$('#peopledetails').find(':input').attr('disabled', true).blur()		
+			$('#peopledetails').find(':input').attr('disabled', true)	
 						
 			$('#people').view()
 			$('#peoplelistview').view()			
@@ -58,7 +58,7 @@ App.controllers.people = {
 			$('#people').view()
 			$('#peopledetails').view()
 			
-			$('#peopledetails').find(':input').attr('disabled', false).first().focus()	
+			$('#peopledetails').find(':input').removeAttr('disabled')	
 		});		
 	}
 };
