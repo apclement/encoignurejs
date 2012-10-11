@@ -37,7 +37,8 @@ App.controllers.people = {
 	list: function(){
 		var that = this
 		$('#viewholder').loadOnce('people/people.html', function(){		
-			$('#peopledetails').find(':input').attr('disabled', true)
+			$('#peopledetails').find('input').attr('disabled', true)
+			
 			that.buildList()				
 						
 			$('#people').view()
@@ -57,7 +58,7 @@ App.controllers.people = {
 			$('#people').view()
 			$('#peopledetails').view()
 			
-			$('#peopledetails').find(':input').attr('disabled', false)
+			$('#peopledetails').find('input').attr('disabled', false)
 			
 		});		
 	}
