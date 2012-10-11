@@ -34,18 +34,18 @@ $(document).ready(function(){
 
 // vertical stretcher
 $(window).resize(function(){   
-  // $('.stretchable').height('auto').parent().each(function(){         
-	// var $this = $(this)
-	// var total = $this.outerHeight(true)
-	// var used = 0
-	// $this.children(':not(.stretchable):visible').each(function(){
-	  // used += $(this).outerHeight(true)      
-	// })
+  $('.stretchable').height('auto').parent().each(function(){         
+	var $this = $(this)
+	var total = $this.outerHeight(true)
+	var used = 0
+	$this.children(':not(.stretchable):visible').each(function(){
+	  used += $(this).outerHeight(true)      
+	})
 	
-	// var $stretchable = $this.children('.stretchable')
-	// var h = (total - used) / $stretchable.length
-	// $stretchable.height(h)                  
-  // })          
+	var $stretchable = $this.children('.stretchable')
+	var h = (total - used) / $stretchable.length
+	$stretchable.height(h)                  
+  })          
 })   
 
 $(window).load(function(){     

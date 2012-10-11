@@ -98,8 +98,7 @@
 }
 
 .in, .out {
-	-webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
+	
 }
 
 .in {

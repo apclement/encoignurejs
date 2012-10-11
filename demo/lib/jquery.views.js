@@ -45,8 +45,6 @@ $.fn.initViews = function(){
 	return $(this)
 }
 
-
-
 $.fn.view = function() {
 	var view = this
 	var $view = $(this)	
@@ -68,13 +66,12 @@ $.fn.view = function() {
 		var visibleClass = effect != 'none' ? 'visible' : ''
 			
 		var otherViews = $view.parent().children('.view.in')
-		$view.removeClass(effectClass + ' out').addClass(effect+' in')
-		otherViews.removeClass(effectClass + ' in').addClass(effect+' out')
-		
+		otherViews.rebind(endEvents, endHandler).addClass(visibleClass).removeClass(effectClass + ' in').addClass(effect+' out')
+		$view.rebind(endEvents, endHandler).addClass(visibleClass).removeClass(effectClass + ' out').addClass(effect+' in')
 		
 		switching.done(function(){
-			//$view.css('visibility', '')//.removeClass(effectClass)									
-			//otherViews.css('visibility', '')//.removeClass(effectClass)									
+			$view.removeClass('visible').removeClass(effectClass)									
+			otherViews.removeClass('visible')
 		});
 		
 		if (effect == 'none'){
@@ -92,8 +89,9 @@ $.fn.loadOnce = function(url, cb){
 		var $content = $('<div>')
 		$content.load(url, function(){		
 			loadedFragments[url] = true;
-			$(this).initViews()
-			$content.children().appendTo($holder).trigger('init')
+			var views = $(this).initViews().find('.view')
+			$content.children().appendTo($holder)
+			views.trigger('init')
 			cb()
 		});	
 	} else {			

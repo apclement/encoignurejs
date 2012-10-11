@@ -36,32 +36,27 @@ App.controllers.people = {
 
 	list: function(){
 		var that = this
-		$('#viewholder').loadOnce('people/people.html', function(){
+		$('#viewholder').loadOnce('people/people.html', function(){			
+			that.buildList()			
+						
 			$('#people').view()
 			$('#peoplelistview').view()
-			that.buildList()
-			
-			//$('#peoplelistview').find('a').css()			
-			
-			//$('#peopledetails').find(':input').attr('disabled', true)
+			$('#peopledetails').find(':input').attr('disabled', true)
 		})		
 	},
 	
 	view: function(args){		
 		var that = this
-		$('#viewholder').loadOnce('people/people.html', function(){
-			$('#people').view()
-			$('#peopledetails').view()	
-			//$('#peoplelistview').find('a').hide()		
-			//$('#peopledetails').find(':input').attr('disabled', false)						
-		
+		$('#viewholder').loadOnce('people/people.html', function(){		
 			that.buildList()
 			console.debug('view is called on people')				
 			var person = $.grep(that.items, function(it){return it.id == args.id})[0];
 			
 			$('#peopledetails').find('#peopleform').populate(person).data('item', person).find('input#firstname').hide().show()
 			
-							
+			$('#peopledetails').find(':input').attr('disabled', false)		
+			$('#people').view()
+			$('#peopledetails').view()
 		});		
 	}
 };
