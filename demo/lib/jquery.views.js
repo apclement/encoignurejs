@@ -59,6 +59,7 @@ $.fn.view = function() {
 		}	
 		
 		if ($view.hasClass('in') || $view.css('visibility') == 'visible'){	
+			$view.removeClass('out').addClass('in')
 			endHandler.call(view)		
 			return
 		}
