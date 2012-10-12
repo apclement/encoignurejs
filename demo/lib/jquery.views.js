@@ -58,7 +58,7 @@ $.fn.view = function() {
 			switching.resolve()
 		}	
 		
-		if ($view.hasClass('in')){	
+		if ($view.hasClass('in') || $view.css('visibility') == 'visible'){	
 			endHandler.call(view)		
 			return
 		}
