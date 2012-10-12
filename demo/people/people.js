@@ -44,7 +44,7 @@ App.controllers.people = {
 			$('#people').view()
 			$('#peoplelistview').view()		
 			
-			$('#peoplelistview').find('a').attr('href', function(){ return $(this).data('href') })
+			//$('#peoplelistview').find('a').attr('href', function(){ return $(this).data('href') })
 		})		
 	},
 	
@@ -81,7 +81,7 @@ $(document).on('init', '#peopledetails', function(){
 $(document).on('init', '#peoplelistview', function(){
 	var $view = $(this)
 	$view.on('click', 'a', function(){
-		$view.find('a').data('href', function(){ return $(this).attr('href') }).removeAttr('href')
+		//$view.find('a').data('href', function(){ return $(this).attr('href') }).removeAttr('href')
 	})
 })
 
