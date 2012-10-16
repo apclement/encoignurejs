@@ -70,7 +70,7 @@ $.fn.view = function() {
 		var endHandler = function(e){	
 			var $this = $(this)
 			if (e && e.eventPhase == 2 && $this.hasClass('view')){				
-				console.debug($this)
+				console.debug([e, $this])
 				$this.removeClass(effectClass)
 				if ($this.hasClass('out')){
 					$this.hideView()						
