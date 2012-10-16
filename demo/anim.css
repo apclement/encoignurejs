@@ -1,5 +1,9 @@
 
 /* animations */
+.translate-l, .translate-r {
+	 -webkit-animation-fill-mode: forwards;
+}
+
 .translate-l.in {
   -webkit-animation-name: translate-left-in;
 	-webkit-animation-duration: .3s;	
@@ -192,7 +196,7 @@
 
 @-webkit-keyframes translate-left-out {
    from { -webkit-transform: translate(0); }
-   to { -webkit-transform: translate(-100%); }
+   to { -webkit-transform: translate(-100%); display: none; }
 }
 
 @-webkit-keyframes translate-right-in {
@@ -202,7 +206,7 @@
 
 @-webkit-keyframes translate-right-out {
    from { -webkit-transform: translate(0); }
-   to { -webkit-transform: translate(100%); }
+   to { -webkit-transform: translate(100%); display: none; }
 }
 
 @-moz-keyframes translate-left-in {
