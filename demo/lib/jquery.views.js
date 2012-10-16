@@ -39,9 +39,14 @@ $.fn.rebind = function(e, func) {
 }
 
 $.fn.initViews = function(){
-	var $views = $(this).find('.view')
-	$views.addClass('out').css('visibility', 'hidden')
-	
+	return $(this).find('.view').hideView()	
+}
+
+$.fn.hideView = function(){
+	$(this).each(function(){
+		var $view = $(this)
+		$view.find('.view').andSelf().removeClass('in').addClass('out').css('visibility', 'hidden')	
+	})
 	return $(this)
 }
 
@@ -57,7 +62,10 @@ $.fn.view = function() {
 		var endHandler = function(e){	
 			var $this = $(this)
 			if ($this.hasClass('view')){
-				$this.removeClass(effectClass).css('visibility', $this.hasClass('in') ? 'visible' : 'hidden')			
+				$this.removeClass(effectClass)
+				if ($this.hasClass('out')){
+					$this.hideView()						
+				} 
 				switching.resolve()
 			}
 		}	
