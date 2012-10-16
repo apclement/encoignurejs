@@ -30,11 +30,15 @@
 	-moz-animation-duration: .3s;	
 }
 
+.flip, .flip-r {
+	 -webkit-animation-fill-mode: forwards;
+}
+
 .flip.in {
 	-webkit-animation-name: flipin;
 	-webkit-animation-duration: 3s;
 	-webkit-backface-visibility: hidden;
-  
+	  
   -moz-animation-name: flipin;
 	-moz-animation-duration: .3s;
 	-moz-backface-visibility: hidden;
@@ -120,7 +124,6 @@
   height: 100%;
   overflow: auto;
   overflow-x: hidden; 
-  -webkit-animation-fill-mode: forwards;
 }
 
 .views {
