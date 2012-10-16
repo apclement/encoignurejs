@@ -27,6 +27,10 @@ $.routes.add('\!/task', function(){
 		App.controllers.task.list()
 	})
 }); 
+
+$.routes.add('\!/menu', function(){ 
+	$('#menu').view()
+}); 
  
 $(document).ready(function(){
 	
