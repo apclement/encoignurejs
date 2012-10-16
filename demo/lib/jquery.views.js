@@ -53,7 +53,7 @@ $.fn.hideView = function(){
 $.fn.showView = function(){
 	$(this).each(function(){
 		var $view = $(this)
-		$view.removeClass('out').addClass('in').css('visibility', '')	
+		$view.removeClass('out').addClass('in').show()
 	})
 	return $(this)
 }
@@ -76,7 +76,7 @@ $.fn.view = function() {
 		}	
 		
 		if ($view.hasClass('in') || $view.css('visibility') == 'visible'){	
-			$view.removeClass('out').addClass('in').css('visibility', '')
+			$view.removeClass('out').addClass('in').show()
 			endHandler.call(view)		
 			return
 		}
@@ -84,8 +84,8 @@ $.fn.view = function() {
 		var visibleClass = effect != 'none' ? 'visible' : ''
 			
 		var otherViews = $view.parent().children('.view.in')
-		otherViews.rebind(endEvents, endHandler).css('visibility', '').removeClass(effectClass + ' in').addClass(effect+' out')
-		$view.rebind(endEvents, endHandler).css('visibility', '').removeClass(effectClass + ' out').addClass(effect+' in')
+		otherViews.rebind(endEvents, endHandler).show().removeClass(effectClass + ' in').addClass(effect+' out')
+		$view.rebind(endEvents, endHandler).show().removeClass(effectClass + ' out').addClass(effect+' in')
 		
 		switching.done(function(){		
 			otherViews.hideView()
