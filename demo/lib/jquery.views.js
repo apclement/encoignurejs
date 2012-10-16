@@ -22,7 +22,7 @@ var eventNames = {
 
 var effectClass = effects.all.join(' ')
 
-var endEvents = $.map(['transition', 'animation'], function(n){
+var endEvents = $.map([ 'animation'], function(n){
 	return eventNames[Modernizr.prefixed(n)]
 }).join(' ');
 
