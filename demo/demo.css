@@ -157,7 +157,7 @@ overflow-x: hidden;
 }
 
 .testmvc .band:before {
-  content: '';
+  content: ' ';
   position: absolute;
   height: 15px;
   background-color: #8D7D77;
@@ -178,7 +178,7 @@ overflow-x: hidden;
 
 @media screen and (max-width: 700px) {  
 .testmvc section.body  { 
-  padding: 1em .7em;
+  padding: .6em .7em;
 }
 }
 
