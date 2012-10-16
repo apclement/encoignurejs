@@ -70,10 +70,10 @@ $.fn.view = function() {
 		var otherViews = $view.parent().children('.view.in')
 		var endHandler = function(e){	
 			var $this = $(this)
-			if (e && e.eventPhase == 2 && $this.hasClass('view')){
+			if (e && e.eventPhase == 2 && $this.hasClass('out')){
 				
 				$view.removeClass(effectClass)		
-				
+				otherViews.unbind(endEvents)
 			}			
 		}	
 		
