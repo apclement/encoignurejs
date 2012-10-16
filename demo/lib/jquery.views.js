@@ -69,7 +69,7 @@ $.fn.view = function() {
 	return $.Deferred(function(switching){		
 		var endHandler = function(e){	
 			var $this = $(this)
-			if ($this.hasClass('view')){
+			if (!e.bubbles && $this.hasClass('view')){
 				console.debug('end handler on '+ $this.attr('id'))
 				$this.removeClass(effectClass)
 				if ($this.hasClass('out')){
