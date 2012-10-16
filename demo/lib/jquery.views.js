@@ -69,8 +69,8 @@ $.fn.view = function() {
 	return $.Deferred(function(switching){		
 		var endHandler = function(e){	
 			var $this = $(this)
-			if (e && e.eventPhase == 2 && $this.hasClass('view')){				
-				console.debug([e.target.id, e, $this])
+			if (e && e.eventPhase == 2 && $this.hasClass('view')){
+				$this.hide()
 				switching.resolve()
 			}			
 		}	
@@ -84,13 +84,15 @@ $.fn.view = function() {
 		var visibleClass = effect != 'none' ? 'visible' : ''
 			
 		var otherViews = $view.parent().children('.view.in')
-		otherViews.bind(endEvents, endHandler).removeClass(effectClass + ' in').show().addClass(effect+' out')
-		$view.removeClass(effectClass + ' out').show().addClass(effect+' in')
-		
 		switching.done(function(){	
 			otherViews.unbind(endEvents).hideView()
 			$view.removeClass(effectClass)					
-		});
+		});		
+		
+		otherViews.bind(endEvents, endHandler).removeClass(effectClass + ' in').show().addClass(effect+' out')
+		$view.removeClass(effectClass + ' out').show().addClass(effect+' in')
+		
+		
 		
 		if (effect == 'none'){
 			endHandler.call(view)		
