@@ -201,7 +201,7 @@ overflow-x: hidden;
 
 /* people */
 @media screen and (min-width: 701px) {  
-  .testmvc #peoplelistview, .testmvc #peopledetails, #menu {
+  .testmvc #peoplelistview, .testmvc #peopledetails {
     position: static !important;
     height: 50% !important;
     visibility: visible !important;
