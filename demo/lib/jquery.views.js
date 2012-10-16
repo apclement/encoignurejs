@@ -72,7 +72,7 @@ $.fn.view = function() {
 			if (e && e.eventPhase == 2 && $this.hasClass('view')){				
 				console.debug([e.target.id, e, $this])
 				switching.resolve()
-			}
+			}			
 		}	
 		
 		if ($view.hasClass('in') || $view.css('display') == 'block'){	
@@ -84,12 +84,12 @@ $.fn.view = function() {
 		var visibleClass = effect != 'none' ? 'visible' : ''
 			
 		var otherViews = $view.parent().children('.view.in')
-		otherViews.rebind(endEvents, endHandler).removeClass(effectClass + ' in').show().addClass(effect+' out')
+		otherViews.removeClass(effectClass + ' in').show().addClass(effect+' out')
 		$view.rebind(endEvents, endHandler).removeClass(effectClass + ' out').show().addClass(effect+' in')
 		
-		switching.done(function(){		
+		switching.done(function(){	
 			otherViews.hideView()
-			$view.removeClass(effectClass)					
+			$view.unbind(endEvents).removeClass(effectClass)					
 		});
 		
 		if (effect == 'none'){
