@@ -108,12 +108,11 @@ overflow-x: hidden;
 }
 
 .testmvc #menu  {
-  margin: .2em 0;
+ 
 }
 
 .testmvc #menu  a {
   padding: .5em .5em;
-  font-size: .8em;
 }
 }
 
