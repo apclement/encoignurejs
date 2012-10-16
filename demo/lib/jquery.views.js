@@ -89,7 +89,7 @@ $.fn.view = function() {
 		
 		switching.done(function(){		
 			otherViews.hideView()
-			$this.removeClass(effectClass)					
+			$view.removeClass(effectClass)					
 		});
 		
 		if (effect == 'none'){
