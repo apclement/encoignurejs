@@ -73,7 +73,7 @@ $.fn.view = function() {
 			if (e && e.eventPhase == 2 && $this.hasClass('view')){
 				setTimeout(function(){
 					otherViews.unbind(endEvents).hideView()
-				}, 0);
+				}, 100);
 				$view.removeClass(effectClass)		
 				
 			}			
