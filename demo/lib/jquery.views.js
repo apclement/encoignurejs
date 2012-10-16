@@ -59,7 +59,7 @@ $.fn.view = function() {
 		}	
 		
 		if ($view.hasClass('in') || $view.css('visibility') == 'visible'){	
-			$view.removeClass('out').addClass('in')
+			$view.removeClass('out').addClass('in').css('visibility', 'visible')
 			endHandler.call(view)		
 			return
 		}
