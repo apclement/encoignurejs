@@ -167,7 +167,7 @@ overflow-x: hidden;
 }
 
 @media screen and (max-width: 700px) {  
-.testmvc .a  section{ 
+.testmvc .a  section { 
   padding: 1em .7em;
 }
 }
