@@ -158,12 +158,15 @@ overflow-x: hidden;
 }
 
 /* section */
-.testmvc .a section {
-  background-color: #fafafa;
-  padding: .5em 1.5em;
-  padding-bottom: 2em;
+.testmvc .a  {
+  background-color: #fafafa; 
   border: 1px solid #ccc;
   border-top-width: 0;
+}
+
+.testmvc .a section { 
+  padding: .5em 1.5em;
+  padding-bottom: 2em; 
 }
 
 @media screen and (max-width: 700px) {  
