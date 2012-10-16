@@ -77,14 +77,14 @@ $.fn.view = function() {
 			}			
 		}	
 		
-		if ($view.hasClass('in') || $view.is(':visible')){	
+		if ($view.hasClass('in')){	
 			$view.showView()
 			endHandler.call(view)		
 			return
 		}				
 		
-		otherViews.rebind(endEvents, endHandler).removeClass(effectClass + ' in').show().addClass(effect+' out')
-		$view.removeClass(effectClass + ' out').show().addClass(effect+' in')
+		otherViews.rebind(endEvents, endHandler).removeClass(effectClass + ' in').addClass(effect+' out')
+		$view.removeClass(effectClass + ' out').addClass(effect+' in')
 		
 		
 		
