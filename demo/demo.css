@@ -152,6 +152,7 @@ overflow-x: hidden;
 
 /* band */
 .testmvc .band {
+  padding: 0 .5em;
   padding-top: 15px;
 }
 
