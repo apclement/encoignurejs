@@ -22,7 +22,7 @@ var eventNames = {
 
 var effectClass = effects.all.join(' ')
 
-var endEvents = $.map([ 'animation'], function(n){
+var endEvents = $.map(['transition', 'animation'], function(n){
 	return eventNames[Modernizr.prefixed(n)]
 }).join(' ');
 
@@ -75,7 +75,7 @@ $.fn.view = function() {
 			}			
 		}	
 		
-		if ($view.hasClass('in') || $view.css('display') == 'block'){	
+		if ($view.hasClass('in') || $view.is(':visible')){	
 			$view.removeClass('out').addClass('in').show()
 			endHandler.call(view)		
 			return
@@ -84,19 +84,19 @@ $.fn.view = function() {
 		var visibleClass = effect != 'none' ? 'visible' : ''
 			
 		var otherViews = $view.parent().children('.view.in')
-		otherViews.removeClass(effectClass + ' in').show().addClass(effect+' out')
-		$view.rebind(endEvents, endHandler).removeClass(effectClass + ' out').show().addClass(effect+' in')
+		otherViews.bind(endEvents, endHandler).removeClass(effectClass + ' in').show().addClass(effect+' out')
+		$view.removeClass(effectClass + ' out').show().addClass(effect+' in')
 		
 		switching.done(function(){	
-			otherViews.hideView()
-			$view.unbind(endEvents).removeClass(effectClass)					
+			otherViews.unbind(endEvents).hideView()
+			$view.removeClass(effectClass)					
 		});
 		
 		if (effect == 'none'){
 			endHandler.call(view)		
 		}
 		
-		setTimeout(function(){}, 500);
+		//setTimeout(function(){}, 500);
 	});
 }
 
