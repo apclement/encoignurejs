@@ -75,7 +75,7 @@ $.fn.view = function() {
 			}
 		}	
 		
-		if ($view.hasClass('in') || $view.css('visibility') == 'visible'){	
+		if ($view.hasClass('in') || $view.css('display') == 'block'){	
 			$view.removeClass('out').addClass('in').show()
 			endHandler.call(view)		
 			return
