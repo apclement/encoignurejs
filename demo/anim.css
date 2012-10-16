@@ -33,7 +33,7 @@
 .flip.in {
 	-webkit-animation-name: flipin;
 	-webkit-animation-duration: 3s;
-	--webkit-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
   
   -moz-animation-name: flipin;
 	-moz-animation-duration: .3s;
@@ -43,7 +43,7 @@
 .flip.out {
 	-webkit-animation-name: flipout;
 	-webkit-animation-duration: 3s;
-	--webkit-backface-visibility: hidden;	  
+	-webkit-backface-visibility: hidden;	  
   
   -moz-animation-name: flipout;
 	-moz-animation-duration: .3s;
@@ -53,7 +53,7 @@
 .flip-r.in {
 	-webkit-animation-name: flip-right-in;
 	-webkit-animation-duration: 3s;
-	--webkit-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
   
   -moz-animation-name: flip-right-in;
 	-moz-animation-duration: .3s;
@@ -63,7 +63,7 @@
 .flip-r.out {
 	-webkit-animation-name: flip-right-out;
 	-webkit-animation-duration: 3s;
-	--webkit-backface-visibility: hidden;	 
+	-webkit-backface-visibility: hidden;	 
   
   -moz-animation-name: flip-right-out;
 	-moz-animation-duration: .3s;
