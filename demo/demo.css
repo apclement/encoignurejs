@@ -79,7 +79,7 @@ overflow-x: hidden;
 
 /* menu */
 .testmvc #menu {
-  margin: .7em 0;
+  padding: .7em 0;
 }
 
 .testmvc #menu  li {
@@ -165,13 +165,13 @@ overflow-x: hidden;
   width: 100%;
   height: 15px;
   background-color: #8D7D77;
-  border-radius: 2px 2px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 /* section */
 .testmvc section.a, .testmvc article.a {
   background-color: #fafafa; 
-  border: 1px solid #ccc;
+  border: 1px solid #eee;
   border-top-width: 0;
   padding: 0 1.5em;
   padding-bottom: 2em; 
