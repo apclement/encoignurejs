@@ -40,7 +40,7 @@ $.fn.rebind = function(e, func) {
 
 $.fn.initViews = function(){
 	var $views = $(this).find('.view')
-	$views.addClass('out')
+	$views.addClass('out').css('visibility', 'hidden')
 	
 	return $(this)
 }
