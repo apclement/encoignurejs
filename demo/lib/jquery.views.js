@@ -70,7 +70,7 @@ $.fn.view = function() {
 		var endHandler = function(e){	
 			var $this = $(this)
 			if (e && e.eventPhase == 2 && $this.hasClass('view')){				
-				
+				console.debug([e.target.id, e, $this])
 				switching.resolve()
 			}
 		}	
@@ -87,8 +87,7 @@ $.fn.view = function() {
 		otherViews.rebind(endEvents, endHandler).css('visibility', '').removeClass(effectClass + ' in').addClass(effect+' out')
 		$view.rebind(endEvents, endHandler).css('visibility', '').removeClass(effectClass + ' out').addClass(effect+' in')
 		
-		switching.done(function(){
-			console.debug([e.target.id, e, $this])
+		switching.done(function(){			
 			//$this.removeClass(effectClass)			
 			otherViews.hideView()
 		});
