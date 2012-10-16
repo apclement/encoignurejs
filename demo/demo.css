@@ -103,6 +103,10 @@ overflow-x: hidden;
 }
 
 @media screen and (max-width: 701px) {  
+.testmvc #menu  li {
+  display: block;
+}
+
 .testmvc #menu  {
   margin: .2em 0;
 }
