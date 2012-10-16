@@ -90,11 +90,11 @@
 }
 
 .none.in {
-  visibility: visible;
+  display: block;
 }
 
 .none.out {
-  visibility: hidden;
+  display: none;
 }
 
 .in, .out {

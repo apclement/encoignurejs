@@ -45,7 +45,7 @@ $.fn.initViews = function(){
 $.fn.hideView = function(){
 	$(this).each(function(){
 		var $view = $(this)
-		$view.hide().removeClass('in').addClass('out')
+		$view.removeClass('in').addClass('none out')
 	})
 	return $(this)
 }
