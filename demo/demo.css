@@ -151,8 +151,8 @@ overflow-x: hidden;
 }
 
 /* band */
-.testmvc .band {
-  padding: 0;
+
+.testmvc .view.a {
   padding-top: 15px;
 }
 
