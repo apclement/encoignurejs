@@ -164,7 +164,7 @@ overflow-x: hidden;
 }
 
 /* section */
-.testmvc .view .a {
+.testmvc .view.a {
   background-color: #fafafa; 
   border: 1px solid #ccc;
   border-top-width: 0;
