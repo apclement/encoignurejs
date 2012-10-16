@@ -152,25 +152,31 @@ overflow-x: hidden;
 
 /* band */
 .testmvc .band {
+  padding-top: 15px;
+}
+
+.testmvc .band:before {
+  content: '';
+  position: absolute;
   height: 15px;
   background-color: #8D7D77;
   border-radius: 2px 2px 0 0;
 }
 
 /* section */
-.testmvc .a  {
+.testmvc section.a  {
   background-color: #fafafa; 
   border: 1px solid #ccc;
   border-top-width: 0;
 }
 
-.testmvc .a section { 
+.testmvc section.a  { 
   padding: .5em 1.5em;
   padding-bottom: 2em; 
 }
 
 @media screen and (max-width: 700px) {  
-.testmvc .a  section { 
+.testmvc section.a  { 
   padding: 1em .7em;
 }
 }
