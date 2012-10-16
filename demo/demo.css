@@ -217,6 +217,12 @@ overflow-x: hidden;
     height: 50% !important;
     visibility: visible !important;
   }
+  
+  .testmvc #menu {
+    position: static !important;
+    height: auto !important;
+    visibility: visible !important;
+  }
 
 }
 
