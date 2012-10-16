@@ -69,8 +69,7 @@ $.fn.view = function() {
 	return $.Deferred(function(switching){		
 		var endHandler = function(e){	
 			var $this = $(this)
-			if (e && e.eventPhase == 2 && $this.hasClass('view')){
-				console.debug('end handler on '+ $this.attr('id') + ': '+ ($this.hasClass('in') ? 'in' : 'out'))
+			if (e && e.eventPhase == 2 && $this.hasClass('view')){				
 				console.debug($this)
 				$this.removeClass(effectClass)
 				if ($this.hasClass('out')){
