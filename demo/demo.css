@@ -152,12 +152,12 @@ overflow-x: hidden;
 
 /* band */
 .testmvc .band {
-  padding: 0 .5em;
+  padding: 0;
   padding-top: 15px;
 }
 
-.testmvc .band:before {
-  content: ' ';
+.testmvc .view.a:before {
+  content: '';
   position: absolute;
   display: block;
   top: 0;
