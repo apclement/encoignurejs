@@ -40,7 +40,7 @@
 
 .flip.in {
 	-webkit-animation-name: flipin;
-	-webkit-animation-duration: 3s;
+	-webkit-animation-duration: .3s;
 	-webkit-backface-visibility: hidden;
 	  
   -moz-animation-name: flipin;
@@ -50,7 +50,7 @@
 
 .flip.out {
 	-webkit-animation-name: flipout;
-	-webkit-animation-duration: 3s;
+	-webkit-animation-duration: .3s;
 	-webkit-backface-visibility: hidden;	  
   
   -moz-animation-name: flipout;
@@ -60,7 +60,7 @@
 
 .flip-r.in {
 	-webkit-animation-name: flip-right-in;
-	-webkit-animation-duration: 3s;
+	-webkit-animation-duration: .3s;
 	-webkit-backface-visibility: hidden;
   
   -moz-animation-name: flip-right-in;
@@ -70,7 +70,7 @@
 
 .flip-r.out {
 	-webkit-animation-name: flip-right-out;
-	-webkit-animation-duration: 3s;
+	-webkit-animation-duration: .3s;
 	-webkit-backface-visibility: hidden;	 
   
   -moz-animation-name: flip-right-out;
@@ -115,10 +115,6 @@
 
 .out {
   
-}
-
-.visible {
-  visibility: visible !important;
 }
 
 .view {
