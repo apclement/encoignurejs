@@ -66,13 +66,13 @@ $.fn.view = function() {
 		
 		var visibleClass = effect != 'none' ? 'visible' : ''
 			
-		var otherViews = $view.parent().children('.view.in')
+		var otherViews = $view.parent().children('.view.in').css('z-index', 0)		
 		otherViews.rebind(endEvents, endHandler).addClass(visibleClass).removeClass(effectClass + ' in').addClass(effect+' out')
 		$view.rebind(endEvents, endHandler).addClass(visibleClass).removeClass(effectClass + ' out').addClass(effect+' in')
 		
 		switching.done(function(){
 			otherViews.removeClass('visible').removeClass(effectClass)
-			$view.removeClass('visible').removeClass(effectClass)			
+			$view.removeClass('visible').removeClass(effectClass).css('z-index', 1)		
 		});
 		
 		if (effect == 'none'){
