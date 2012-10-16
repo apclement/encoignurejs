@@ -71,9 +71,7 @@ $.fn.view = function() {
 		var endHandler = function(e){	
 			var $this = $(this)
 			if (e && e.eventPhase == 2 && $this.hasClass('view')){
-				setTimeout(function(){
-					otherViews.unbind(endEvents).hideView()
-				}, 100);
+				
 				$view.removeClass(effectClass)		
 				
 			}			

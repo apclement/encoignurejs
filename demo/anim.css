@@ -120,6 +120,7 @@
   height: 100%;
   overflow: auto;
   overflow-x: hidden; 
+  -webkit-animation-fill-mode: forwards;
 }
 
 .views {
@@ -148,7 +149,7 @@
 
 @-webkit-keyframes flipout {
    from { -webkit-transform: rotateY(0); }
-   to { -webkit-transform: rotateY(-180deg) scale(.7);}
+   to { -webkit-transform: rotateY(-180deg) scale(.7); display: none; }
 }
 
 @-webkit-keyframes flip-right-in {
@@ -158,7 +159,7 @@
 
 @-webkit-keyframes flip-right-out {
    from { -webkit-transform: rotateY(0); }
-   to { -webkit-transform: rotateY(180deg) scale(.7);}
+   to { -webkit-transform: rotateY(180deg) scale(.7); display: none;}
 }
 
 @-moz-keyframes flipin {
