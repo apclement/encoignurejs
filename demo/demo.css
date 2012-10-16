@@ -218,13 +218,13 @@ overflow-x: hidden;
   .testmvc #peoplelistview, .testmvc #peopledetails {
     position: static !important;
     height: 50% !important;
-    visibility: visible !important;
+    display: block !important;
   }
   
   .testmvc #menu {
     position: static !important;
     height: auto !important;
-    visibility: visible !important;
+    display: block !important;
   }
 
 }
