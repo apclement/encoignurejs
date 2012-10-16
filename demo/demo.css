@@ -118,9 +118,9 @@ overflow-x: hidden;
 }
 
 .testmvc .itemlist {  
-  margin: 1em 0;
+  margin: 0;
   box-shadow: 0 0 20px #333;
-   border-radius: 5px;
+  border-radius: 5px;
 }
 
 .testmvc .itemlist a {
@@ -172,7 +172,7 @@ overflow-x: hidden;
 }
 
 .testmvc section.body  { 
-  padding: .5em 1.5em;
+  padding: 0 1.5em;
   padding-bottom: 2em; 
 }
 
