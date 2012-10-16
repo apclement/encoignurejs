@@ -95,6 +95,8 @@ $.fn.view = function() {
 		if (effect == 'none'){
 			endHandler.call(view)		
 		}
+		
+		setTimeout(function(){}, 500);
 	});
 }
 
