@@ -39,8 +39,9 @@ App.controllers.people = {
 		$('#viewholder').loadOnce('people/people.html', function(){		
 			//$('#peopledetails').find('input').attr('disabled', true)
 			
-			that.buildList()							
-			
+			that.buildList()				
+						
+			$('#people').view()
 			$('#peoplelistview').view()		
 			
 			//$('#peoplelistview').find('a').attr('href', function(){ return $(this).data('href') })
@@ -55,8 +56,10 @@ App.controllers.people = {
 			var person = $.grep(that.items, function(it){return it.id == args.id})[0];
 			
 			$('#peopledetails').find('#peopleform').populate(person).data('item', person).find('input#firstname').hide().show()			
-						
-			$('#people').view()			
+			
+			$('#peopledetails').view()
+			$('#people').view()
+			
 			
 			$('#peopledetails').find('input').attr('disabled', false)
 			
