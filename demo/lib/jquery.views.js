@@ -67,12 +67,13 @@ $.fn.view = function() {
 	}	
 	
 	return $.Deferred(function(switching){	
-		var otherViews = $view.parent().find('.view.in')
+		var otherViews = $view.parent().children('.view.in')
 		var endHandler = function(e){	
 			var $this = $(this)
 			if (e && e.eventPhase == 2 && $this.hasClass('view')){
 				$view.removeClass(effectClass)		
 				otherViews.unbind(endEvents)
+				otherViews.find('.view').hideView()
 			}			
 		}	
 		
