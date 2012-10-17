@@ -70,6 +70,7 @@ $.fn.view = function(_effect) {
 	if (parents.length){
 		var $rootView = parents.first()
 		parents.filter(':gt(0)').showView()
+		$view.showView()
 		$rootView.view()
 		return;
 	}
