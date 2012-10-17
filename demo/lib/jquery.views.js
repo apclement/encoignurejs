@@ -66,7 +66,7 @@ $.fn.view = function(_effect) {
 		effect = 'none'
 	}	
 	
-	var parents = $view.parents('.view.in').reverse()
+	var parents = $($view.parents('.view.in').get().reverse())
 	if (parents.length){
 		var $rootView = parents.first()
 		parents.filter(':gt(0)').showView()
