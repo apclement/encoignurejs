@@ -57,8 +57,9 @@ App.controllers.people = {
 			
 			$('#peopledetails').find('#peopleform').populate(person).data('item', person).find('input#firstname').hide().show()			
 			
-			$('#people').view()
 			$('#peopledetails').view()
+			$('#people').view()
+			
 			
 			$('#peopledetails').find('input').attr('disabled', false)
 			
