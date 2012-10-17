@@ -85,7 +85,6 @@ $.fn.view = function(_effect) {
 		$view.rebind(endEvents, endHandler).removeClass(effectClass + ' out').addClass(effect+' in')
 				
 		switching.done(function(){
-			alert('remove effect')
 			$view.unbind(endEvents).removeClass(effectClass)		
 			otherViews.unbind(endEvents).find('.view').hideView()
 		});
