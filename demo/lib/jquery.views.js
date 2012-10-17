@@ -50,31 +50,27 @@ $.fn.hideView = function(){
 	return $(this)
 }
 
-$.fn.showView = function(){
-	$(this).each(function(){
-		var $view = $(this)
-		$view.removeClass(effectClass).removeClass('out').addClass('in')
-	})
-	return $(this)
+$.fn.view = function(_effect) {
+	var view = this
+	var $view = $(this)	
+	
+	var parent = $view.closest('.view.out')
+	if (parent.length){
+		showView.call(view, 'none')
+		return parent.view();
+	}
+	
+	return showView.call(view)
 }
 
-$.fn.view = function(_effect) {
+function showView(_effect) {
 	var view = this
 	var $view = $(this)	
 	var effect = _effect || current
 	if (!Modernizr[effects[effect].test]){
 		effect = 'none'
 	}	
-	
-	var parents = $($view.parents('.view.out').get().reverse())
-	if (parents.length){
-		var $rootView = parents.first()
-		parents.filter(':gt(0)').view('none')
-		$view.view('none')
-		$rootView.view()
-		return;
-	}
-	
+		
 	return $.Deferred(function(switching){		
 		var endHandler = function(e){	
 			var $this = $(this)
