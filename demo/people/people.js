@@ -73,7 +73,7 @@ $(document).on('init', '#peopledetails', function(){
 	})
 	
 	$view.find('a').click(function(){
-		$view.find('input').attr('disabled', true)
+		//$view.find('input').attr('disabled', true)
 	})
 })
 
