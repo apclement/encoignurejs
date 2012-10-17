@@ -53,7 +53,7 @@ $.fn.hideView = function(){
 $.fn.showView = function(){
 	$(this).each(function(){
 		var $view = $(this)
-		$view.removeClass('out').addClass('in').show()
+		$view.removeClass(effectClass).removeClass('out').addClass('in')
 	})
 	return $(this)
 }
