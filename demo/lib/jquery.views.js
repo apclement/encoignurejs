@@ -65,6 +65,7 @@ $.fn.view = function(_effect) {
 	if (!Modernizr[effects[effect].test]){
 		effect = 'none'
 	}	
+	alert('view')
 	
 	return $.Deferred(function(switching){		
 		var endHandler = function(e){	
