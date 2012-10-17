@@ -1,6 +1,8 @@
 
 /* animations */
-.translate-l, .translate-r {
+/* .translate-l, .translate-r, */
+
+ .out {
 	 -webkit-animation-fill-mode: forwards;
 }
 
@@ -35,7 +37,7 @@
 }
 
 .flip, .flip-r {
-	 -webkit-animation-fill-mode: forwards;
+	 --webkit-animation-fill-mode: forwards;
 }
 
 .flip.in {
