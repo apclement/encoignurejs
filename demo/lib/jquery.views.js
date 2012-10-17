@@ -84,14 +84,12 @@ $.fn.view = function() {
 		
 		otherViews.rebind(endEvents, endHandler).removeClass(effectClass + ' in').addClass(effect+' out')
 		$view.removeClass(effectClass + ' out').addClass(effect+' in')
-		
-		
+				
 		
 		if (effect == 'none'){
 			endHandler.call(view)		
-		}
+		}	
 		
-		//setTimeout(function(){}, 500);
 	});
 }
 
