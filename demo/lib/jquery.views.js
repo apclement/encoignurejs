@@ -66,6 +66,14 @@ $.fn.view = function(_effect) {
 		effect = 'none'
 	}	
 	
+	var parents = $view.parents('.view.in').reverse()
+	if (parents.length){
+		var $rootView = parents.first()
+		parents.filter(':gt(0)').showView()
+		$rootView().view()
+		return;
+	}
+	
 	return $.Deferred(function(switching){		
 		var endHandler = function(e){	
 			var $this = $(this)
