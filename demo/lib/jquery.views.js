@@ -50,19 +50,6 @@ $.fn.hideView = function(){
 	return $(this)
 }
 
-$.fn.view = function(_effect) {
-	var view = this
-	var $view = $(this)	
-	
-	var parent = $view.closest('.view.out')
-	if (parent.length){
-		showView.call(view, 'none')
-		return parent.view();
-	}
-	
-	return showView.call(view)
-}
-
 function showView(_effect) {
 	var view = this
 	var $view = $(this)	
@@ -99,6 +86,19 @@ function showView(_effect) {
 		}	
 		
 	});
+}
+
+$.fn.view = function(_effect) {
+	var view = this
+	var $view = $(this)	
+	
+	var parent = $view.closest('.view.out')
+	if (parent.length){
+		showView.call(view, 'none')
+		return parent.view();
+	}
+	
+	return showView.call(view)
 }
 
 var loadedFragments = {}
