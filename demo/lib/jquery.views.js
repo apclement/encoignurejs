@@ -67,7 +67,6 @@ function showView(_effect) {
 		}	
 		
 		if ($view.hasClass('in')){	
-			$view.showView()
 			switching.resolve()
 			return
 		}				
