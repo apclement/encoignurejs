@@ -58,10 +58,10 @@ $.fn.showView = function(){
 	return $(this)
 }
 
-$.fn.view = function() {
+$.fn.view = function(_effect) {
 	var view = this
 	var $view = $(this)	
-	var effect = current
+	var effect = _effect || current
 	if (!Modernizr[effects[effect].test]){
 		effect = 'none'
 	}	
