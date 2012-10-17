@@ -41,8 +41,9 @@ App.controllers.people = {
 			
 			that.buildList()				
 						
-			$('#people').view()
-			$('#peoplelistview').view()		
+			$('#people').view().done(function(){
+				$('#peoplelistview').view()		
+			})
 			
 			//$('#peoplelistview').find('a').attr('href', function(){ return $(this).data('href') })
 		})		
@@ -57,8 +58,10 @@ App.controllers.people = {
 			
 			$('#peopledetails').find('#peopleform').populate(person).data('item', person).find('input#firstname').hide().show()			
 			
-			$('#peopledetails').view()
-			$('#people').view()
+			$('#people').view().done(function(){
+				$('#peopledetails').view()
+			})
+				
 			
 			
 			$('#peopledetails').find('input').attr('disabled', false)
