@@ -76,7 +76,7 @@ $.fn.view = function(_effect) {
 		
 		if ($view.hasClass('in')){	
 			$view.showView()
-			endHandler.call(view)		
+			switching.resolve()
 			return
 		}				
 		
@@ -90,7 +90,7 @@ $.fn.view = function(_effect) {
 		});
 		
 		if (effect == 'none'){
-			endHandler.call(view)		
+			switching.resolve()	
 		}	
 		
 	});
