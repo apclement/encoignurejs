@@ -98,7 +98,9 @@ $.fn.view = function(_effect) {
 	}
 	
 	return showView.call(view).done(function(){
-		//$(window).resize() 
+		setTimeout(function(){
+			$(window).resize() 
+		}, 0);
 	})
 }
 
