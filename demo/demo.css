@@ -153,11 +153,6 @@ overflow-x: hidden;
   position:relative;
 }
 
-/* band */
-
-.testmvc .view.a {
-  padding-top: 15px;
-}
 
 .testmvc .view.a:before_ {
   content: '';
