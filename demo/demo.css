@@ -148,11 +148,14 @@ overflow-x: hidden;
 
 .testmvc .itemlist a:hover {
   background-color: #fff;
-  box-shadow: 0 0 8px #888;
+  box-shadow: 0 0 3px #888;
   z-index: 1;
   position:relative;
 }
 
+.testmvc .view.a .band {
+  padding-top: 15px;
+}
 
 .testmvc .view.a .band:before {
   content: '';
