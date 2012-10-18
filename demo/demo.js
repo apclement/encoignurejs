@@ -38,7 +38,7 @@ $(document).ready(function(){
 
 // vertical stretcher
 $(window).resize(function(){   
-  $('.stretchable').height('auto').parent().each(function(){         
+  $('.stretchable:visible').height('auto').parent().each(function(){         
 	var $this = $(this)
 	var total = $this.outerHeight(true)
 	var used = 0
