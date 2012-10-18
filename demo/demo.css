@@ -187,7 +187,8 @@ overflow-x: hidden;
 }
 
 .testmvc section.a h1 {
-  margin: .5em 0;
+  margin: 0;
+  padding: .5em 0;
   color: #B83F45;
 }
 
@@ -212,6 +213,15 @@ overflow-x: hidden;
   border: 1px solid #ccc;
   font-size: 1em;
 }
+
+/* btns */
+
+.btns {
+  margin: 0;
+  padding: 1em 0;
+}
+
+
 
 /* people */
 @media screen and (min-width: 701px) {  
