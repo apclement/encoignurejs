@@ -147,8 +147,7 @@ overflow-x: hidden;
 }
 
 .testmvc .itemlist a:hover {
-  background-color: #fff;
-  box-shadow: 0 0 3px #333;
+  background-color: #bbb;
   z-index: 1;
   position:relative;
 }
