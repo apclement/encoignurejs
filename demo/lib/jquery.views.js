@@ -91,7 +91,7 @@ $.fn.view = function(_effect) {
 	var view = this
 	var $view = $(this)	
 	
-	var parent = $view.closest('.view.out')
+	var parent = $view.parent().closest('.view.out')
 	if (parent.length){
 		showView.call(view, 'none')
 		return parent.view();
