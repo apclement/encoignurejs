@@ -159,7 +159,7 @@ overflow-x: hidden;
   padding-top: 15px;
 }
 
-.testmvc .view.a:before {
+.testmvc .view.a:before_ {
   content: '';
   position: absolute;
   display: block;
@@ -195,11 +195,11 @@ overflow-x: hidden;
 
 /* forms */
 .testmvc  form.a {
-  margin: 2em 1em;
+  padding: 2em 1em;
 }
 
 .testmvc  form.a .controlHolder {
-  margin: .5em 0;
+  padding: .5em 0;
 }
 
 .testmvc  form.a .controlHolder label {
