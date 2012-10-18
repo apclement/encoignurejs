@@ -77,7 +77,7 @@ function showView(_effect) {
 				
 		switching.done(function(){
 			$view.unbind(endEvents).removeClass(effectClass)		
-			otherViews.unbind(endEvents).find('.view').hideView()
+			otherViews.unbind(endEvents).hideView()
 		});
 		
 		if (effect == 'none'){
