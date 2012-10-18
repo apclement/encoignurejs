@@ -154,7 +154,7 @@ overflow-x: hidden;
 }
 
 
-.testmvc .view.a:before_ {
+.testmvc .view.a .band:before {
   content: '';
   position: absolute;
   display: block;
