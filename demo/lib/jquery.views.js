@@ -45,7 +45,7 @@ $.fn.initViews = function(){
 $.fn.hideView = function(){
 	$(this).each(function(){
 		var $view = $(this)
-		$view.removeClass(effectClass).removeClass('in').addClass('none out')
+		$view.removeClass(effectClass).removeClass('in').addClass('none out').hide()
 	})
 	return $(this)
 }
@@ -73,7 +73,7 @@ function showView(_effect) {
 		
 		var otherViews = $view.parent().children('.view.in')
 		otherViews.rebind(endEvents, endHandler).removeClass(effectClass + ' in').addClass(effect+' out')
-		$view.rebind(endEvents, endHandler).removeClass(effectClass + ' out').addClass(effect+' in')
+		$view.rebind(endEvents, endHandler).show().removeClass(effectClass + ' out').addClass(effect+' in')
 				
 		switching.done(function(){
 			$view.unbind(endEvents).removeClass(effectClass)		
