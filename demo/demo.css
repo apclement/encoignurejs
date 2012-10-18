@@ -225,13 +225,14 @@ overflow-x: hidden;
 @media screen and (min-width: 701px) {  
   .testmvc #peoplelistview, .testmvc #peopledetails {
     position: static !important;
-    height: 50% !important;
+    height: 40% !important;
     display: block !important;
+    -webkit-animation-name: none !important;
   }
   
   .testmvc #menu {
     position: static !important;
-    height: auto !important;
+    height: 20% !important;
     display: block !important;
     -webkit-animation-name: none !important;
   }
