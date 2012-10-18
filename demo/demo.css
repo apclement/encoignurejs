@@ -139,15 +139,14 @@ overflow-x: hidden;
 
 .testmvc .itemlist li:first-child a {
      border-top: 1px solid #ccc;  
-    
 }
 
 .testmvc .itemlist li:last-child a {
-
+    border-bottom: 1px solid #ccc;  
 }
 
 .testmvc .itemlist a:hover {
-  background-color: #bbb;
+  background-color: #ddd;
   z-index: 1;
   position:relative;
 }
@@ -229,7 +228,7 @@ overflow-x: hidden;
     -webkit-animation-name: none !important;
   }
   
-  .testmvc #people {
+  .testmvc #people , .testmvc #task{
     height: 80% !important;
   }
   
