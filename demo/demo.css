@@ -261,6 +261,18 @@ overflow-x: hidden;
 
 }
 
+.testmvc .loading-overlay {
+ display: none;
+ position: absolute;
+ z-index: 100;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background: rgba(255, 255, 255, .7) url('images/loading.gif') 50% 50% no-repeat;
+ border: 1px solid #ddd;
+}
+
 
 
 

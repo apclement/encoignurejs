@@ -41,6 +41,17 @@ if (!window.location.hash){
 	 window.location.hash = '#!/menu'
 }
 
+ // loading overlay
+    $('body').prepend($("<div class='loading-overlay' />"))
+    $("body").on({      
+      ajaxStart: function(e) { 
+        $('.loading-overlay').fadeIn(300)
+      },     
+      ajaxStop: function() { 
+        $('.loading-overlay').fadeOut(300) 
+      }    
+    });
+
 // vertical stretcher
 $(window).resize(function(){   
   $('.stretchable:visible').height('auto').parent().each(function(){         
