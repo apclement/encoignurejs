@@ -36,6 +36,11 @@ $(document).ready(function(){
 	
 })
 
+// default use case
+if (!window.location.hash){
+	 window.location.hash = '#!/menu'
+}
+
 // vertical stretcher
 $(window).resize(function(){   
   $('.stretchable:visible').height('auto').parent().each(function(){         
