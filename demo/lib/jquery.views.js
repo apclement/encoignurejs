@@ -115,9 +115,9 @@ $.fn.loadOnce = function(url, cb){
 			loadedFragments[url] = true;
 			var views = $(this).initViews().find('.view')
 			$content.children().appendTo($holder)
-			views.trigger('init')
-			$(window).resize() 
+			views.trigger('init')			
 			cb()
+			$(window).resize() 
 		});	
 	} else {			
 		cb()
