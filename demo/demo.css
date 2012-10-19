@@ -216,6 +216,8 @@ overflow-x: hidden;
 }
 
 .testmvc .btn {
+  color: #fff;
+  text-decoration: none;
   padding: .5em 1em;
   background-color: #c00;
   background-image: -moz-linear-gradient(top, #fff, #FF0000 6%, #990808);
