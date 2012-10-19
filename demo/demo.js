@@ -37,10 +37,15 @@ $(document).ready(function(){
 	//$('body').prepend($('<div>').addClass('loading-overlay'))
 	$("body").on({      
 	  ajaxStart: function(e) { 
-		$('.loading-overlay').fadeIn(300)
+		var $view = $('.view.in')
+		if (!$view.find('.loading-overlay').length)){
+			$view.prepend($('<div>').addClass('loading-overlay'))
+		}
+		$view.find('.loading-overlay').fadeIn(300)
 	  },     
 	  ajaxStop: function() { 
-		$('.loading-overlay').fadeOut(300) 
+		var $view = $('.view.in')
+		view.find('.loading-overlay').fadeOut(300) 
 	  }    
 	});
 })
