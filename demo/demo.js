@@ -40,7 +40,7 @@ $(document).ready(function(){
 		$('.loading-overlay').fadeIn(300)
 	  },     
 	  ajaxStop: function() { 
-		$('.loading-overlay').fadeOut(300) 
+		$('.loading-overlay').fadeOut(300, function(){ $(window).resize() }) 
 	  }    
 	});
 })
