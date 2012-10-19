@@ -99,7 +99,7 @@ $.fn.view = function(_effect) {
 	
 	return showView.call(view).done(function(){
 		setTimeout(function(){
-			$(window).resize() 
+			
 		}, 0);
 	})
 }
@@ -116,6 +116,7 @@ $.fn.loadOnce = function(url, cb){
 			var views = $(this).initViews().find('.view')
 			$content.children().appendTo($holder)
 			views.trigger('init')
+			$(window).resize() 
 			cb()
 		});	
 	} else {			
