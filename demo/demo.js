@@ -34,13 +34,13 @@ $.routes.add('\!/menu', function(){
  
 $(document).ready(function(){
 	 // loading overlay
-	$('body').prepend($('<div>').addClass('loading-overlay'))
+	//$('body').prepend($('<div>').addClass('loading-overlay'))
 	$("body").on({      
 	  ajaxStart: function(e) { 
 		$('.loading-overlay').fadeIn(300)
 	  },     
 	  ajaxStop: function() { 
-		$('.loading-overlay').fadeOut(300, function(){ $(window).resize() }) 
+		$('.loading-overlay').fadeOut(300) 
 	  }    
 	});
 })
