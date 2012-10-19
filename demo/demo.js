@@ -34,7 +34,7 @@ $.routes.add('\!/menu', function(){
  
 $(document).ready(function(){
 	 // loading overlay
-	$('body').prepend($("<div class='loading-overlay' />"))
+	$('body').prepend($('<div>').addClass('loading-overlay'))
 	$("body").on({      
 	  ajaxStart: function(e) { 
 		$('.loading-overlay').fadeIn(300)
@@ -67,7 +67,7 @@ $(window).resize(function(){
   })          
 })   
 
-$(window).load(function(){     
+$(document).load(function(){     
   $(window).resize()   
 });	
 
