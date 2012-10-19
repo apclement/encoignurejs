@@ -55,7 +55,7 @@ if (!window.location.hash){
 $(window).resize(function(){   
   $('.stretchable:visible').height('auto').parent().each(function(){         
 	var $this = $(this)
-	var total = $this.outerHeight(true)
+	var total = $this.height()
 	var used = 0
 	$this.children(':not(.stretchable):visible').each(function(){
 	  used += $(this).outerHeight(true)      
