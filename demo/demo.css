@@ -219,10 +219,10 @@ overflow-x: hidden;
   color: #fff;
   text-decoration: none;
   padding: .5em 1em;
-  border-radius: 5px;
+  border-radius: 15px;
   background-color: #c00;
-  background-image: -moz-linear-gradient(top, #fff, #B83F45 6%, #990808);
-  background-image: -webkit-linear-gradient(top, #fff, #B83F45 6%, #990808);
+  background-image: -moz-linear-gradient(top, #fff, #B83F45 6%, #6e2629);
+  background-image: -webkit-linear-gradient(top, #fff, #B83F45 6%, #6e2629);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FF0000', EndColorStr='#990808')";
 }
 
