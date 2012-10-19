@@ -119,33 +119,26 @@ overflow-x: hidden;
 }
 }
 
-.testmvc .itemlist {
-  
-}
-
 .testmvc .itemlist {  
   margin: 0;
-  box-shadow: 0 0 20px #333;
-  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 .testmvc .itemlist a {
   text-decoration: none;
   display: block;
   padding: .8em;
-  background-color: #fdfdfd;
-  border: 1px solid #ccc;
+  background-color: #fdfdfd;  
   border-bottom: 1px dotted #ccc;
   border-top-width: 0;
  
 }
 
-.testmvc .itemlist li:first-child a {
-     border-top: 1px solid #ccc;  
+.testmvc .itemlist li:first-child a {   
 }
 
 .testmvc .itemlist li:last-child a {
-    border-bottom: 1px solid #ccc;  
+    border-bottom-width: 0;  
 }
 
 .testmvc .itemlist a:hover {
