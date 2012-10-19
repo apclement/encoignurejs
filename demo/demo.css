@@ -29,7 +29,7 @@ overflow-x: hidden;
 @media screen and (max-width: 701px) {  
 
 .testmvc {
-  width: 98%;
+  width: 99%;
   font-size: 1em;
 }
 }
@@ -179,7 +179,7 @@ overflow-x: hidden;
 
 @media screen and (max-width: 700px) {  
 .testmvc section.a, .testmvc article.a  { 
-  padding: 0 .7em;
+  padding: 0 .3em;
 }
 }
 
@@ -221,7 +221,7 @@ overflow-x: hidden;
   margin-right: .3em;
 }
 
-.testmvc .btn {
+.testmvc .btn, .testmvc .btn:visited {
   color: #fff;
   text-decoration: none;
   padding: .5em 1em;
