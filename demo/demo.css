@@ -129,9 +129,7 @@ overflow-x: hidden;
   display: block;
   padding: .8em;
   background-color: #fdfdfd;  
-  border-bottom: 1px dotted #ccc;
-  border-top-width: 0;
- 
+  border-bottom: 1px dotted #ccc; 
 }
 
 .testmvc .itemlist li:first-child a {   
