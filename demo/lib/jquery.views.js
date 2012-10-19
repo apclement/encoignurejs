@@ -97,11 +97,7 @@ $.fn.view = function(_effect) {
 		return parent.view();
 	}
 	
-	return showView.call(view).done(function(){
-		setTimeout(function(){
-			
-		}, 0);
-	})
+	return showView.call(view)
 }
 
 var loadedFragments = {}
