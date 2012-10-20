@@ -64,7 +64,7 @@ html {
   padding-bottom: 0;
 }
 
-.testmvc #header h1{
+.testmvc #header h1 {
   text-align: center;
   margin: 0;  
   color: #B83F45;
@@ -93,7 +93,7 @@ html {
   display: inline-block;
 }
 
-.testmvc #menu  a {
+.testmvc #menu a {
   display: block;
   text-decoration: none;
   font-weight: bold;
@@ -107,6 +107,10 @@ html {
   background-image: -webkit-linear-gradient(top, #fefefe, #f0f0f0);
   box-shadow: 0 1px 3px #777;
   border: 1px solid #999;
+}
+
+#viewholder {
+	margin-top: 4em;
 }
 
 @media screen and (max-width: 701px) {  
@@ -212,7 +216,7 @@ html {
   padding: 1em 0;
 }
 
-.testmvc .btns  .btn{
+.testmvc .btns .btn {
   margin-right: .3em;
 }
 
