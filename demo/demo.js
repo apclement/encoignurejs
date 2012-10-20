@@ -45,7 +45,7 @@ $(document).ready(function(){
 	  },     
 	  ajaxStop: function() { 
 		var $view = $('.view.in')
-		view.find('.loading-overlay').fadeOut(300) 
+		$view.find('.loading-overlay').fadeOut(300) 
 	  }    
 	});
 })
