@@ -6,12 +6,12 @@ html {
 
 
 .stretchable {
-position: relative;
-padding: 0;
-margin: 0;
-width: 100%;
-overflow: auto;
-overflow-x: hidden;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	overflow: auto;
+	overflow-x: hidden;
 }
 
 .testmvc {
@@ -27,11 +27,10 @@ overflow-x: hidden;
 } 
 
 @media screen and (max-width: 701px) {  
-
-.testmvc {
-  width: 100%;
-  font-size: 1em;
-}
+	.testmvc {
+	  width: 100%;
+	  font-size: 1em;
+	}
 }
 
 .testmvc * {
@@ -58,6 +57,7 @@ overflow-x: hidden;
 
 /* header */
 .testmvc #header {
+  position: fixed;
   padding: 1em 0;
   padding-bottom: 0;
 }
@@ -82,6 +82,7 @@ overflow-x: hidden;
 
 /* menu */
 .testmvc #menu {
+  position: fixed;
   padding: .7em 0;
 }
 
@@ -99,7 +100,7 @@ overflow-x: hidden;
   -webkit-transition: all .5s;
 }
 
-.testmvc #menu  a:hover {  
+.testmvc #menu a:hover {  
   background-image: -webkit-linear-gradient(top, #fefefe, #f0f0f0);
   box-shadow: 0 1px 3px #777;
   border: 1px solid #999;
