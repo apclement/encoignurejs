@@ -38,7 +38,7 @@ $(document).ready(function(){
 	$("body").on({      
 	  ajaxStart: function(e) { 
 		var $view = $('.view.in')
-		if (!$view.find('.loading-overlay').length)){
+		if (!$view.find('.loading-overlay').length){
 			$view.prepend($('<div>').addClass('loading-overlay'))
 		}
 		$view.find('.loading-overlay').fadeIn(300)
