@@ -89,7 +89,7 @@ html {
   padding: .7em 0;
 }
 
-.testmvc #menu  li {
+.testmvc #menu li {
   display: inline-block;
 }
 
@@ -244,7 +244,7 @@ html {
   }
   
   .testmvc #menu {
-    position: static !important;
+    position: fixed !important;
     height: auto !important;
     display: block !important;
     -webkit-animation-name: none !important;
