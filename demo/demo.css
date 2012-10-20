@@ -19,6 +19,7 @@ overflow-x: hidden;
   font-size: .8em;
   width: 70%;
   margin: 0 auto;
+  margin-top: 4em;
   font-family: arial;
   color: #666;
   background-color: #fafafa;
@@ -58,6 +59,7 @@ overflow-x: hidden;
 
 /* header */
 .testmvc #header {
+  position: fixed;
   padding: 1em 0;
   padding-bottom: 0;
 }
