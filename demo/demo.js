@@ -35,7 +35,7 @@ $.routes.add('\!/menu', function(){
 $(document).ready(function(){
 	 // loading overlay
 	//$('body').prepend($('<div>').addClass('loading-overlay'))
-	$("body").on({      
+	$("_body").on({      
 	  ajaxStart: function(e) { 
 		var $view = $('.view.in')
 		if (!$view.find('.loading-overlay').length){
