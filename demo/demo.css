@@ -58,6 +58,7 @@ html {
 /* header */
 .testmvc #header {
   position: fixed;
+  width: 70%;
   padding: 1em 0;
   padding-bottom: 0;
 }
