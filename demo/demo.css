@@ -189,7 +189,7 @@ html {
 
 
 
-/* layout */
+/* containers */
 .testmvc .view.a .band {
   padding-top: 15px;
 }
@@ -241,7 +241,7 @@ html {
   }
   
   .testmvc #people , .testmvc #task{
-    height: 80% !important;
+    height: 90% !important;
   }
   
   .testmvc #menu {
