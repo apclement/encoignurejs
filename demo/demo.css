@@ -232,7 +232,7 @@ html {
   overflow: visible;
 }
 
-.testmvc .section {
+.testmvc .view {
   position: static;
   height: auto;
   overflow: visible;
