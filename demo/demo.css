@@ -235,7 +235,7 @@ html {
 }
 
 .testmvc .view {
-  padding-top: 2em;
+ top: 0;
   height: 100%;
   overflow: hidden;
   overflow-x: hidden
@@ -247,8 +247,8 @@ html {
 }
 
 .testmvc #peoplelistview{
-overflow: auto;	
-	
+	overflow: auto;	
+	top: 2em;
 }
 
 }
