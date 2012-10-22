@@ -240,6 +240,10 @@ html {
   overflow-x: hidden
 }
 
+.testmvc .stretchable {
+  height: auto !important;
+}
+
 }
 
 .testmvc section.a h1 {
