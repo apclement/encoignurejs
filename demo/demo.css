@@ -225,6 +225,10 @@ html {
   background-color: #fafafa;
 }
 
+.testmvc .view.a .band:before {
+padding-top: 2em;	
+}
+
 .testmvc section.a, .testmvc article.a  { 
   padding: 0 .3em;
 }
@@ -248,7 +252,7 @@ html {
 
 .testmvc #peoplelistview{
 	overflow: auto;	
-	top: 2em;
+	top: 0;
 }
 
 }
