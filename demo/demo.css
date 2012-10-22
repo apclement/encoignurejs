@@ -146,44 +146,6 @@ html {
   background-color: #eee;
 }
 
-.testmvc .view.a .band {
-  padding-top: 15px;
-}
-
-.testmvc .view.a .band:before {
-  content: '';
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 15px;
-  background-color: #8D7D77;
-  border-radius: 5px 5px 0 0;
-}
-
-/* section */
-.testmvc section.a, .testmvc article.a {
-  background-color: #fafafa; 
-  border: 1px solid #eee;
-  border-top-width: 0;
-  border-bottom-width: 0;
-  padding: 0 1.5em; 
-}
-
-@media screen and (max-width: 700px) {  
-.testmvc section.a, .testmvc article.a  { 
-  padding: 0 .3em;
-}
-}
-
-.testmvc section.a h1 {
-  margin: 0;
-  padding: .5em 0;
-  color: #B83F45;
-}
-
-
 /* forms */
 .testmvc  form.a {
   padding: 2em .5em;
@@ -226,6 +188,54 @@ html {
   background-image: -webkit-linear-gradient(top, #fff, #B83F45 4%, #3e1517);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FF0000', EndColorStr='#990808')";
 }
+
+
+
+/* layout */
+.testmvc .view.a .band {
+  padding-top: 15px;
+}
+
+.testmvc .view.a .band:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background-color: #8D7D77;
+  border-radius: 5px 5px 0 0;
+}
+
+/* section */
+.testmvc section.a, .testmvc article.a {
+  background-color: #fafafa; 
+  border: 1px solid #eee;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  padding: 0 1.5em; 
+}
+
+@media screen and (max-width: 700px) {  
+
+.testmvc #header {
+  position: fixed;
+  top: 0;
+}
+
+.testmvc section.a, .testmvc article.a  { 
+  padding: 0 .3em;
+}
+}
+
+.testmvc section.a h1 {
+  margin: 0;
+  padding: .5em 0;
+  color: #B83F45;
+}
+
+
 
 
 
