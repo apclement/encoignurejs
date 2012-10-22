@@ -57,7 +57,7 @@ html {
 
 /* header */
 .testmvc #header {
-  padding: 1em 0;
+  padding: .5em 0;
 }
 
 .testmvc #header h1 {
@@ -237,6 +237,7 @@ html {
 .testmvc .view {
   height: auto;
   overflow: visible;
+  overflow-x: hidden
 }
 
 }
