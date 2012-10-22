@@ -227,6 +227,18 @@ html {
 .testmvc section.a, .testmvc article.a  { 
   padding: 0 .3em;
 }
+
+.testmvc #viewholder {
+  overflow: visible;
+}
+
+.testmvc .section {
+  position: static;
+  height: auto;
+  overflow: visible;
+}
+
+
 }
 
 .testmvc section.a h1 {
@@ -234,6 +246,7 @@ html {
   padding: .5em 0;
   color: #B83F45;
 }
+
 
 
 
