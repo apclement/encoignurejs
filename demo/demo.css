@@ -235,7 +235,6 @@ html {
 }
 
 .testmvc .view {
-  position: static;
   height: auto;
   overflow: visible;
 }
