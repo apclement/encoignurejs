@@ -226,7 +226,7 @@ html {
 }
 
 .testmvc .view.a .band:before {
-padding-top: 2em;	
+margin-top: 2em;	
 }
 
 .testmvc section.a, .testmvc article.a  { 
