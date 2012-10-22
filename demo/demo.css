@@ -230,12 +230,12 @@ html {
 }
 
 .testmvc #viewholder {
-  overflow: visible;
-  margin-top: 2em;
+  overflow: visible; 
 }
 
 .testmvc .view {
-  height: auto;
+  margin-top: 2em;
+  height: 100%;
   overflow: visible;
   overflow-x: hidden
 }
