@@ -114,12 +114,13 @@ html {
   display: block;
 }
 
-.testmvc #menu  {
- 
+.testmvc #menu a {
+  border-width: 0;
+  border-bottom: 1px solid #bbb;  
 }
 
-.testmvc #menu  a {
-
+.testmvc #menu li:first-child a {
+ border-top: 1px solid #bbb;
 }
 }
 
