@@ -96,7 +96,7 @@ html {
   -webkit-transition: all .5s;
 }
 
-.testmvc #menu a:first-child {
+.testmvc #menu li:first-child a {
  border-top: 1px solid #bbb;
 }
 
