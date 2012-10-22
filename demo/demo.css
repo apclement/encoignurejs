@@ -230,19 +230,19 @@ html {
 }
 
 .testmvc #viewholder {
-  overflow: visible; 
+  overflow: hidden; 
   height: 100% !important;
 }
 
 .testmvc .view {
   padding-top: 2em;
   height: 100%;
-  overflow: visible;
+  overflow: auto;
   overflow-x: hidden
 }
 
 .testmvc .stretchable {
-   height: auto !important;
+   height: hidden !important;
 }
 
 }
