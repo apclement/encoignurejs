@@ -91,9 +91,13 @@ html {
   text-decoration: none;
   font-weight: bold;
   padding: 1em .8em;
-  border: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
   background-image: -webkit-linear-gradient(top, #fafafa, #eee);
   -webkit-transition: all .5s;
+}
+
+.testmvc #menu a:first-child {
+ border-top: 1px solid #bbb;
 }
 
 .testmvc #menu a:hover {  
@@ -116,7 +120,7 @@ html {
 }
 
 .testmvc #menu  a {
-  margin-bottom: 1px;
+
 }
 }
 
