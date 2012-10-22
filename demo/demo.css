@@ -91,14 +91,11 @@ html {
   text-decoration: none;
   font-weight: bold;
   padding: 1em .8em;
-  border-bottom: 1px solid #bbb;
+  border: 1px solid #bbb;
   background-image: -webkit-linear-gradient(top, #fafafa, #eee);
   -webkit-transition: all .5s;
 }
 
-.testmvc #menu li:first-child a {
- border-top: 1px solid #bbb;
-}
 
 .testmvc #menu a:hover {  
   background-image: -webkit-linear-gradient(top, #fefefe, #f0f0f0);
