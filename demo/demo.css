@@ -242,7 +242,7 @@ html {
 }
 
 .testmvc .stretchable {
-   height: hidden !important;
+   height: auto !important;
 }
 
 }
