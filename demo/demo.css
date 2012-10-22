@@ -234,7 +234,7 @@ html {
 }
 
 .testmvc .view {
-  margin-top: 2em;
+  padding-top: 2em;
   height: 100%;
   overflow: visible;
   overflow-x: hidden
