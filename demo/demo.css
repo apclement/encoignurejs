@@ -231,6 +231,7 @@ html {
 
 .testmvc #viewholder {
   overflow: visible; 
+  height: 100% !important;
 }
 
 .testmvc .view {
@@ -241,7 +242,7 @@ html {
 }
 
 .testmvc .stretchable {
-  height: auto !important;
+  
 }
 
 }
