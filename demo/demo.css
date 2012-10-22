@@ -237,12 +237,18 @@ html {
 .testmvc .view {
   padding-top: 2em;
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
   overflow-x: hidden
 }
 
 .testmvc .stretchable {
    height: auto !important;
+    overflow: hidden;
+}
+
+.testmvc #peoplelistview{
+overflow: auto;	
+	
 }
 
 }
