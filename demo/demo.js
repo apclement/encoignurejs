@@ -48,6 +48,8 @@ $(document).ready(function(){
 		$view.find('.loading-overlay').fadeOut(300) 
 	  }    
 	});
+	
+	MBP.hideUrlBarOnLoad()
 })
 
 // default use case
