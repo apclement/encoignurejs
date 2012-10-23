@@ -214,8 +214,8 @@ html {
 
 /* section */
 .testmvc section.a, .testmvc article.a {
-  background-color: #fafafa; 
-  border: 1px solid #eee;
+  background-color: #eee; 
+  border: 1px solid #ccc;
   border-top-width: 0;
   border-bottom-width: 0;
   padding: 0 1.5em; 
