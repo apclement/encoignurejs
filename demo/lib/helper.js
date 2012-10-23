@@ -52,7 +52,7 @@
         var win = window;
 
         // if there is a hash, or MBP.BODY_SCROLL_TOP hasn't been set yet, wait till that happens
-        if (!location.hash && MBP.BODY_SCROLL_TOP !== false) {
+        if (MBP.BODY_SCROLL_TOP !== false) {
             win.scrollTo( 0, MBP.BODY_SCROLL_TOP === 1 ? 0 : 1 );
         }
     };
@@ -63,7 +63,7 @@
         var bodycheck;
 
         // If there's a hash, or addEventListener is undefined, stop here
-        if ( !location.hash && win.addEventListener ) {
+        if (win.addEventListener ) {
 
             // scroll to 1
             window.scrollTo( 0, 1 );

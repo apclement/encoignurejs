@@ -75,11 +75,10 @@ $(window).resize(function(){
 
 $(document).load(function(){     
   
-	$(window).resize()   
-	MBP.hideUrlBar()
+	$(window).resize()   	
   
 });	
 
-
+MBP.hideUrlBarOnLoad()
 
 })(jQuery);
