@@ -78,8 +78,10 @@ $(document).on('init', '#peopledetails', function(){
 
 $(document).on('init', '#peoplelistview', function(){
 	var $view = $(this)
-	$view.on('click', 'a', function(){
-		//$view.find('a').data('href', function(){ return $(this).attr('href') }).removeAttr('href')
+	$view.on('click', 'a', function(e){
+		e.preventDefault()
+		window.location.hash = $(this).attr('href')
+		
 	})
 })
 
