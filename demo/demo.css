@@ -21,7 +21,7 @@ html {
   margin: 0 auto;
   font-family: arial;
   color: #666;
-  background-color: #fafafa;
+  background-color: #fff;
   padding: 0;
   height: 100%;
 } 
@@ -192,6 +192,10 @@ html {
 
 
 /* containers */
+.testmvc .view {
+	background-color: #fafafa;	
+}
+
 .testmvc .view.a .band {
   padding-top: 15px;
 }
@@ -234,10 +238,6 @@ html {
   padding: .5em 0;
   color: #B83F45;
 }
-
-
-
-
 
 
 /* people */
