@@ -194,6 +194,7 @@ html {
 /* containers */
 .testmvc .view {
 	background-color: #eee;	
+	z-index: 100;
 }
 
 .testmvc .view.a .band {
