@@ -75,9 +75,9 @@ $(window).resize(function(){
 
 $(document).load(function(){     
 	
+ window.scrollTo( 0, 1 );
+$(window).resize()   	
 
-	$(window).resize()   	
-	MBP.hideUrlBar()
   
 });	
 
