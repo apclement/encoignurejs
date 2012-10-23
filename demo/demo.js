@@ -74,11 +74,12 @@ $(window).resize(function(){
 })   
 
 $(document).load(function(){     
-  
+	
+
 	$(window).resize()   	
+	MBP.hideUrlBar()
   
 });	
 
-MBP.hideUrlBarOnLoad()
 
 })(jQuery);
