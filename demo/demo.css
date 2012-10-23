@@ -91,7 +91,7 @@ html {
   text-decoration: none;
   font-weight: bold;
   padding: 1em .8em;
-  border: 1px solid #777;
+  border: 1px solid #333;
   border-top: 1px solid #fff;
   background-image: -webkit-linear-gradient(top, #eee, #ccc);
   -webkit-transition: all .5s;
