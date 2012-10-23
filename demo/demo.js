@@ -49,7 +49,6 @@ $(document).ready(function(){
 	  }    
 	});
 	
-	MBP.hideUrlBarOnLoad()
 })
 
 // default use case
@@ -75,7 +74,10 @@ $(window).resize(function(){
 })   
 
 $(document).load(function(){     
-  $(window).resize()   
+  
+	$(window).resize()   
+	MBP.hideUrlBar()
+  
 });	
 
 
