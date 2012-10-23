@@ -8,32 +8,32 @@
 
 .translate-l.in {
   -webkit-animation-name: translate-left-in;
-	-webkit-animation-duration: .3s;	
+	-webkit-animation-duration: .6s;	
   
   -moz-animation-name: translate-left-in;
-	-moz-animation-duration: .3s;	
+	-moz-animation-duration: .6s;	
 }
 
 .translate-l.out {
   -webkit-animation-name: translate-left-out;
-	-webkit-animation-duration: .3s;	
+	-webkit-animation-duration: .6s;	
   
   -moz-animation-name: translate-left-out;
-	-moz-animation-duration: .3s;
+	-moz-animation-duration: .6s;
 }
 
 .translate-r.in { 
   -webkit-animation-name: translate-right-in;
-	-webkit-animation-duration: .3s;	
+	-webkit-animation-duration: .6s;	
   -moz-animation-name: translate-right-in;
-	-moz-animation-duration: .3s;	
+	-moz-animation-duration: .6s;	
 }
 
 .translate-r.out { 
   -webkit-animation-name: translate-right-out;
-	-webkit-animation-duration: .3s;	
+	-webkit-animation-duration: .6s;	
   -moz-animation-name: translate-right-out;
-	-moz-animation-duration: .3s;	
+	-moz-animation-duration: .6s;	
 }
 
 .flip, .flip-r {
@@ -42,41 +42,41 @@
 
 .flip.in {
 	-webkit-animation-name: flipin;
-	-webkit-animation-duration: .3s;
+	-webkit-animation-duration: .6s;
 	-webkit-backface-visibility: hidden;
 	  
   -moz-animation-name: flipin;
-	-moz-animation-duration: .3s;
+	-moz-animation-duration: .6s;
 	-moz-backface-visibility: hidden;
 }
 
 .flip.out {
 	-webkit-animation-name: flipout;
-	-webkit-animation-duration: .3s;
+	-webkit-animation-duration: .6s;
 	-webkit-backface-visibility: hidden;	  
   
   -moz-animation-name: flipout;
-	-moz-animation-duration: .3s;
+	-moz-animation-duration: .6s;
 	-moz-backface-visibility: hidden;
 }
 
 .flip-r.in {
 	-webkit-animation-name: flip-right-in;
-	-webkit-animation-duration: .3s;
+	-webkit-animation-duration: .6s;
 	-webkit-backface-visibility: hidden;
   
   -moz-animation-name: flip-right-in;
-	-moz-animation-duration: .3s;
+	-moz-animation-duration: .6s;
 	-moz-backface-visibility: hidden;
 }
 
 .flip-r.out {
 	-webkit-animation-name: flip-right-out;
-	-webkit-animation-duration: .3s;
+	-webkit-animation-duration: .6s;
 	-webkit-backface-visibility: hidden;	 
   
   -moz-animation-name: flip-right-out;
-	-moz-animation-duration: .3s;
+	-moz-animation-duration: .6s;
 	-moz-backface-visibility: hidden;
 }
 
