@@ -40,10 +40,10 @@ App.controllers.people = {
 			//$('#peopledetails').find('input').attr('disabled', true)
 			
 			that.buildList()				
-			$('#peoplelistview').find('a').each(function(){
-				$(this).data('href', $(this).attr('href'))
-				$(this).removeAttr('href')
-			})
+			// $('#peoplelistview').find('a').each(function(){
+				// $(this).data('href', $(this).attr('href'))
+				// $(this).removeAttr('href')
+			// })
 			
 			$('#peoplelistview').view()
 			
@@ -75,18 +75,18 @@ $(document).on('init', '#peopledetails', function(){
 	})
 	
 	$view.find('a').click(function(){
-		$view.find('input').attr('disabled', true)
+		//$view.find('input').attr('disabled', true)
 	})
 })
 
 $(document).on('init', '#peoplelistview', function(){
 	var $view = $(this)	
 	
-	$view.on('click', 'a', function(e){
-		e.preventDefault()
-		window.location.hash = $(this).data('href')
+	// $view.on('click', 'a', function(e){
+		// e.preventDefault()
+		// window.location.hash = $(this).data('href')
 		
-	})
+	// })
 })
 
 })(jQuery);  
