@@ -114,7 +114,9 @@ $.fn.loadOnce = function(url, cb){
 			views.trigger('init')			
 			cb()
 			 window.scrollTo( 0, 1 );
-			$(window).resize() 
+			setTimeout(function(){ 
+				$(window).resize() 
+			}, 500);
 		});	
 	} else {			
 		cb()
