@@ -41,7 +41,8 @@ App.controllers.people = {
 			
 			that.buildList()				
 			$('#peoplelistview').find('a').each(function(){
-				$(this).data('href', $(this).attr('href')).removeAttr('href')		
+				$(this).data('href', $(this).attr('href'))
+				$(this).removeAttr('href')
 			})
 			
 			$('#peoplelistview').view()
