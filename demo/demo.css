@@ -10,7 +10,7 @@ html {
 	padding: 0;
 	margin: 0;
 	width: 100%;
-	overflow: auto;
+	overflow: hidden;
 	overflow-x: hidden;
 }
 
@@ -186,6 +186,7 @@ html {
 }
 
 .testmvc .btn, .testmvc .btn:visited {
+  cursor: pointer;
   color: #fff;
   text-decoration: none;
   padding: .5em 1em;
