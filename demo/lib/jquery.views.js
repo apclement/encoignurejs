@@ -113,10 +113,8 @@ $.fn.loadOnce = function(url, cb){
 			$content.children().appendTo($holder)
 			views.trigger('init')			
 			cb()
-			 window.scrollTo( 0, 1 );
-			setTimeout(function(){ 
-				$(window).resize() 
-			}, 500);
+			MBP.hideUrlBar()
+			
 		});	
 	} else {			
 		cb()
