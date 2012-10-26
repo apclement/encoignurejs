@@ -80,7 +80,7 @@ html {
 /* menu */
 .testmvc #menu {
   padding: .7em 0;
-  background-color: #fff;
+
 }
 
 .testmvc #menu li {
@@ -106,7 +106,7 @@ html {
 	
 }
 
-@media screen and (max-width: 701px) {  
+@media screen and (max-width: 700px) {  
 .testmvc #menu  li {
   display: block;
 }
@@ -121,6 +121,11 @@ html {
  border-top: 1px solid #bbb;
 }
 }
+
+@media screen and (min-width: 701px) {  
+  background-color: #fff;
+}
+
 
 .testmvc .itemlist {  
   margin: 0;
