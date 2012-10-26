@@ -140,6 +140,7 @@ html {
   padding: .8em;
   background-color: #fdfdfd;  
   border-bottom: 1px dotted #ccc; 
+  cursor: pointer;
 }
 
 .testmvc .itemlist li:first-child a {   
