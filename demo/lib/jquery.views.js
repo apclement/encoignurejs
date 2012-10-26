@@ -113,7 +113,8 @@ $.fn.loadOnce = function(url, cb){
 			$content.children().appendTo($holder)
 			views.trigger('init')			
 			cb()
-			MBP.hideUrlBar()
+			//MBP.hideUrlBar()
+			$(window).resize()
 			
 		});	
 	} else {			

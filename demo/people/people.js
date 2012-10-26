@@ -78,9 +78,9 @@ $(document).on('init', '#peopledetails', function(){
 
 $(document).on('init', '#peoplelistview', function(){
 	var $view = $(this)
-	$view.find('a').data('href', function(){
-		return $(this).attr('href')
-	}).removeAttr('href')
+	$view.find('a').each(function(){
+		$(this).data('href', $(this).attr('href')).removeAttr('href')		
+	})
 	
 	$view.on('click', 'a', function(e){
 		e.preventDefault()
