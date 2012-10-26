@@ -80,6 +80,7 @@ html {
 /* menu */
 .testmvc #menu {
   padding: .7em 0;
+  background-color: #fff;
 }
 
 .testmvc #menu li {
@@ -91,11 +92,9 @@ html {
   text-decoration: none;
   font-weight: bold;
   padding: 1em .8em;
-  border: 1px solid #333;
-  border-top: 1px solid #fff;
+  border: 1px solid #333; 
   background-image: -webkit-linear-gradient(top, #eee, #ccc);
-  -webkit-transition: all .5s;
-  box-shadow: 0 0 1px #000;
+  -webkit-transition: all .5s;  
 }
 
 
