@@ -183,6 +183,7 @@ html {
   width: 15em;
   border: 1px solid #ccc;
   font-size: 1em;
+  vertical-align: middle;
 }
 
 /* btns */
