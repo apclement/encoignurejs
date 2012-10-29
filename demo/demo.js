@@ -10,11 +10,19 @@ $.routes.add('\!/people/{id:int}', function(args){
 	})
 });
 
+$.routes.add('\!/people-more/{id:int}', function(args){ 
+	require(['people/people'], function(){
+		$('#peopledetailsmore').view()		
+	})
+});
+
 $.routes.add('\!/people', function(args){ 
 	require(['people/people'], function(){
 		App.controllers.people.list()
 	})
 }); 
+
+
 
 $.routes.add('\!/task/{id:int}', function(args){ 
 	require(['task/task'], function(){
