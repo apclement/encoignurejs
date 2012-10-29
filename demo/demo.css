@@ -165,7 +165,7 @@ html {
 
 /* forms */
 .testmvc  form.a {
-  padding: 2em .5em;
+  padding: 0 .5em;
 }
 
 .testmvc  form.a .controlHolder {
