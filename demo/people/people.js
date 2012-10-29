@@ -68,10 +68,8 @@ App.controllers.people = {
 	edit2: function(args){		
 		var that = this
 		$('#viewholder').loadOnce('people/people.html', function(){		
-			that.buildList()				
-			
-			$('#peopledetailsmore').view()				
-			
+			that.buildList()			
+			$('#peopledetailsmore').view()			
 		});		
 	}
 };

@@ -264,9 +264,9 @@ html {
 
 /* people */
 @media screen and (min-width: 701px) {  
-  .testmvc #peoplelistview, .testmvc #peopledetails {
+  .testmvc #peoplelistview, .testmvc #peopledetails, .testmvc #peopledetailsmore {
     position: static !important;
-    height: 50% !important;
+    height: 33.33% !important;
     display: block !important;
     -webkit-animation-name: none !important;
   }
