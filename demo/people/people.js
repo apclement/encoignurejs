@@ -65,7 +65,7 @@ App.controllers.people = {
 		});		
 	}
 	
-	view: function(args){		
+	edit2: function(args){		
 		var that = this
 		$('#viewholder').loadOnce('people/people.html', function(){		
 			that.buildList()				
