@@ -272,7 +272,7 @@ html {
   }
   
   .testmvc #peopledetails, .testmvc #peopledetailsmore {
-     height: 25% !important;
+     height: auto !important;
   }
   
   .testmvc #people , .testmvc #task{
