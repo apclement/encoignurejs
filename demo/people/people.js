@@ -63,7 +63,7 @@ App.controllers.people = {
 			
 			
 		});		
-	}
+	},
 	
 	edit2: function(args){		
 		var that = this
