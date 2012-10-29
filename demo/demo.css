@@ -177,7 +177,8 @@ html {
   width: 8em;
 }
 
-.testmvc  form.a .controlHolder input {
+.testmvc  form.a .controlHolder input,
+.testmvc  form.a .controlHolder textarea {
   padding: .2em .3em;
   width: 15em;
   border: 1px solid #ccc;
