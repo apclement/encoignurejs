@@ -12,7 +12,7 @@ $.routes.add('\!/people/{id:int}', function(args){
 
 $.routes.add('\!/people-more/{id:int}', function(args){ 
 	require(['people/people'], function(){
-		$('#peopledetailsmore').view()		
+		App.controllers.people.edit2(args)
 	})
 });
 

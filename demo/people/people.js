@@ -64,6 +64,16 @@ App.controllers.people = {
 			
 		});		
 	}
+	
+	view: function(args){		
+		var that = this
+		$('#viewholder').loadOnce('people/people.html', function(){		
+			that.buildList()				
+			
+			$('#peopledetailsmore').view()				
+			
+		});		
+	}
 };
 	
 $(document).on('init', '#peopledetails', function(){
