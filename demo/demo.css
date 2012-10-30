@@ -271,6 +271,10 @@ html {
     -webkit-animation-name: none !important;
   }
   
+  .testmvc #peoplelistview {
+    max-height: 30em;
+  }  
+  
   .testmvc #people , .testmvc #task{
     height: 90% !important;
   }
