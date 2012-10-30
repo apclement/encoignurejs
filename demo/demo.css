@@ -275,6 +275,10 @@ html {
     max-height: 30em;
   }  
   
+  .testmvc #peopledetails header, .testmvc #peoplemore header {
+    display: none;
+  }
+  
   .testmvc #people , .testmvc #task{
     height: 90% !important;
   }
