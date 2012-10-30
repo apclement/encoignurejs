@@ -22,7 +22,8 @@ html {
 .testmvc {
   font-family: arial;
   font-size: .8em;
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
   font-family: arial;
   color: #666;
