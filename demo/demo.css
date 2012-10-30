@@ -273,7 +273,7 @@ html {
   
   .testmvc #peoplelistview {
     max-height: 30em;
-    margin-bottom: 2em;
+    padding-bottom: 2em;
   }  
   
   .testmvc #peopledetails header, .testmvc #peoplemore header {
