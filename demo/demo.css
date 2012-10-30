@@ -210,6 +210,10 @@ html {
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FF0000', EndColorStr='#990808')";
 }
 
+.testmvc .menubtn {
+  display: block;
+  float: right;
+}
 
 
 /* containers */
