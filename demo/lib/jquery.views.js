@@ -113,10 +113,7 @@ $.fn.loadOnce = function(url, cb){
 			var views = $(this).initViews().find('.view')
 			$content.children().appendTo($holder)
 			views.trigger('init')			
-			cb()
-			//MBP.hideUrlBar()
-			$(window).resize()
-			
+			cb()			
 		});	
 	} else {			
 		cb()
