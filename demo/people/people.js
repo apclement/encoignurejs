@@ -37,13 +37,8 @@ App.controllers.people = {
 	list: function(){
 		var that = this
 		$('#viewholder').loadOnce('people/people.html', function(){		
-			//$('#peopledetails').find('input').attr('disabled', true)
-			
-			that.buildList()				
-			// $('#peoplelistview').find('a').each(function(){
-				// $(this).data('href', $(this).attr('href'))
-				// $(this).removeAttr('href')
-			// })
+						
+			that.buildList()		
 			
 			$('#peoplelistview').view()
 			
@@ -54,10 +49,10 @@ App.controllers.people = {
 		var that = this
 		$('#viewholder').loadOnce('people/people.html', function(){		
 			that.buildList()
-			console.debug('view is called on people')				
+						
 			var person = $.grep(that.items, function(it){return it.id == args.id})[0];
 			
-			$('#peopledetails').find('#peopleform').populate(person).data('item', person).find('input#firstname').hide().show()			
+			$('#peopledetails').find('form').populate(person).data('item', person).find('input#firstname').hide().show()			
 			
 			$('#peopledetails').view()			
 			
@@ -69,7 +64,7 @@ App.controllers.people = {
 		var that = this
 		$('#viewholder').loadOnce('people/people.html', function(){		
 			that.buildList()			
-			$('#peopledetailsmore').view()			
+			$('#peoplemore').view()			
 		});		
 	}
 };
@@ -82,18 +77,14 @@ $(document).on('init', '#peopledetails', function(){
 	})
 	
 	$view.find('a').click(function(){
-		//$view.find('input').attr('disabled', true)
+		
 	})
 })
 
 $(document).on('init', '#peoplelistview', function(){
 	var $view = $(this)	
 	
-	// $view.on('click', 'a', function(e){
-		// e.preventDefault()
-		// window.location.hash = $(this).data('href')
-		
-	// })
+	
 })
 
 })(jQuery);  
