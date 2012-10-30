@@ -266,13 +266,9 @@ html {
 @media screen and (min-width: 701px) {  
   .testmvc #peoplelistview, .testmvc #peopledetails, .testmvc #peopledetailsmore {
     position: static !important;
-    height: 50% !important;
+    height: auto !important;
     display: block !important;
     -webkit-animation-name: none !important;
-  }
-  
-  .testmvc #peopledetails, .testmvc #peopledetailsmore {
-     height: auto !important;
   }
   
   .testmvc #people , .testmvc #task{
