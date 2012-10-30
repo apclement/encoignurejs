@@ -60,7 +60,7 @@ App.controllers.people = {
 		});		
 	},
 	
-	edit2: function(args){		
+	editmore: function(args){		
 		var that = this
 		$('#viewholder').loadOnce('people/people.html', function(){		
 			that.buildList()			

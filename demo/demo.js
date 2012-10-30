@@ -10,9 +10,9 @@ $.routes.add('\!/people/{id:int}', function(args){
 	})
 });
 
-$.routes.add('\!/people-more/{id:int}', function(args){ 
+$.routes.add('\!/peoplemore/{id:int}', function(args){ 
 	require(['people/people'], function(){
-		App.controllers.people.edit2(args)
+		App.controllers.people.editmore(args)
 	})
 });
 
