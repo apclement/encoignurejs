@@ -264,7 +264,7 @@ html {
 
 /* people */
 @media screen and (min-width: 701px) {  
-  .testmvc #peoplelistview, .testmvc #peopledetails, .testmvc #peopledetailsmore {
+  .testmvc #peoplelistview, .testmvc #peopledetails, .testmvc #peoplemore {
     position: static !important;
     height: auto !important;
     display: block !important;
