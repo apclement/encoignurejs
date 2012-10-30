@@ -212,7 +212,9 @@ html {
 
 .testmvc .menubtn {
   display: block;
-  float: right;
+  position: absolute;
+  top: 0;
+ 
 }
 
 
