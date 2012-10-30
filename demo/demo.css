@@ -214,9 +214,10 @@ html {
   display: block;
   position: absolute;
   top: 0;
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
   background-image: url('images/menu-icon.png');
+  background-size: 32px;
 }
 
 
