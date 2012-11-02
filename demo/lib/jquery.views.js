@@ -114,8 +114,8 @@ $.fn.loadOnce = function(url, cb){
 			$content.children().appendTo($holder)
 			views.trigger('viewinit')			
 			cb()		
-			window.scrollTo(0, 1); 
-			setTimeout(function(){ $(window).resize() }, 200) 
+			hideAddressBar()
+			setTimeout(function(){ $(window).resize() }, 500) 
 		});	
 	} else {			
 		cb()
