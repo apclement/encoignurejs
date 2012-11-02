@@ -112,13 +112,24 @@ $.fn.loadOnce = function(url, cb){
 			loadedFragments[url] = true;
 			var views = $(this).initViews().find('.view')
 			$content.children().appendTo($holder)
-			views.trigger('init')			
+			views.trigger('viewinit')			
 			cb()	
 			$(window).resize()
+			hideAddressBar()
 		});	
 	} else {			
 		cb()
 	}
+}
+
+function hideAddressBar(){
+    if(document.height < window.outerHeight)
+    {
+        document.body.style.height = (window.outerHeight + 50) + 'px';
+    }
+
+    setTimeout( function(){ window.scrollTo(0, 1); }, 50 );
+
 }
 
 $(document).ready(function(){

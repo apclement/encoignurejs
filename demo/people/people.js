@@ -69,7 +69,7 @@ App.controllers.people = {
 	}
 };
 	
-$(document).on('init', '#peopledetails', function(){
+$(document).on('viewinit', '#peopledetails', function(){
 	var $view = $(this)
 	$view.find('input').change(function(){
 		$(this.form).data('item')[$(this).attr('name')] = $(this).val()
