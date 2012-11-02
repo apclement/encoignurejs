@@ -92,9 +92,8 @@ function hideAddressBar(){
 }
 
 $(document).load(function(){     
-	if(!window.pageYOffset){ 
-		hideAddressBar(); 
-	} 
+	//hideAddressBar(); 
+	 
 	$(window).resize()   	
 
   
