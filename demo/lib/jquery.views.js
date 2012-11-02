@@ -115,7 +115,7 @@ $.fn.loadOnce = function(url, cb){
 			views.trigger('viewinit')			
 			cb()	
 			$(window).resize()
-			hideAddressBar()
+			setTimeout( function(){ window.scrollTo(0, 1); }, 50 );
 		});	
 	} else {			
 		cb()

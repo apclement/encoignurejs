@@ -81,7 +81,7 @@ $(document).on('viewinit', '#peopledetails', function(){
 	})
 })
 
-$(document).on('init', '#peoplelistview', function(){
+$(document).on('viewinit', '#peoplelistview', function(){
 	var $view = $(this)	
 	
 	
