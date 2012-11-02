@@ -113,8 +113,9 @@ $.fn.loadOnce = function(url, cb){
 			var views = $(this).initViews().find('.view')
 			$content.children().appendTo($holder)
 			views.trigger('viewinit')			
-			cb()			
-			setTimeout( function(){ window.scrollTo(0, 1); $(window).resize() }, 50 );
+			cb()		
+			window.scrollTo(0, 1); 
+			setTimeout(function(){ $(window).resize() }, 200) 
 		});	
 	} else {			
 		cb()
