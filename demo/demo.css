@@ -67,6 +67,7 @@ html {
 
 /* header */
 .testmvc #header {
+  position: relative;
   padding: 1em 0;
   background-image: -webkit-linear-gradient(top, #fefefe, #ccc);
   border-bottom: 1px solid #bbb; 
@@ -221,7 +222,8 @@ html {
 .testmvc .menubtn {
   display: block;
   position: absolute;
-  top: 0;
+  top: 50%;
+  margin-top: -16px;
   width: 32px;
   height: 32px;
   background-image: url('images/menu-icon.png');
