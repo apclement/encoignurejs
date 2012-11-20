@@ -124,8 +124,7 @@ html {
   display: block;
 }
 
-.testmvc #menu a {
-  border-width: 0;
+.testmvc #menu a { 
   border: 1px solid #bbb;
   border-top: 1px solid #fff;  
 }
@@ -141,7 +140,17 @@ html {
   }
   
   .testmvc #menu li {
-  	display: inline-block;
+  	display: block;
+  	float: left;
+  }
+  
+  .testmvc #menu a { 
+  	border: 1px solid #bbb;
+  	border-left: 1px solid #fff;  
+  }
+
+  .testmvc #menu li:first-child a {
+    border-left: 1px solid #bbb;
   }
 }
 
