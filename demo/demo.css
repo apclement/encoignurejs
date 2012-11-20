@@ -108,7 +108,7 @@ html {
 
 
 .testmvc #menu a:hover {  
-   background-image: -webkit-linear-gradient(top, #fff, #eee);
+   background: -webkit-linear-gradient(top, #f0f0f0, #ddd);
 }
 
 #viewholder {
