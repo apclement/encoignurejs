@@ -150,7 +150,7 @@ html {
   	
   }
 
-  .testmvc #menu li:first-child a {
+  .testmvc #menu li:last-child a {
     border-right-width: 1px;
   }
 }
