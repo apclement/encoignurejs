@@ -114,7 +114,7 @@ $.fn.loadOnce = function(url, cb){
 			$content.children().appendTo($holder)
 			views.trigger('viewinit')			
 			cb()		
-			hideAddressBar()
+		//	hideAddressBar()
 			setTimeout(function(){ $(window).resize() }, 50) 
 		});	
 	} else {			
