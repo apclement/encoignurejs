@@ -108,7 +108,7 @@ html {
 
 
 .testmvc #menu a:hover {  
-  box-shadow: 0 1px 3px #777;
+   background-image: -webkit-linear-gradient(top, #fff, #eee);
 }
 
 #viewholder {
@@ -146,11 +146,12 @@ html {
   
   .testmvc #menu a { 
   	border: 1px solid #bbb;
-  	border-left: 1px solid #fff;  
+  	border-left-width: 0;  
+  	margin-right: 1px;
   }
 
   .testmvc #menu li:first-child a {
-    border-left: 1px solid #bbb;
+    border-left-width: 1px;
   }
 }
 
