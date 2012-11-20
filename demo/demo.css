@@ -50,7 +50,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.testmvc  ul {
+.testmvc  ul, .testmvc  li {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -96,10 +96,6 @@ html {
 
 }
 
-.testmvc #menu li {
-  display: inline-block;
-}
-
 .testmvc #menu a {
   display: block;
   text-decoration: none;
@@ -141,7 +137,11 @@ html {
 
 @media screen and (min-width: 701px) {  
   .testmvc #menu {
-      background-color: #fff;
+    background-color: #fff;
+  }
+  
+  .testmvc #menu li {
+  	display: inline-block;
   }
 }
 
