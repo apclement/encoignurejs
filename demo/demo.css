@@ -68,6 +68,8 @@ html {
 /* header */
 .testmvc #header {
   padding: 1em 0;
+  background-color: -webkit-linear-gradient(top, #fefefe, #ccc);
+  border-bottom: 1px solid #666; 
 }
 
 .testmvc #header h1 {
