@@ -222,7 +222,7 @@ html {
   padding: .5em 1em;
   border-radius: 20px;
   border: 1px solid #3e1517;
-  box-shadow: 0 1px 3px #666;
+  box-shadow: 0 1px 3px #333;
   background-color: #c00;
   background-clip: padding-box;
   background-image: -moz-linear-gradient(top, #fff, #B83F45 4%, #3e1517);
