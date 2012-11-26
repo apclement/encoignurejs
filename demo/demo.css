@@ -15,8 +15,8 @@ html {
 }
 
 /* bug android stock browser */
-.flip .stretchable, .flip-r  .stretchable {
-  overflow: hidden;
+.flip .stretchable, .flip-r .stretchable {
+  overflow-y: hidden;
 }
 
 .testmvc {
