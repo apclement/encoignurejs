@@ -15,7 +15,7 @@ html {
 }
 
 /* bug android stock browser */
-.flip .stretchable, .flip-r .stretchable {
+.touch .flip .stretchable, .touch .flip-r .stretchable {
   overflow: hidden;
 }
 
