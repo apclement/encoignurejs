@@ -67,7 +67,7 @@ if (!window.location.hash){
 
 // vertical stretcher
 $(window).resize(function(){   
-  $('.stretchable:visible').height('auto').parent().each(function(){         	
+  $('.stretchable').height('auto').parent().each(function(){         	
 	var $this = $(this)
 	var total = $this.height()
 	var used = 0

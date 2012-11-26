@@ -77,8 +77,7 @@ function showView(_effect) {
 				
 		switching.done(function(){
 			$view.unbind(endEvents).removeClass(effectClass)		
-			otherViews.unbind(endEvents).hideView()
-			setTimeout(function(){ $(window).resize() }, 100) 
+			otherViews.unbind(endEvents).hideView()			
 		});
 		
 		if (effect == 'none'){
