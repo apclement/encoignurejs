@@ -221,8 +221,7 @@ html {
   text-decoration: none;
   padding: .5em 1em;
   border-radius: 20px;
-  border: 1px solid rgba(0,0,0,.4);
-  box-shadow: 2px 2px 10px rgba(0,0,0,.8);
+  box-shadow: inset 0 0 1px rgba(0,0,0,.7), 2px 2px 10px rgba(0,0,0,.8);
   text-shadow: 0px 0px 3px rgba(0,0,0,.8);
   background-color: #c00;
   -background-clip: padding-box;
