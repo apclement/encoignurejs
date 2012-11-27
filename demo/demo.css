@@ -227,7 +227,7 @@ text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
 background-color: #C00;
 -background-clip: padding-box;
 background-image: -moz-linear-gradient(top, #B83F45, #3E1517);
-background-image: -webkit-linear-gradient(top, #F77, #F77 50%, #300 51%, #200);
+background-image: -webkit-linear-gradient(top, #F77, #F77 50%, #300 51%, #300);
 -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FF0000', EndColorStr='#990808')";
 }
 
