@@ -226,7 +226,7 @@ html {
   background-color: #c00;
   -background-clip: padding-box;
   background-image: -moz-linear-gradient(top, #B83F45, #3e1517);
-  background-image: -webkit-linear-gradient(top, #f00, #e00 49%, #300 50%, #200);
+  background-image: -webkit-linear-gradient(top, #f77, #e77 49%, #300 50%, #200);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FF0000', EndColorStr='#990808')";
 }
 
