@@ -57,6 +57,14 @@ $(document).ready(function(){
 	  }    
 	});
 	
+	$('body').bind('swipeleft', function(){
+      window.location = $('.btn.next').attr('href') 
+    })
+    
+    $('body').bind('swiperight', function(){
+       window.location = $('.btn.back').attr('href') 
+    })
+	
 })
 
 // default use case
