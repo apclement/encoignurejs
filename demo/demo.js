@@ -58,11 +58,11 @@ $(document).ready(function(){
 	});
 	
 	$('body').bind('swipeleft', function(){
-      window.location = $('.btn.next').attr('href') 
+      $('.btn.next').click()
     })
     
     $('body').bind('swiperight', function(){
-       window.location = $('.btn.back').attr('href') 
+       $('.btn.back').click() 
     })
 	
 })
