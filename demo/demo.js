@@ -58,11 +58,15 @@ $(document).ready(function(){
 	});
 	
 	$('body').bind('swipeleft', function(){
-      window.location = $('.btn.next').click().attr('href')
+      $('.btn.next:visible').each(function(){
+		window.location = $(this).click().attr('href')
+	  })
     })
     
     $('body').bind('swiperight', function(){
-       window.location =  $('.btn.back').click().attr('href')
+       $('.btn.back:visible').each(function(){
+		window.location = $(this).click().attr('href')
+	   })
     })
 	
 })
