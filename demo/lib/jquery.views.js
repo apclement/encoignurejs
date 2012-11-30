@@ -123,10 +123,10 @@ $.fn.loadOnce = function(url, cb){
 
 function hideAddressBar(){ 
 	if(document.height <= window.innerHeight){
-	  document.body.style.height = '105%';     
+	  //document.body.style.height = '105%';     
 	}
 	setTimeout(function(){ window.scrollTo(0, 1) }, 0);
-	setTimeout(function(){ $(window).resize() }, 50) 
+	setTimeout(function(){ $(window).resize() }, 100) 
 }
 
 
