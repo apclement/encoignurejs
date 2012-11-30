@@ -114,7 +114,7 @@ $.fn.loadOnce = function(url, cb){
 			$content.children().appendTo($holder)
 			views.trigger('viewinit')			
 			cb()		
-			//hideAddressBar()
+			hideAddressBar()
 			setTimeout(function(){ $(window).resize() }, 50) 
 		});	
 	} else {			
@@ -123,8 +123,8 @@ $.fn.loadOnce = function(url, cb){
 }
 
 function hideAddressBar(){ 
-	if(document.height <= window.innerHeight){
-	  document.body.style.height = (window.innerHeight + 50) + 'px';     
+	if(document.height != window.innerHeight){
+	  document.body.style.height = (window.innerHeight + 0) + 'px';     
 	}
 	setTimeout( function(){ window.scrollTo(0, 1); }, 0 );
 }
