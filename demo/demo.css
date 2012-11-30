@@ -27,7 +27,7 @@ html {
   margin: 0 auto;
   font-family: arial;
   color: #666;
-  background-color: #fff;
+  background-color: #eee;
   padding: 0;
   height: 100%;
 } 
@@ -136,7 +136,7 @@ html {
 
 @media screen and (min-width: 701px) {  
   .testmvc #menu {
-    background-color: #fff;
+    
   }
   
   .testmvc #menu li {
