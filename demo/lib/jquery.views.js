@@ -122,11 +122,11 @@ $.fn.loadOnce = function(url, cb){
 }
 
 function hideAddressBar(){ 
-	//if(document.height != window.innerHeight){
-	  //document.body.style.height = (window.innerHeight + 0) + 'px';     
-	//}
-	setTimeout(function(){ window.scrollTo(-50, 1) }, 0);
-	setTimeout(function(){ $(window).resize() }, 3000) 
+	if(document.height <= window.innerHeight){
+	  document.body.style.height = '105%';     
+	}
+	setTimeout(function(){ window.scrollTo(0, 1) }, 0);
+	setTimeout(function(){ $(window).resize() }, 50) 
 }
 
 
