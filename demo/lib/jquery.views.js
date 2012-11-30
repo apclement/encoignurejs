@@ -125,8 +125,8 @@ function hideAddressBar(){
 	//if(document.height != window.innerHeight){
 	  //document.body.style.height = (window.innerHeight + 0) + 'px';     
 	//}
-	window.scrollTo(0, 1)
-	setTimeout(function(){ $(window).resize() }, 500) 
+	setTimeout(function(){ window.scrollTo(0, 1), 0 };
+	setTimeout(function(){ $(window).resize() }, 1000) 
 }
 
 
