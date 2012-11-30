@@ -81,14 +81,14 @@ if (!window.location.hash){
 $(window).resize(function(){   
   $('.stretchable:visible').each(function(){         	
 	var $this = $(this).height('auto')
-	var $parent = $this.parent()
-	var total = $parent.height()
+	var $container = $this.parent()
+	var total = $container.height()
 	var used = 0
-	$parent.children(':not(.stretchable):visible').each(function(){
+	$container.children(':not(.stretchable):visible').each(function(){
 	  used += $(this).outerHeight(true)      
 	})
 	
-	var $stretchable = $this.children('.stretchable')
+	var $stretchable = $container.children('.stretchable')
 	var h = (total - used) / $stretchable.length
 	$stretchable.height(h)                  
   })          
