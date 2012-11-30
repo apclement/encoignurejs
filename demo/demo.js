@@ -80,7 +80,7 @@ if (!window.location.hash){
 // vertical stretcher
 $(window).resize(function(){   
   $('.stretchable:visible').each(function(){         	
-	var $this = $(this)
+	var $this = $(this).height('auto')
 	var $parent = $this.parent()
 	var total = $parent.height()
 	var used = 0
