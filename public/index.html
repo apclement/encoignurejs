@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Page Title</title> 
+	
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> 
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link href='demo.css' rel='stylesheet' type='text/css'></link>
+
+<script src="lib/require-config.js"></script>
+<script type="text/javascript" data-main="lib/demo" src="lib/require.js"></script>
+</head> 
+
+<body class='testmvc'> 
+<header id='header'>
+	<h1>JQuery Views Demo</h1>	
+	<a href='#!/menu' data-transition='flip' class='menubtn'></a>
+</header>
+
+
+<div id='viewholder' class='stretchable views'>
+<div id='menu' class='view none out'>
+<ul>
+<li><a href='#!/people' data-transition='flip-r'>People management</a></li>
+<li><a href='#!/task' data-transition='flip-r'>Task management</a></li>
+<li><a href='#!/people' data-transition='flip-r'>People management</a></li>
+<li><a href='#!/task' data-transition='flip-r'>Task management</a></li>
+</ul>
+</div>
+
+</div>
+
+
+</body>
+</html>
