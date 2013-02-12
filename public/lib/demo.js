@@ -1,4 +1,4 @@
-require(['jquery', 'jquery.routes', 'jquery.views', 'modernizr'], function($) {
+require(['jquery', 'jquery.routes', 'jquery.views', 'modernizr', 'weld'], function($) {
 
 $.routes.add('\!/people/{id:int}', function(args){ 
 	require(['../people/people'], function(people){
@@ -89,4 +89,11 @@ $(document).ready(function(){
 		$stretchable.height(h)                  
 	  })          
 	})   
+	
+	// weld jquery plugin
+	$.fn.weld = function (data, config) {
+		//return this.each (function () {
+			weld(this[0], data, config);
+		//});
+	};
 });

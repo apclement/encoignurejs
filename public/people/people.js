@@ -1,8 +1,8 @@
 define(['jquery', 'jquery.tmpl', 'jquery.views', 'jquery.serialize', 'jquery.populate'], function($){
 
 var result = {
-	defaultItems: [{id: 1, firstname: 'Alain', lastname: 'Bernard'},
-			{id: 2, firstname: 'Bill', lastname: 'Bibaa'},
+	defaultItems: [{id: 1, firstname: 'Alain', lastname: 'Bernard', company: 'Bull', address: '170 barnaby street'},
+			{id: 2, firstname: 'Bill', lastname: 'Bibaa', company: 'Duck', address: '1 sesame street'},
 			{id: 3, firstname: 'Jean', lastname: 'Tazon'},
 			{id: 4, firstname: 'Pine', lastname: 'Dhuitre'},
 			{id: 5, firstname: 'Jean', lastname: 'Tazon'},
@@ -23,8 +23,16 @@ var result = {
 	
 	renderList: function(){		
 		var $peoplelist = $('#peoplelist')	
-		var content = $('#peopleTemplate').tmpl(this.items)		
-		$peoplelist.data('people', this.items).hide().empty().append(content).fadeIn(300);
+		//var content = $('#peopleTemplate').tmpl(this.items)			
+
+		var config = { 
+			alias: {
+				id: function(parent, element, key, value) { $(element).find('a').attr('href', '#!/people/'+ value) }
+			}
+		};
+		$('#peoplelist li').weld(this.items, config);
+		
+		//$peoplelist.data('people', this.items).hide().empty().append(content).fadeIn(300);
 	},
 	
 	buildList: function(){
@@ -49,9 +57,8 @@ var result = {
 						
 			var person = $.grep(that.items, function(it){return it.id == args.id})[0];
 			
-			$('#peopledetails').find('form').populate(person).data('item', person).find('input#firstname').hide().show()			
-			
-			$('#peopledetails').view()			
+			$('#people').find('form').populate(person).data('item', person)
+			$('#peopledetails').view()					
 		});		
 	},
 	
@@ -64,7 +71,7 @@ var result = {
 	}
 };
 
-$(document).on('viewinit', '#peopledetails', function(){
+$(document).on('viewinit', '#peopledetails,#peoplemore', function(){
 	var $view = $(this)
 	
 	$view.find('input').change(function(){
