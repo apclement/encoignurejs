@@ -84,7 +84,7 @@ $(document).ready(function(){
 		  used += $(this).outerHeight(true)      
 		})
 		
-		var $stretchable = $container.children('.stretchable')
+		var $stretchable = $container.children('.stretchable:visible')
 		var h = (total - used) / $stretchable.length
 		$stretchable.height(h)                  
 	  })          

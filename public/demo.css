@@ -6,7 +6,6 @@ html {
 
 
 .stretchable {
-	position: relative;
 	padding: 0;
 	margin: 0;
 	width: 100%;
@@ -156,9 +155,13 @@ html {
 }
 
 
-.testmvc .itemlist {  
+.testmvc .itemlist {
+ border-top: 1px solid #aaa;
+ border-left: 1px solid #ddd;
+}
+
+.testmvc .itemlist ul {  
   margin: 0;
-  border: 1px solid #ccc;
 }
 
 .testmvc .itemlist a {
@@ -294,7 +297,7 @@ background-image: -webkit-linear-gradient(top, #edabab, #edabab 50%, rgba(59,0,0
   }
   
   .testmvc #people , .testmvc #task{
-    height: 90% !important;
+    -height: auto !important;
   }
   
   .testmvc #menu {

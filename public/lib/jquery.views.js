@@ -28,7 +28,7 @@ var endEvents = $.map(['transition', 'animation'], function(n){
 
 var startEvents = endEvents.replace(/end/g, 'start').replace(/End/g, 'Start')
 	
-var current = 'fade'
+var current = 'none'
 
 $.fn.rebind = function(e, func) {
 	var $this = $(this)
@@ -67,16 +67,17 @@ function showView(_effect) {
 		}	
 		
 		if ($view.hasClass('in')){	
-			switching.resolve()
-			return
-		}				
+			switching.resolve()	
+			return;
+		}	
 		
 		var otherViews = $view.parent().children('.view.in')
+				
 		otherViews.rebind(endEvents, endHandler).removeClass(effectClass + ' in').addClass(effect+' out')
 		$view.rebind(endEvents, endHandler).show().removeClass(effectClass + ' out').addClass(effect+' in')
 				
 		switching.done(function(){
-			$view.unbind(endEvents).removeClass(effectClass)		
+			$view.unbind(endEvents).removeClass(effectClass).show()	
 			otherViews.unbind(endEvents).hideView()	
 			setTimeout(function(){ $(window).resize() }, 0) 
 		});
@@ -89,16 +90,18 @@ function showView(_effect) {
 }
 
 $.fn.view = function(_effect) {
-	var view = this
-	var $view = $(this)	
+	var view = this	
+	var result;
 	
-	var parent = $view.parent().closest('.view.out')
+	var parent = view.parent().closest('.view.out')
 	if (parent.length){
-		showView.call(view, 'none')
-		return parent.view();
+		result = showView.call(view, 'none')
+		setTimeout(function(){ parent.view() }, 0) 		
+	} else {	
+		result = showView.call(view)
 	}
 	
-	return showView.call(view)
+	return result;
 }
 
 var loadedFragments = {}
