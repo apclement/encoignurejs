@@ -28,7 +28,11 @@ var result = {
 			var person = $.grep(that.items, function(it){return it.id == args.id})[0];
 			
 			$('#people').find('form').populate(person).data('item', person)
-			$('#peopledetails').view()					
+			
+			$('#peopledetails').find("a.next").attr('href', '#!/peoplemore/'+ person.id)
+			$('#peoplemore').find("a.back").attr('href', '#!/people/'+ person.id)			
+			
+			$('#peopledetails').view()						
 		});		
 	},
 	

@@ -66,24 +66,23 @@ function showView(_effect) {
 			}			
 		}	
 		
-		if ($view.hasClass('in')){	
-			switching.resolve()	
+		if ($view.hasClass('in')){			
 			return;
 		}	
 		
-		var otherViews = $view.parent().children('.view.in')
-				
+		var otherViews = $view.parent().children('.view.in')				
 		otherViews.rebind(endEvents, endHandler).removeClass(effectClass + ' in').addClass(effect+' out')
 		$view.rebind(endEvents, endHandler).show().removeClass(effectClass + ' out').addClass(effect+' in')
 				
 		switching.done(function(){
-			$view.unbind(endEvents).removeClass(effectClass).show()	
+			$view.unbind(endEvents).removeClass(effectClass)
 			otherViews.unbind(endEvents).hideView()	
-			setTimeout(function(){ $(window).resize() }, 0) 
+			//setTimeout(function(){ $(window).resize() }, 0) 
+			$(window).resize()
 		});
 		
 		if (effect == 'none'){
-			switching.resolve()	
+			switching.resolve()				
 		}	
 		
 	});
@@ -94,7 +93,7 @@ $.fn.view = function(_effect) {
 	var result;
 	
 	var parent = view.parent().closest('.view.out')
-	if (parent.length){
+	if (parent.length){		
 		result = showView.call(view, 'none')
 		setTimeout(function(){ parent.view() }, 0) 		
 	} else {	
