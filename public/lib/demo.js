@@ -1,4 +1,4 @@
-require(['jquery', 'jquery.routes', 'jquery.views', 'modernizr', 'weld'], function($) {
+require(['jquery', 'jquery.routes', 'encoignure', 'weld'], function($) {
 
 $.routes.add('\!/people/{id:int}', function(args){ 
 	require(['../people/people'], function(people){

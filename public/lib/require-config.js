@@ -11,7 +11,7 @@ var require = {
 	    jquerypp: ['jquery'],
 		'jquery.tmpl': ['jquery'],
 		'jquery.routes': ['jquery'],
-		'jquery.views': ['jquery']
+		'encoignure': ['modernizr', 'jquery']
 	}
   
 };

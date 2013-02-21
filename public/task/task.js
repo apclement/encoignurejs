@@ -1,4 +1,4 @@
-define(['jquery', 'jquery.tmpl', 'jquery.views', 'jquery.serialize', 'jquery.populate'], function($){
+define(['jquery', 'jquery.tmpl', 'encoignure', 'jquery.serialize', 'jquery.populate'], function($){
 
 return {
 

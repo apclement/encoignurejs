@@ -1,4 +1,4 @@
-define(['jquery', 'jquery.views', 'jquery.serialize', 'jquery.populate'], function($){
+define(['jquery', 'encoignure', 'jquery.serialize', 'jquery.populate'], function($){
 
 var result = {	
 			
