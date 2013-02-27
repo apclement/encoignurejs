@@ -4,8 +4,8 @@ EncoignureJS
 Multiple views
 ----
 
-Split your HTML into multiple manageable views. 
-Provides the V (View) of the MVC pattern. 
+Split your HTML page into multiple manageable views. 
+
 
 Partial views
 ------
