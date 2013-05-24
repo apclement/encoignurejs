@@ -39,13 +39,13 @@ $.fn.rebind = function(e, func) {
 }
 
 $.fn.initViews = function(){
-	return $(this).find('.view').hideView()	
+	return $(this)//.find('.view').hideView()	
 }
 
 $.fn.hideView = function(){
 	$(this).each(function(){
 		var $view = $(this)
-		$view.removeClass('in').addClass('out').hide()
+		$view.removeClass('in').addClass('none out')
 	})
 	return $(this)
 }
@@ -72,17 +72,15 @@ function showView(_effect) {
 		
 		var otherViews = $view.parent().children('.view.in')				
 		otherViews.rebind(endEvents, endHandler).removeClass(effectClass + ' in').addClass(effect+' out')
-		$view.rebind(endEvents, endHandler).show().removeClass(effectClass + ' out').addClass(effect+' in')
+		$view.rebind(endEvents, endHandler).removeClass(effectClass + ' out').addClass(effect+' in')
 				
 		switching.done(function(){
 			$view.unbind(endEvents).removeClass(effectClass)
-			otherViews.unbind(endEvents).hideView()	
-			//setTimeout(function(){ $(window).resize() }, 0) 
-			$(window).resize()
+			//otherViews.unbind(endEvents).hideView()	
 		});
 		
 		if (effect == 'none'){
-			switching.resolve()				
+			switching.resolve()			
 		}	
 		
 	});

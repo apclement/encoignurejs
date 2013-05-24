@@ -14,7 +14,7 @@ $.routes.add('\!/peoplemore/{id:int}', function(args){
 
 $.routes.add('\!/people', function(args){ 
 	require(['../people/people'], function(people){
-		people.list()
+		people.show()
 	})
 });
 
@@ -75,19 +75,19 @@ $(document).ready(function(){
 
 // vertical stretcher
 	$(window).resize(function(){   
-	  $('.stretchable:visible').each(function(){         	
-		var $this = $(this).height('auto')
-		var $container = $this.parent()
-		var total = $container.height()
-		var used = 0
-		$container.children(':not(.stretchable):visible').each(function(){
-		  used += $(this).outerHeight(true)      
-		})
+	  // $('.stretchable:visible').each(function(){         	
+		// var $this = $(this).height('auto')
+		// var $container = $this.parent()
+		// var total = $container.height()
+		// var used = 0
+		// $container.children(':not(.stretchable):visible').each(function(){
+		  // used += $(this).outerHeight(true)      
+		// })
 		
-		var $stretchable = $container.children('.stretchable:visible')
-		var h = (total - used) / $stretchable.length
-		$stretchable.height(h)                  
-	  })          
+		// var $stretchable = $container.children('.stretchable:visible')
+		// var h = (total - used) / $stretchable.length
+		// $stretchable.height(h)                  
+	  // })          
 	})   
 	
 	// weld jquery plugin

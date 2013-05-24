@@ -21,6 +21,8 @@ html {
 .testmvc {
   font-family: arial;
   font-size: .8em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -30,6 +32,12 @@ html {
   padding: 0;
   height: 100%;
 } 
+
+.stretchable, #peoplelistview {
+   display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-flex: 1;
+}
 
 @media screen and (max-width: 701px) {  
 	.testmvc {
@@ -284,21 +292,26 @@ background-image: -webkit-linear-gradient(top, #edabab, #edabab 50%, rgba(59,0,0
   .testmvc #peoplelistview, .testmvc #peopledetails, .testmvc #peoplemore {
     position: static !important;
     height: auto !important;
-    display: block !important;
+    display: -webkit-box !important;
     -webkit-animation-name: none !important;
   }
   
   .testmvc #peoplelistview {
-    max-height: 30em;
-    padding-bottom: 2em;
+     padding-bottom: 2em;
   }  
+  
+  .testmvc #peoplelistview {
+    min-height: 20em;
+    max-height: 30em;
+  }
   
   .testmvc #peopledetails header, .testmvc #peoplemore header {
     display: none;
   }
   
   .testmvc #people , .testmvc #task{
-    -height: auto !important;
+    height: auto !important;
+    position: static !important;
   }
   
   .testmvc #menu {

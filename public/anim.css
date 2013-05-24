@@ -3,7 +3,7 @@
 /* .translate-l, .translate-r, */
 
  .out {
-	 -webkit-animation-fill-mode: forwards;
+	-webkit-animation-fill-mode: forwards;
 }
 
 .translate-l.in {
@@ -37,14 +37,16 @@
 }
 
 .flip, .flip-r {
-	 -webkit-animation-fill-mode: forwards;
+	 
+   -webkit-animation-duration: .8s;
+   -webkit-backface-visibility: hidden;
+  
+   
 }
 
 .flip.in {
 	-webkit-animation-name: flipin;
-	-webkit-animation-duration: .8s;
-	-webkit-backface-visibility: hidden;
-	  
+		  
   -moz-animation-name: flipin;
 	-moz-animation-duration: .8s;
 	-moz-backface-visibility: hidden;
@@ -52,9 +54,8 @@
 
 .flip.out {
 	-webkit-animation-name: flipout;
-	-webkit-animation-duration: .8s;
-	-webkit-backface-visibility: hidden;	  
-  
+ 
+    
   -moz-animation-name: flipout;
 	-moz-animation-duration: .8s;
 	-moz-backface-visibility: hidden;
@@ -62,9 +63,8 @@
 
 .flip-r.in {
 	-webkit-animation-name: flip-right-in;
-	-webkit-animation-duration: .8s;
-	-webkit-backface-visibility: hidden;
-  
+    
+	  
   -moz-animation-name: flip-right-in;
 	-moz-animation-duration: .8s;
 	-moz-backface-visibility: hidden;
@@ -72,9 +72,8 @@
 
 .flip-r.out {
 	-webkit-animation-name: flip-right-out;
-	-webkit-animation-duration: .8s;
-	-webkit-backface-visibility: hidden;	 
-  
+   
+  	  
   -moz-animation-name: flip-right-out;
 	-moz-animation-duration: .8s;
 	-moz-backface-visibility: hidden;
@@ -100,11 +99,11 @@
 }
 
 .none.in {
-  display: block;
+
 }
 
 .none.out {
-  display: none;
+  visibility: hidden;
 }
 
 .in, .out {
@@ -125,9 +124,10 @@
   margin: 0;
   height: 100%;
   overflow: auto;
-  overflow-x: hidden; 
+  overflow-x: hidden;   
 }
 
+/* Container for the views */
 .views {
   position: relative;
   width: 100%;
@@ -148,37 +148,37 @@
 
 
 @-webkit-keyframes flipin {
-   from { -webkit-transform: rotateY(180deg) scale(.7); }
+   from { -webkit-transform: rotateY(180deg); opacity: 0; }
    to { -webkit-transform: rotateY(0); }
 }
 
 @-webkit-keyframes flipout {
    from { -webkit-transform: rotateY(0); }
-   to { -webkit-transform: rotateY(-180deg) scale(.7); display: none; }
+   to { -webkit-transform: rotateY(-180deg); opacity: 0; visibility: hidden; }
 }
 
 @-webkit-keyframes flip-right-in {
-   from { -webkit-transform: rotateY(-180deg) scale(.7); }
+   from { -webkit-transform: rotateY(-180deg); opacity: 0; }
    to { -webkit-transform: rotateY(0); }
 }
 
 @-webkit-keyframes flip-right-out {
    from { -webkit-transform: rotateY(0); }
-   to { -webkit-transform: rotateY(180deg) scale(.7); display: none;}
+   to { -webkit-transform: rotateY(180deg); opacity: 0; visibility: hidden; }
 }
 
 @-moz-keyframes flipin {
-   from { -moz-transform: rotateY(180deg) scale(.7); }
+   from { -moz-transform: rotateY(180deg)  }
    to { -moz-transform: rotateY(0); }
 }
 
 @-moz-keyframes flipout {
    from { -moz-transform: rotateY(0); }
-   to { -moz-transform: rotateY(-180deg) scale(.7);}
+   to { -moz-transform: rotateY(-180deg) }
 }
 
 @-moz-keyframes flip-right-in {
-   from { -moz-transform: rotateY(-180deg) scale(.7); }
+   from { -moz-transform: rotateY(-180deg) }
    to { -moz-transform: rotateY(0); }
 }
 
