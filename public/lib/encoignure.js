@@ -39,13 +39,13 @@ $.fn.rebind = function(e, func) {
 }
 
 $.fn.initViews = function(){
-	return $(this)//.find('.view').hideView()	
+	return $(this).find('.view').hideView()	
 }
 
 $.fn.hideView = function(){
 	$(this).each(function(){
 		var $view = $(this)
-		$view.removeClass('in').addClass('none out')
+		$view.removeClass('in').addClass('none out').hide()
 	})
 	return $(this)
 }
@@ -70,13 +70,13 @@ function showView(_effect) {
 			return;
 		}	
 		
-		var otherViews = $view.parent().children('.view.in')				
+		var otherViews = $view.parent().children('.view.in')						
+		$view.rebind(endEvents, endHandler).show(0, function(){ $view.removeClass(effectClass + ' out').addClass(effect+' in') })
 		otherViews.rebind(endEvents, endHandler).removeClass(effectClass + ' in').addClass(effect+' out')
-		$view.rebind(endEvents, endHandler).removeClass(effectClass + ' out').addClass(effect+' in')
 				
 		switching.done(function(){
 			$view.unbind(endEvents).removeClass(effectClass)
-			//otherViews.unbind(endEvents).hideView()	
+			otherViews.unbind(endEvents).hideView()	
 		});
 		
 		if (effect == 'none'){

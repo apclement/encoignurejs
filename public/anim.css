@@ -62,8 +62,7 @@
 }
 
 .flip-r.in {
-	-webkit-animation-name: flip-right-in;
-    
+	-webkit-animation-name: flip-right-in;    
 	  
   -moz-animation-name: flip-right-in;
 	-moz-animation-duration: .8s;
@@ -148,23 +147,23 @@
 
 
 @-webkit-keyframes flipin {
-   from { -webkit-transform: rotateY(180deg); opacity: 0; }
+   from { -webkit-transform: rotateY(180deg); }
    to { -webkit-transform: rotateY(0); }
 }
 
 @-webkit-keyframes flipout {
    from { -webkit-transform: rotateY(0); }
-   to { -webkit-transform: rotateY(-180deg); opacity: 0; visibility: hidden; }
+   to { -webkit-transform: rotateY(-180deg);}
 }
 
 @-webkit-keyframes flip-right-in {
-   from { -webkit-transform: rotateY(-180deg); opacity: 0; }
+   from { -webkit-transform: rotateY(-180deg);  }
    to { -webkit-transform: rotateY(0); }
 }
 
 @-webkit-keyframes flip-right-out {
    from { -webkit-transform: rotateY(0); }
-   to { -webkit-transform: rotateY(180deg); opacity: 0; visibility: hidden; }
+   to { -webkit-transform: rotateY(180deg); }
 }
 
 @-moz-keyframes flipin {
@@ -194,7 +193,7 @@
 
 @-webkit-keyframes translate-left-out {
    from { -webkit-transform: translate(0); }
-   to { -webkit-transform: translate(-100%); display: none; }
+   to { -webkit-transform: translate(-100%); }
 }
 
 @-webkit-keyframes translate-right-in {
@@ -204,7 +203,7 @@
 
 @-webkit-keyframes translate-right-out {
    from { -webkit-transform: translate(0); }
-   to { -webkit-transform: translate(100%); display: none; }
+   to { -webkit-transform: translate(100%); }
 }
 
 @-moz-keyframes translate-left-in {

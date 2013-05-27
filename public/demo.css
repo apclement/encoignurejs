@@ -292,7 +292,7 @@ background-image: -webkit-linear-gradient(top, #edabab, #edabab 50%, rgba(59,0,0
   .testmvc #peoplelistview, .testmvc #peopledetails, .testmvc #peoplemore {
     position: static !important;
     height: auto !important;
-    display: -webkit-box !important;
+    visibility: visible !important;
     -webkit-animation-name: none !important;
   }
   
@@ -308,17 +308,16 @@ background-image: -webkit-linear-gradient(top, #edabab, #edabab 50%, rgba(59,0,0
   .testmvc #peopledetails header, .testmvc #peoplemore header {
     display: none;
   }
-  
-  .testmvc #people , .testmvc #task{
-    height: auto !important;
-    position: static !important;
-  }
-  
+   
   .testmvc #menu {
     position: static !important;
     height: auto !important;
-    display: block !important;
+    visibility: visible !important;
     -webkit-animation-name: none !important;
+  }
+  
+  .testmvc #viewholder {
+    position: relative !important;
   }
   
   .testmvc .btns {

@@ -16,8 +16,10 @@ var result = {
 	
 	show: function(){
 		var that = this
-		$('#viewholder').loadViews('people/people.html', function(){							
-			$('#people').view()			
+		$('#viewholder').loadViews('people/people.html', function(){		
+			//$('#people').view()
+			//$('#people>.view.in').length ? $('#people').view()	: 
+			$('#peoplelistview').view()			
 		})		
 	},
 
