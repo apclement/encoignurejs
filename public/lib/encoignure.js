@@ -64,19 +64,23 @@ function showView(_effect) {
 			if (e && e.eventPhase == 2 && $this.hasClass('view')){
 				switching.resolve()
 			}			
-		}	
-		
+		}
+				
 		if ($view.hasClass('in')){			
 			return;
-		}	
+		}			
 		
-		var otherViews = $view.parent().children('.view.in')						
-		$view.rebind(endEvents, endHandler).show(0, function(){ $view.removeClass(effectClass + ' out').addClass(effect+' in') })
-		otherViews.rebind(endEvents, endHandler).removeClass(effectClass + ' in').addClass(effect+' out')
+		var otherViews = $view.parent().children('.view.in')
+		var afterShow = function(){
+			$view.removeClass(effectClass + ' out').addClass(effect+' animated in')
+			otherViews.rebind(endEvents, endHandler).removeClass(effectClass + ' in').addClass(effect+' animated out')
+		}
+		
+		$view.rebind(endEvents, endHandler).show(0, function(){ afterShow() })		
 				
 		switching.done(function(){
-			$view.unbind(endEvents).removeClass(effectClass)
-			otherViews.unbind(endEvents).hideView()	
+			$view.unbind(endEvents).removeClass(effectClass + ' animated')	
+			otherViews.unbind(endEvents).css('display', 'none').removeClass('animated')
 		});
 		
 		if (effect == 'none'){

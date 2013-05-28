@@ -4,20 +4,6 @@ html {
   height: 100%;
 }
 
-
-.stretchable {
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	overflow: auto;
-	overflow-x: hidden;
-}
-
-/* bug android stock browser */
-.touch .flip .stretchable, .touch .flip-r .stretchable {
-  overflow: hidden;
-}
-
 .testmvc {
   font-family: arial;
   font-size: .8em;
@@ -33,10 +19,22 @@ html {
   height: 100%;
 } 
 
-.stretchable, #peoplelistview {
+.stretchable {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.stretchable {
    display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-box-flex: 1;
+}
+
+.animated .stretchable {
+  overflow: hidden;
 }
 
 @media screen and (max-width: 701px) {  
@@ -175,6 +173,7 @@ html {
 .testmvc .itemlist a {
   text-decoration: none;
   display: block;
+  font-size: 1em;
   padding: .8em;
   background-color: #fdfdfd;  
   border-bottom: 1px dotted #ccc; 
@@ -190,6 +189,10 @@ html {
 
 .testmvc .itemlist a:hover {
   
+}
+
+.testmvc .itemlist a {
+   max-height: 999999px;
 }
 
 /* forms */
@@ -258,7 +261,7 @@ background-image: -webkit-linear-gradient(top, #edabab, #edabab 50%, rgba(59,0,0
 /* containers */
 .testmvc .view {
 	background-color: #ddd;	
-	z-index: 100;
+	
 }
 
 
@@ -268,6 +271,12 @@ background-image: -webkit-linear-gradient(top, #edabab, #edabab 50%, rgba(59,0,0
   border-top-width: 0;
   border-bottom-width: 0;
   padding: 0 1.5em; 
+}
+
+#peoplelistview , #people {
+   display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-flex: 1;
 }
 
 @media screen and (max-width: 700px) {  	
@@ -292,8 +301,16 @@ background-image: -webkit-linear-gradient(top, #edabab, #edabab 50%, rgba(59,0,0
   .testmvc #peoplelistview, .testmvc #peopledetails, .testmvc #peoplemore {
     position: static !important;
     height: auto !important;
-    visibility: visible !important;
+    overflow: auto !important;
     -webkit-animation-name: none !important;
+  }
+  
+  .testmvc #peopledetails, .testmvc #peoplemore {
+    display: block !important;
+  }
+  
+  .testmvc .stretchable {
+    overflow: auto !important;
   }
   
   .testmvc #peoplelistview {
@@ -312,7 +329,7 @@ background-image: -webkit-linear-gradient(top, #edabab, #edabab 50%, rgba(59,0,0
   .testmvc #menu {
     position: static !important;
     height: auto !important;
-    visibility: visible !important;
+    display: block !important;
     -webkit-animation-name: none !important;
   }
   

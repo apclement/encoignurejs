@@ -8,56 +8,52 @@
 
 .translate-l.in {
   -webkit-animation-name: translate-left-in;
-	-webkit-animation-duration: .6s;	
+	-webkit-animation-duration: .4s;	
   
   -moz-animation-name: translate-left-in;
-	-moz-animation-duration: .6s;	
+	-moz-animation-duration: .4s;	
 }
 
 .translate-l.out {
   -webkit-animation-name: translate-left-out;
-	-webkit-animation-duration: .6s;	
+	-webkit-animation-duration: .4s;
   
   -moz-animation-name: translate-left-out;
-	-moz-animation-duration: .6s;
+	-moz-animation-duration: .4s;
 }
 
 .translate-r.in { 
   -webkit-animation-name: translate-right-in;
-	-webkit-animation-duration: .6s;	
+	-webkit-animation-duration: .4s;	
   -moz-animation-name: translate-right-in;
-	-moz-animation-duration: .6s;	
+	-moz-animation-duration: .4s;	
 }
 
 .translate-r.out { 
   -webkit-animation-name: translate-right-out;
-	-webkit-animation-duration: .6s;	
+	-webkit-animation-duration: .4s;	
   -moz-animation-name: translate-right-out;
-	-moz-animation-duration: .6s;	
+	-moz-animation-duration: .4s;	
 }
 
-.flip, .flip-r {
-	 
-   -webkit-animation-duration: .8s;
-   -webkit-backface-visibility: hidden;
-  
-   
+.flip, .flip-r {	 
+   -webkit-animation-duration: .5s;
+   -webkit-backface-visibility: hidden;   
 }
 
 .flip.in {
 	-webkit-animation-name: flipin;
 		  
   -moz-animation-name: flipin;
-	-moz-animation-duration: .8s;
+	-moz-animation-duration: .5s;
 	-moz-backface-visibility: hidden;
 }
 
 .flip.out {
-	-webkit-animation-name: flipout;
- 
+	-webkit-animation-name: flipout; 
     
   -moz-animation-name: flipout;
-	-moz-animation-duration: .8s;
+	-moz-animation-duration: .5s;
 	-moz-backface-visibility: hidden;
 }
 
@@ -65,16 +61,15 @@
 	-webkit-animation-name: flip-right-in;    
 	  
   -moz-animation-name: flip-right-in;
-	-moz-animation-duration: .8s;
+	-moz-animation-duration: .5s;
 	-moz-backface-visibility: hidden;
 }
 
 .flip-r.out {
-	-webkit-animation-name: flip-right-out;
-   
+	-webkit-animation-name: flip-right-out;   
   	  
   -moz-animation-name: flip-right-out;
-	-moz-animation-duration: .8s;
+	-moz-animation-duration: .5s;
 	-moz-backface-visibility: hidden;
 }
 
@@ -102,7 +97,7 @@
 }
 
 .none.out {
-  visibility: hidden;
+  display: none;
 }
 
 .in, .out {

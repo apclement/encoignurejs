@@ -13,15 +13,6 @@ var result = {
 		};
 		$('#peoplelist li').weld(this.items, config);		
 	},	
-	
-	show: function(){
-		var that = this
-		$('#viewholder').loadViews('people/people.html', function(){		
-			//$('#people').view()
-			//$('#people>.view.in').length ? $('#people').view()	: 
-			$('#peoplelistview').view()			
-		})		
-	},
 
 	list: function(){
 		var that = this

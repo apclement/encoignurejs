@@ -14,7 +14,7 @@ $.routes.add('\!/peoplemore/{id:int}', function(args){
 
 $.routes.add('\!/people', function(args){ 
 	require(['../people/people'], function(people){
-		people.show()
+		people.list()
 	})
 });
 
