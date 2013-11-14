@@ -335,6 +335,9 @@ background-image: -webkit-linear-gradient(top, #edabab, #edabab 50%, rgba(59,0,0
   
   .testmvc #viewholder {
     position: relative !important;
+    background-color: #fff;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
   }
   
   .testmvc .btns {

@@ -61,34 +61,27 @@ $(document).ready(function(){
 	
 	$('body').bind('swipeleft', function(){
       $('.btn.next:visible').each(function(){
-		window.location = $(this).click().attr('href')
-	  })
-    })
+		    window.location = $(this).click().attr('href')
+	    })
+  })
     
-    $('body').bind('swiperight', function(){
-       $('.btn.back:visible').each(function(){
-		window.location = $(this).click().attr('href')
-	   })
-    })
+  $('body').bind('swiperight', function(){
+      $('.btn.back:visible').each(function(){
+	      window.location = $(this).click().attr('href')
+      })
+	})
+	
+
+
+	  if(document.height <= window.height) {
+      $('body').height( ($('body').height() + 50) )
+    }
+	  
+$('body').scrollTop(1);
 	
 })
 
-// vertical stretcher
-	$(window).resize(function(){   
-	  // $('.stretchable:visible').each(function(){         	
-		// var $this = $(this).height('auto')
-		// var $container = $this.parent()
-		// var total = $container.height()
-		// var used = 0
-		// $container.children(':not(.stretchable):visible').each(function(){
-		  // used += $(this).outerHeight(true)      
-		// })
-		
-		// var $stretchable = $container.children('.stretchable:visible')
-		// var h = (total - used) / $stretchable.length
-		// $stretchable.height(h)                  
-	  // })          
-	})   
+  
 	
 	// weld jquery plugin
 	$.fn.weld = function (data, config) {

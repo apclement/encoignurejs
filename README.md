@@ -1,26 +1,18 @@
 EncoignureJS
 =======
 
-Multiple views
+Powerfull view container
 ----
 
-Split your HTML page into multiple manageable views. 
+Split your HTML page into multiple views managed by a view container.
+The view container provides:
+- lazy downloading of views
+- animated transitions between views
 
 
-Partial views
-------
+Nested view containers and responsive design
+----
 
-A view can be partial and only manages a subset of the page.
+You can nest view containers one within another. This is a powerful and unique feature among JS web frameworks.
+Using CSS media queries you can enable or disable view containers based on responsive design levels (mobile, tablet or desktop).
 
-
-Animations
------
-Views are top down sized to have the height of their container (height: 100%). 
-Therefore it is easy to animate transitions between two views.
-
-Responsive composite views
-------
-
-Page responsive design is not restricted to the view content:
-you can define composite views for larger screens from a set of views that are displayed alone on smaller screens
-(with just a few lines of CSS).
