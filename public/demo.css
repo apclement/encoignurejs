@@ -325,14 +325,20 @@ section h1 {
   }
 }
 
+.itemlist a {
+display: inline-block;
+}
+
 .itemlist a.edit {
   display: inline-block;
   width: 95%
 }
 
 .itemlist a.delete {
-  float: right;
+  width: 5%;
+  text-align: right;
   cursor: pointer;
+  display: inline-block;
 }
 
 
