@@ -334,6 +334,8 @@
 
         // OBJECT
         } else {
+		  $(element).data('model', value)
+		
           var keys = Object.keys(value), current = keys.length, obj;
           while (current--) {
             var lkey    = keys[current];

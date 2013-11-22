@@ -3,64 +3,63 @@
 <html> 
 <body>
 
-<div id='people' class='view stretchable '>
+<div id='people' class='view-container view active-lg'>
 
-<section id='peoplelistview' class='view a'>
-<header class='band'>
-	<h1>People management</h1>
-</header>
-<div id='peoplelist' class='itemlist stretchable'>
-<ul>
-	<li><a data-transition='translate-l'>Hello, <b class='firstname'>Alain</b> <b class='lastname'>Debile</b>!</a></li>		
-</ul>
-</div>
-<p class='btns'>
-<a href='#!/task' data-transition='fade' class='btn'>Task</a>
-</p>
-</section>
+	<section id='people-list' class='flex-container view active-sm'>
+		<header class='band'>
+			<h1>People management</h1>
+		</header>
+		<div class='itemlist'>
+		<ul>
+			<li><a class='edit' data-transition='translate-l'><b class='firstname'>Alain</b> <b class='lastname'>Debile</b>&nbsp;!</a><a class='delete'>&#x2716;</a></li>		
+		</ul>
+		</div>
+		<p class='btns'>
+			<a href='#!/task' data-transition='fade' class='btn'>Task</a>
+		</p>
+	</section>
 
-<article id='peopledetails' class='view a'>
-<header class='band'></header>
-<section>
-<form class='a'>
-<div class='controlHolder'>
-	<label>Firstname</label>
-	<input type='text' id='firstname' name='firstname' />
-</div>
-<div class='controlHolder'>
-	<label>Lastname</label>
-	<input type='text' id='lastname' name='lastname' />
-</div>
+	<article id='people-details' class='view active-sm'>
+		<header class='band'></header>
+		<section>
+			<form class='a'>
+			<div class='controlHolder'>
+				<label>Firstname</label>
+				<input type='text' id='firstname' name='firstname' />
+			</div>
+			<div class='controlHolder'>
+				<label>Lastname</label>
+				<input type='text' id='lastname' name='lastname' />
+			</div>
+			</form>
+			<p class='btns'>
+				<a class='btn back' href='#!/people' data-transition='translate-r'>&laquo;Retour</a>
+				<a class='btn next' href='#!/peoplemore/1' data-transition='translate-l'>Next &raquo;</a>
+			</p>
+		</section>
+	</article>
 
-</form>
-<p class='btns'>
-<a class='btn back' href='#!/people' data-transition='translate-r'>&laquo;Retour</a>
-<a class='btn next' href='#!/peoplemore/1' data-transition='translate-l'>Next &raquo;</a>
-</p>
-</section>
-</article>
+	<article id='people-more' class='view active-sm'>
+		<header class='band'></header>
+		<section>
+		<form class='a'>
 
-<article id='peoplemore' class='view a'>
-<header class='band'></header>
-<section>
-<form class='a'>
+		<div class='controlHolder'>
+			<label>Company</label>
+			<input type='text' id='company' name='company' />
+		</div>
 
-<div class='controlHolder'>
-	<label>Company</label>
-	<input type='text' id='company' name='company' />
-</div>
+		<div class='controlHolder'>
+			<label>Address</label>
+			<textarea id='address' name='address' rows='5' />
+		</div>
 
-<div class='controlHolder'>
-	<label>Address</label>
-	<textarea id='address' name='address' rows='5' />
-</div>
-
-</form>
-<p class='btns'>
-<a class='btn back' href='#!/people/1' data-transition='translate-r'>&laquo;Retour</a>
-</p>
-</section>
-</article>
+		</form>
+		<p class='btns'>
+			<a class='btn back' href='#!/people/1' data-transition='translate-r'>&laquo;Retour</a>
+		</p>
+		</section>
+	</article>
 </div>
 
 </body>

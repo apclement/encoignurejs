@@ -1,75 +1,75 @@
-define(['jquery', 'encoignure', 'jquery.serialize', 'jquery.populate'], function($){
+define(['jquery', 'demo-services', 'encoignure', 'jquery.serialize', 'jquery.populate'], function($, resources){
 
-var result = {	
-			
-	items: null,
+var result = {		
+
+	templateUrl: 'people/people.html',
 	
-	renderList: function(){			
-
+	renderList: function(){
 		var config = { 
 			alias: {
-				id: function(parent, element, key, value) { $(element).find('a').attr('href', '#!/people/'+ value) }
+				id: function(parent, element, key, value) { 
+					$(element).find('a.edit').attr('href', '#!/people/'+ value) 
+				}
+			},
+			map: function(parent, element, key, value) { 
+				console.info(value)
 			}
 		};
-		$('#peoplelist li').weld(this.items, config);		
+		var items = resources.get('peopleItems')
+		$('#people-list .itemlist li').weld(items, config);		
 	},	
 
 	list: function(){
-		var that = this
-		$('#viewholder').loadViews('people/people.html', function(){							
-			$('#peoplelistview').view()			
-		})		
+		var that = this									
+		$('#people-list').view()							
 	},
 	
-	view: function(args){		
+	edit: function(args){		
 		var that = this
-		$('#viewholder').loadViews('people/people.html', function(){		
-									
-			var person = $.grep(that.items, function(it){return it.id == args.id})[0];
-			
-			$('#people').find('form').populate(person).data('item', person)
-			
-			$('#peopledetails').find("a.next").attr('href', '#!/peoplemore/'+ person.id)
-			$('#peoplemore').find("a.back").attr('href', '#!/people/'+ person.id)			
-			
-			$('#peopledetails').view()						
-		});		
+				
+		var items = resources.get('peopleItems')
+		var person = $.grep(items, function(it){ return it.id == args.id })[0];
+		
+		$('#people').find('form').populate(person).data('item', person)
+		
+		$('#people-details').find("a.next").attr('href', '#!/peoplemore/'+ person.id)
+		$('#people-more').find("a.back").attr('href', '#!/people/'+ person.id)		
+		
+		$('#people-details').view()			
 	},
 	
-	editmore: function(args){		
+	editMore: function(args){		
 		var that = this
-		$('#viewholder').loadViews('people/people.html', function(){					
-			$('#peoplemore').view()			
-		});		
+		$('#people-more').view()				
 	}
 };
 
-$(document).on('viewinit', '#peoplelistview', function(){
+
+var defaultItems = []
+				
+				
+for (var i = 1; i <= 100; i++){
+	defaultItems.push({id: i, firstname: 'Alain', lastname: 'Bernard-'+ i, company: 'Bull', address: '170 barnaby street'})
+}
+				
+resources.put('peopleItems', defaultItems)
+
+$(document).on('viewinit', '#people-list', function(){
 	var $view = $(this)
-	
-	var defaultItems = [{id: 1, firstname: 'Alain', lastname: 'Bernard', company: 'Bull', address: '170 barnaby street'},
-                 {id: 2, firstname: 'Bill', lastname: 'Bibaa', company: 'Duck', address: '1 sesame street'},
-                 {id: 3, firstname: 'Jean', lastname: 'Tazon'},
-                 {id: 4, firstname: 'Pine', lastname: 'Dhuitre'},
-                 {id: 5, firstname: 'Jean', lastname: 'Tazon'},
-                 {id: 6, firstname: 'Jean', lastname: 'Tazon'},
-                 {id: 7, firstname: 'Jean', lastname: 'Tazon'},
-                 {id: 8, firstname: 'Jean', lastname: 'Tazon'},
-                 {id: 9, firstname: 'Jean', lastname: 'Tazon'},
-                 {id: 10, firstname: 'Jean', lastname: 'Tazon'},
-                 {id: 11, firstname: 'Jean', lastname: 'Tazon'},
-                 {id: 12, firstname: 'Jean', lastname: 'Tazon'},
-                 {id: 13, firstname: 'Jean', lastname: 'Tazon'},
-                 {id: 14, firstname: 'Jean', lastname: 'Tazon'},
-                 {id: 15, firstname: 'Jean', lastname: 'Tazon'},
-                 {id: 16, firstname: 'Jean', lastname: 'Tazon'},
-                 {id: 17, firstname: 'Jean', lastname: 'Jeannot'}];
-	
-	result.items = defaultItems
 	result.renderList()
+	
+	$view.find('.itemlist').on('click', 'a.delete', function(){
+		var $li = $(this).parent()
+		var obj = $li.data('model')
+		var items = resources.get('peopleItems')
+		items.splice(items.indexOf(obj), 1)
+		$li.addClass('bounceOut')
+		setTimeout(function(){ $li.remove() }, 1000)
+		//result.renderList()
+	})
 });
 
-$(document).on('viewinit', '#peopledetails,#peoplemore', function(){
+$(document).on('viewinit', '#people-details,#people-more', function(){
 	var $view = $(this)
 	
 	$view.find('input').change(function(){
@@ -80,7 +80,7 @@ $(document).on('viewinit', '#peopledetails,#peoplemore', function(){
 });
 
 $(document).on('peoplechange', function(p){
-	result.renderList()
+	result.renderList()	
 });
 
 return result;

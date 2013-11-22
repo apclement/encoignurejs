@@ -1,50 +1,6 @@
 @import 'anim.css';
 
-html {
-  height: 100%;
-}
-
-.testmvc {
-  font-family: arial;
-  font-size: .8em;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  font-family: arial;
-  color: #666;
-  background-color: #fafafa;
-  padding: 0;
-  height: 100%;
-} 
-
-.stretchable {
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	overflow: auto;
-	overflow-x: hidden;
-}
-
-.stretchable {
-   display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-box-flex: 1;
-}
-
-.animated .stretchable {
-  overflow: hidden;
-}
-
-@media screen and (max-width: 701px) {  
-	.testmvc {
-	  width: 100%;
-	  font-size: 1em;
-	}
-}
-
-.testmvc * {
+* {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -55,163 +11,103 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.testmvc  ul, .testmvc  li {
+ ul,  li {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.testmvc a, .testmvc a:visited {
+a, a:visited {
     color: #666;
 }
 
-.testmvc a.a, .testmvc a.a:visited {
+a.a, a.a:visited {
     color: #B83F45;
     font-weight: bold;
 }
 
-/* header */
-.testmvc #header {
-  position: relative;
-  padding: 1em 0;
-  background-image: -webkit-linear-gradient(top, #fefefe, #ccc);
-  border-bottom: 1px solid #bbb; 
+html {
+  height: 100%;
 }
 
-.testmvc #header h1 {
-  text-align: center;
-  margin: 0;  
-  color: #B83F45;
+body {
+  font-family: arial;
+  font-size: .8em;  
+  font-family: arial;
+  color: #666;
+  background-color: #fafafa;  
+} 
+
+.loading-overlay {
+ display: none;
+ position: absolute;
+ z-index: 100;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background: rgba(255, 255, 255, .7) url('images/loading.gif') 50% 50% no-repeat;
+ border: 1px solid #ddd;
 }
 
-@media screen and (max-width: 700px) {  
-.testmvc #header {
-  padding: .5em 0;
+@media screen and (max-width: 701px) {  
+	body {
+	  font-size: 1em;
+	}
 }
 
-.testmvc #header h1{ 
-  font-size: .9em;
-  
-}
-}
-
-/* menu */
-.testmvc #menu {
-  padding: 1px 0;
-
-}
-
-.testmvc #menu a {
-  display: block;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 1em .8em;
-  border: 1px solid #777; 
-  background-image: -webkit-linear-gradient(top, #eee, #ccc);
-  -webkit-transition: all .5s;  
-}
-
-
-.testmvc #menu a:hover {  
-  
-}
-
-#viewholder {
-	
-}
-
-@media screen and (max-width: 700px) {  
-.testmvc #menu {
-	padding: 0;
-}	
-	
-.testmvc #menu  li {
-  display: block;
-}
-
-.testmvc #menu a { 
-  border: 1px solid #bbb;
-  border-top: 1px solid #fff;  
-}
-
-.testmvc #menu li:first-child a {
- border-top: 1px solid #bbb;
-}
-}
-
-@media screen and (min-width: 701px) {  
-  .testmvc #menu {
-    
-  }
-  
-  .testmvc #menu li {
-  	display: block;
-  	float: left;
-  }
-  
-  .testmvc #menu a { 
-  	border: 1px solid #bbb;
-  	margin-right: 1px;
-  	
-  }
-
-  .testmvc #menu li:last-child a {
-    
-  }
-}
-
-
-.testmvc .itemlist {
+.itemlist {
  border-top: 1px solid #aaa;
  border-left: 1px solid #ddd;
+ width: 100%;
+ overflow: auto;
 }
 
-.testmvc .itemlist ul {  
+.itemlist ul {  
   margin: 0;
 }
 
-.testmvc .itemlist a {
-  text-decoration: none;
+.itemlist li {
   display: block;
   font-size: 1em;
   padding: .8em;
   background-color: #fdfdfd;  
-  border-bottom: 1px dotted #ccc; 
-  cursor: pointer;
+  border-bottom: 1px solid #ddd; 
 }
 
-.testmvc .itemlist li:first-child a {   
+.itemlist li:first-child a {   
 }
 
-.testmvc .itemlist li:last-child a {
-    border-bottom-width: 0;  
+.itemlist li:last-child a {
+  border-bottom-width: 0;  
 }
 
-.testmvc .itemlist a:hover {
+.itemlist a:hover {
   
 }
 
-.testmvc .itemlist a {
-   max-height: 999999px;
+.itemlist a {
+  text-decoration: none;
+  max-height: 999999px;
 }
 
 /* forms */
-.testmvc  form.a {
-  padding: 0 .5em;
+ form.a {
+  padding: 0;
 }
 
-.testmvc  form.a .controlHolder {
+ form.a .controlHolder {
   padding: .5em 0;
 }
 
-.testmvc  form.a .controlHolder label {
+ form.a .controlHolder label {
   display: inline-block;
   width: 8em;
   font-weight: bold;
 }
 
-.testmvc  form.a .controlHolder input,
-.testmvc  form.a .controlHolder textarea {
+ form.a .controlHolder input,
+ form.a .controlHolder textarea {
   padding: .2em .3em;
   width: 15em;
   border: 1px solid #ccc;
@@ -221,16 +117,16 @@ html {
 }
 
 /* btns */
-.testmvc .btns {
+.btns {
   margin: 0;
   padding: 1em 0;
 }
 
-.testmvc .btns .btn {
+.btns .btn {
   margin-right: .3em;
 }
 
-.testmvc .btn, .testmvc .btn:visited {
+.btn, .btn:visited {
 cursor: pointer;
 color: white;
 text-decoration: none;
@@ -246,7 +142,7 @@ background-image: -webkit-linear-gradient(top, #edabab, #edabab 50%, rgba(59,0,0
 -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FF0000', EndColorStr='#990808')";
 }
 
-.testmvc .menubtn {
+.menubtn {
   display: block;
   position: absolute;
   top: 50%;
@@ -258,105 +154,190 @@ background-image: -webkit-linear-gradient(top, #edabab, #edabab 50%, rgba(59,0,0
 }
 
 
-/* containers */
-.testmvc .view {
-	background-color: #ddd;	
-	
+
+/*** layout ***/
+#top-container {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  margin: 0 auto; 
+  padding: 0; 
 }
 
-
-/* section */
-.testmvc section.a, .testmvc article.a {
-  border: 1px solid #ccc;
-  border-top-width: 0;
-  border-bottom-width: 0;
-  padding: 0 1.5em; 
-}
-
-#peoplelistview , #people {
-   display: -webkit-box;
+.flex-container {
+  position: relative;
+  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-box-flex: 1;
 }
 
-@media screen and (max-width: 700px) {  	
-	
-	.testmvc section.a, .testmvc article.a {
-		padding: 0 .3em;
-		border-top: 1px solid #fff;
-	}
-
+.view {
+  position: absolute; 
 }
 
-.testmvc section.a h1 {
+.view.hidden {
+  display: none;
+}
+
+
+/* header */
+#header {
+  position: relative;
+  padding: 1em 0;
+  background-image: -webkit-linear-gradient(top, #fefefe, #ccc);
+  border-bottom: 1px solid #bbb; 
+}
+
+#header h1 {
+  text-align: center;
+  margin: 0;  
+  color: #B83F45;
+}
+
+@media screen and (max-width: 700px) {  
+#header {
+  padding: .5em 0;
+}
+
+#header h1{ 
+  font-size: .9em;
+  
+}
+}
+
+/* menu */
+#menu {
+  padding: 1px 0;
+  background-color: #ccc;		
+}
+
+#menu a {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1em .8em;
+  border: 1px solid #777; 
+  background-image: -webkit-linear-gradient(top, #eee, #ccc);
+  -webkit-transition: all .5s;  
+}
+
+
+@media screen and (max-width: 700px) {  
+#menu {
+	padding: 0;
+}	
+	
+#menu  li {
+  display: block;
+}
+
+#menu a { 
+  border: 1px solid #bbb;
+  border-top: 1px solid #fff;  
+}
+
+#menu li:first-child a {
+ border-top: 1px solid #bbb;
+}
+}
+
+@media screen and (min-width: 701px) {  
+  #menu {
+    
+  }
+  
+  #menu li {
+  	display: block;
+  	float: left;
+  }
+  
+  #menu a { 
+  	border: 1px solid #bbb;
+  	margin-right: 1px;
+  	
+  }
+
+  #menu li:last-child a {
+    
+  }
+}
+
+section h1 {
   margin: 0;
   padding: .5em 0;
   color: #B83F45;
   font-size: 1.2em;
 }
 
+.view .itemlist {
+  -webkit-box-flex: 1;
+}
 
-/* people */
+.view.animated  .itemlist {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 700px) {  
+  .active-sm {
+    padding: 0 .3em; 
+    background-color: #ddd;		
+  }
+}
+
 @media screen and (min-width: 701px) {  
-  .testmvc #peoplelistview, .testmvc #peopledetails, .testmvc #peoplemore {
+
+  .active-lg {   
+    padding: 0 1.5em; 
+    background-color: #ddd;		
+  }
+
+  .active-lg  .view {
     position: static !important;
+    display: block;
     height: auto !important;
     overflow: auto !important;
     -webkit-animation-name: none !important;
   }
   
-  .testmvc #peopledetails, .testmvc #peoplemore {
-    display: block !important;
+  .active-lg  .flex-container {
+    display: -webkit-box;
   }
-  
-  .testmvc .stretchable {
-    overflow: auto !important;
-  }
-  
-  .testmvc #peoplelistview {
-     padding-bottom: 2em;
-  }  
-  
-  .testmvc #peoplelistview {
+ 
+  #people-list {
+    padding-bottom: 2em;
     min-height: 20em;
     max-height: 30em;
   }
   
-  .testmvc #peopledetails header, .testmvc #peoplemore header {
+  #people-details header, #people-more header {
     display: none;
   }
    
-  .testmvc #menu {
+  #menu {
     position: static !important;
     height: auto !important;
     display: block !important;
     -webkit-animation-name: none !important;
   }
   
-  .testmvc #viewholder {
-    position: relative !important;
-    background-color: #fff;
-    -webkit-perspective: 1000;
-    -moz-perspective: 1000;
-  }
-  
-  .testmvc .btns {
+  .btns {
     display: none;
   }
-
 }
 
-.testmvc .loading-overlay {
- display: none;
- position: absolute;
- z-index: 100;
- top: 0;
- left: 0;
- height: 100%;
- width: 100%;
- background: rgba(255, 255, 255, .7) url('images/loading.gif') 50% 50% no-repeat;
- border: 1px solid #ddd;
+.itemlist a.edit {
+  display: inline-block;
+  width: 95%
 }
+
+.itemlist a.delete {
+  float: right;
+  cursor: pointer;
+}
+
+
+
+
 
 
 

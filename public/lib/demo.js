@@ -1,33 +1,26 @@
-require(['jquery', 'jquery.routes', 'encoignure', 'weld'], function($) {
+require(['jquery', 'encoignure', 'jquery.routes', 'weld'], function($, encoignure) {
+
+var peopleModule = '../people/people';
+var taskModule = '../task/task';
 
 $.routes.add('\!/people/{id:int}', function(args){ 
-	require(['../people/people'], function(people){
-		people.view(args)
-	})
+	encoignure.action(peopleModule, 'edit', args)
 });
 
 $.routes.add('\!/peoplemore/{id:int}', function(args){ 
-	require(['../people/people'], function(people){
-		people.editmore(args)
-	})
+	encoignure.action(peopleModule, 'editMore', args)
 });
 
 $.routes.add('\!/people', function(args){ 
-	require(['../people/people'], function(people){
-		people.list()
-	})
+	encoignure.action(peopleModule, 'list', args)
 });
 
 $.routes.add('\!/task/{id:int}', function(args){ 
-	require(['../task/task'], function(task){
-		task.view(args)
-	})
+	encoignure.action(taskModule, 'edit', args)
 });
 
 $.routes.add('\!/task', function(){ 
-	require(['../task/task'], function(task){
-		task.list()
-	})
+	encoignure.action(taskModule, 'list', args)
 }); 
 
 $.routes.add('\!/menu', function(){ 
@@ -63,17 +56,15 @@ $(document).ready(function(){
       $('.btn.next:visible').each(function(){
 		    window.location = $(this).click().attr('href')
 	    })
-  })
+	})
     
-  $('body').bind('swiperight', function(){
+	$('body').bind('swiperight', function(){
       $('.btn.back:visible').each(function(){
 	      window.location = $(this).click().attr('href')
       })
 	})
 	
-
-
-	  if(document.height <= window.height) {
+	if(document.height <= window.height) {
       $('body').height( ($('body').height() + 50) )
     }
 	  

@@ -2,7 +2,7 @@
 <!DOCTYPE html> 
 <html> 
 <body>
-<section id='task' class='view stretchable a'>
+<section id='task' class='view active-lg active-sm'>
 
 <script id="taskTemplate" type="text/x-jquery-tmpl">
 	<li><a href='#!/task/${id}'>Task: <b>${name} ${description}</b></a></li>		
@@ -10,10 +10,10 @@
 
 <h1>Task management</h1>
 
-<ul id='tasklist' class='itemlist'></ul>
+<ul id='task-list' class='itemlist'></ul>
 
-<article id='taskdetails'>
-<form id='taskform' class='a'>
+<article id='task-details'>
+<form id='task-form' class='a'>
 <div class='controlHolder'>
 	<label>Name</label>
 	<input type='text' name='name' />
@@ -22,7 +22,6 @@
 	<label>Description</label>
 	<input type='text' name='description' />
 </div>
-
 </form>
 <p class='btns'>
 <a href='#!/people' data-transition='fade' class='btn'>People</a>

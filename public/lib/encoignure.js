@@ -1,4 +1,4 @@
-(function($){
+define(['jquery'], function($){
 
 var effects = {
 	all: ['translate-l', 'translate-r', 'flip', 'flip-r', 'fade', 'none'],
@@ -45,7 +45,7 @@ $.fn.initViews = function(){
 $.fn.hideView = function(){
 	$(this).each(function(){
 		var $view = $(this)
-		$view.removeClass('in').addClass('none out').hide()
+		$view.removeClass('in').addClass('none out hidden')
 	})
 	return $(this)
 }
@@ -66,7 +66,7 @@ function showView(_effect) {
 			}			
 		}
 				
-		if ($view.hasClass('in')){			
+		if ($view.hasClass('in') || $view.is(':visible')){			
 			return;
 		}			
 		
@@ -76,11 +76,15 @@ function showView(_effect) {
 			otherViews.rebind(endEvents, endHandler).removeClass(effectClass + ' in').addClass(effect+' animated out')
 		}
 		
-		$view.rebind(endEvents, endHandler).show(0, function(){ afterShow() })		
-				
+		//$view.rebind(endEvents, endHandler).removeClass('hidden')
+		//afterShow()
+		//setTimeout(function(){ afterShow() }, 50) 
+		
+		$view.rebind(endEvents, endHandler).removeClass('hidden').animate({}, 0, afterShow)		
+	
 		switching.done(function(){
 			$view.unbind(endEvents).removeClass(effectClass + ' animated')	
-			otherViews.unbind(endEvents).css('display', 'none').removeClass('animated')
+			otherViews.unbind(endEvents).addClass('hidden').removeClass('animated')
 		});
 		
 		if (effect == 'none'){
@@ -134,9 +138,24 @@ function hideAddressBar(){
 
 
 $(document).ready(function(){
+	$('.view').addClass('none out hidden')
+	
 	$(document).on('click', 'a', function(){
 		current = $(this).data('transition') || 'fade'
 	})	
 })
 
-})(jQuery);  
+return {
+	container: '.load-container',
+
+	action: function(module, method, args){
+		var that = this;
+		require([module], function(mod){
+			$(that.container).loadViews(mod.templateUrl, function(){		
+				mod[method](args)
+			});
+		})
+	}
+}
+
+});  
