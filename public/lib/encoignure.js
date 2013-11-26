@@ -118,7 +118,7 @@ $.fn.loadViews = function(url, cb){
 		var $content = $('<div>')
 		$content.load(url, function(){		
 			loadedFragments[url] = true;
-			var views = $(this).initViews().find('.view')
+			var views = $(this).initViews()
 			$content.children().appendTo($holder)
 			views.trigger('viewinit')			
 			cb()					

@@ -68,16 +68,9 @@ $(document).ready(function(){
       $('body').height( ($('body').height() + 50) )
     }
 	  
-$('body').scrollTop(1);
+	$('body').scrollTop(1);
 	
 })
 
   
-	
-	// weld jquery plugin
-	$.fn.weld = function (data, config) {
-		//return this.each (function () {
-			weld(this[0], data, config);
-		//});
-	};
 });

@@ -11,6 +11,7 @@ return {
 	},
 	put: function (name, data) {
 		localStorage.setItem(name, JSON.stringify(data));
+		this.cache[name] = data
 	}
 }
 

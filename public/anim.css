@@ -168,19 +168,7 @@
                 transform: scale(.3);
         }
 }
-.bounceOut {
-        box-shadow: 0 0 10px #B82010;
-        -webkit-animation-name: bounceOut;
-        -moz-animation-name: bounceOut;
-        -ms-animation-name: bounceOut;
-        -o-animation-name: bounceOut;
-        animation-name: bounceOut;
-        
-        -webkit-animation-duration: 1s;	
-        -moz-animation-duration: 1s;	
-        -ms-animation-duration: 1s;	
-        animation-duration: 1s; 
-}
+
 
 .none {
 

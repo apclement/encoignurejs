@@ -1,24 +1,9 @@
-define(['jquery', 'demo-services', 'encoignure', 'jquery.serialize', 'jquery.populate'], function($, resources){
+define(['jquery', 'demo-services', 'encoignure', 'encoignure-ui', 'jquery.serialize', 'jquery.populate', 'jquerypp'], function($, resources){
 
 var result = {		
 
 	templateUrl: 'people/people.html',
-	
-	renderList: function(){
-		var config = { 
-			alias: {
-				id: function(parent, element, key, value) { 
-					$(element).find('a.edit').attr('href', '#!/people/'+ value) 
-				}
-			},
-			map: function(parent, element, key, value) { 
-				console.info(value)
-			}
-		};
-		var items = resources.get('peopleItems')
-		$('#people-list .itemlist li').weld(items, config);		
-	},	
-
+		
 	list: function(){
 		var that = this									
 		$('#people-list').view()							
@@ -54,34 +39,37 @@ for (var i = 1; i <= 100; i++){
 				
 resources.put('peopleItems', defaultItems)
 
-$(document).on('viewinit', '#people-list', function(){
-	var $view = $(this)
-	result.renderList()
-	
-	$view.find('.itemlist').on('click', 'a.delete', function(){
-		var $li = $(this).parent()
-		var obj = $li.data('model')
-		var items = resources.get('peopleItems')
-		items.splice(items.indexOf(obj), 1)
-		$li.addClass('bounceOut')
-		setTimeout(function(){ $li.remove() }, 1000)
-		//result.renderList()
-	})
-});
+$(document).on('viewinit', '#people', function(e){
+	if (e.target.id != 'people')
+		return;
 
-$(document).on('viewinit', '#people-details,#people-more', function(){
 	var $view = $(this)
+	var items = resources.get('peopleItems')
 	
-	$view.find('input').change(function(){
-		var item = $(this.form).data('item')
-		item[$(this).attr('name')] = $(this).val()
-		$(document).trigger('peoplechange', [item])
+	var config = { 
+		alias: {
+			id: function(parent, element, key, value) { 
+				$(element).find('a.edit').attr('href', '#!/people/'+ value) 
+			}
+		}
+	};	
+	
+	$view.find('#people-list .itemlist').itemlist(items, config)
+	.on('click', 'a.delete', function(){		
+		items.splice(items.indexOf($(this).parent().data('item')), 1)			
+	})
+	
+	$view.find('form .btn').click(function(e){
+		e.preventDefault()
+		var $form = $view.find('form')
+		var item = $form.data('item')
+		$.extend(item, $form.formParams())
 	})	
 });
 
-$(document).on('peoplechange', function(p){
-	result.renderList()	
-});
+
+
+
 
 return result;
 
