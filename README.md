@@ -1,18 +1,18 @@
 EncoignureJS
 =======
 
-Powerfull view container
+EncoignureJS is a web micro-framework that provides:
+
+View container
 ----
 
 Split your HTML page into multiple views managed by a view container.
 The view container provides:
-- lazy downloading of views
-- animated transitions between views
+- Lazy downloading of views
+- Animated transitions between views
+- Possibility to nest containers recursively and activate them at specific responsive design thresholds with CSS media queries.
 
-
-Nested view containers and responsive design
+Templating and data binding
 ----
 
-You can nest view containers one within another. This is a powerful and unique feature among JS web frameworks.
-Using CSS media queries you can enable or disable view containers based on responsive design levels (mobile, tablet or desktop).
-
+EncoignureJS uses Weld for templating and WatchJS for live data binding solutions.
