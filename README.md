@@ -1,7 +1,7 @@
 EncoignureJS
 =======
 
-EncoignureJS is a web micro-framework that provides:
+EncoignureJS is a full featured JavaScript web micro-framework that takes the complete counterpart to all the fashionable JavaScript MVC frameworks that are very popular nowadays. It acknowledges the fact that HTML is already MVC and therefore doesn't need to implement heavy weighted abstractions on top of it. Therefore EncoignureJS just provides the strict minimum set of JS librairies and JQuery plugins that really lack to HTML. That is:
 
 View container
 ----
@@ -12,7 +12,7 @@ The view container provides:
 - Animated transitions between views
 - Possibility to nest containers recursively and activate them at specific responsive design thresholds with CSS media queries.
 
-Templating and data binding
+Templating, data binding and URL routing
 ----
 
-EncoignureJS uses Weld for templating and WatchJS for live data binding solutions.
+EncoignureJS integrates with Weld for templating and WatchJS for live data binding solutions.
