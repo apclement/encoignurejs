@@ -8,36 +8,36 @@
 
 .translate-l.in {
   -webkit-animation-name: translate-left-in;
-	-webkit-animation-duration: .4s;	
+	-webkit-animation-duration: .7s;	
   
   -moz-animation-name: translate-left-in;
-	-moz-animation-duration: .4s;	
+	-moz-animation-duration: .7s;	
 }
 
 .translate-l.out {
   -webkit-animation-name: translate-left-out;
-	-webkit-animation-duration: .4s;
+	-webkit-animation-duration: .7s;
   
   -moz-animation-name: translate-left-out;
-	-moz-animation-duration: .4s;
+	-moz-animation-duration: .7s;
 }
 
 .translate-r.in { 
   -webkit-animation-name: translate-right-in;
-	-webkit-animation-duration: .4s;	
+	-webkit-animation-duration: .7s;	
   -moz-animation-name: translate-right-in;
-	-moz-animation-duration: .4s;	
+	-moz-animation-duration: .7s;	
 }
 
 .translate-r.out { 
   -webkit-animation-name: translate-right-out;
-	-webkit-animation-duration: .4s;	
+	-webkit-animation-duration: .7s;	
   -moz-animation-name: translate-right-out;
-	-moz-animation-duration: .4s;	
+	-moz-animation-duration: .7s;	
 }
 
 .flip, .flip-r {	 
-   -webkit-animation-duration: .5s;
+   -webkit-animation-duration: .7s;
    -webkit-backface-visibility: hidden;   
 }
 
@@ -45,7 +45,7 @@
 	-webkit-animation-name: flipin;
 		  
   -moz-animation-name: flipin;
-	-moz-animation-duration: .5s;
+	-moz-animation-duration: .7s;
 	-moz-backface-visibility: hidden;
 }
 
@@ -53,7 +53,7 @@
 	-webkit-animation-name: flipout; 
     
   -moz-animation-name: flipout;
-	-moz-animation-duration: .5s;
+	-moz-animation-duration: .7s;
 	-moz-backface-visibility: hidden;
 }
 
@@ -61,7 +61,7 @@
 	-webkit-animation-name: flip-right-in;    
 	  
   -moz-animation-name: flip-right-in;
-	-moz-animation-duration: .5s;
+	-moz-animation-duration: .7s;
 	-moz-backface-visibility: hidden;
 }
 
@@ -69,7 +69,7 @@
 	-webkit-animation-name: flip-right-out;   
   	  
   -moz-animation-name: flip-right-out;
-	-moz-animation-duration: .5s;
+	-moz-animation-duration: .7s;
 	-moz-backface-visibility: hidden;
 }
 
