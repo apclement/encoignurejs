@@ -2,7 +2,7 @@ EncoignureJS
 =======
 
 EncoignureJS is a JavaScript web micro-framework based on JQuery that takes the complete counterpart to all the fashionable JavaScript MVC frameworks that are very popular nowadays. It acknowledges the fact that HTML is already MVC and therefore doesn't try to implement another heavy weighted MVC abstraction on top of it. 
-EncoignureJS just provides the strict minimum set of concepts that really lack to HTML. That is:
+Instead EncoignureJS just provides the strict minimum set of concepts that really lack to HTML. That is:
 - Views: the need of HTML modularization
 - HTML Templating
 - Data binding
