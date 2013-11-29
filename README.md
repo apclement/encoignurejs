@@ -20,11 +20,20 @@ The view container provides:
 
 HTML Templating
 ----
-EncoignureJS integrates with the excellent WeldJS library for templating and.
+EncoignureJS integrates with the smart <a href='https://github.com/tmpvar/weld'>weld.js</a> library for templating.
+Concepts behind weld are:
+- Standards compliant. No foreign concepts such as <%=foo%> or {{foo}}. No micro language!
+- Promote portable code/markup by decoupling decision making from presentation.
+- Make both the code and markup more readable and maintainable.
+- Allow designers to write up sample markup and test styling without a developer.
+- Increase maintainability by developers with various skill sets.
+
+More about the motivations behind weld.js can be read <a href='http://joshuakehn.com/2011/10/28/Weld-Dont-Template.html'>here</a>.
+
 
 Live data binding 
 ----
-EncoignureJS integrates with the amzing WatchJS for live data binding.
+EncoignureJS integrates with the amazing WatchJS for live data binding.
  
 URL routing
 ----
