@@ -38,5 +38,3 @@ EncoignureJS integrates with the amazing WatchJS for live data binding.
 URL routing
 ----
 Application control states can be associated to a specific URL. For that purpose, EncoignureJS integrates with the JQuery.route plugin.
-
-toto
