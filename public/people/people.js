@@ -1,4 +1,4 @@
-define(['jquery', 'demo-services', 'encoignure', 'encoignure-ui', 'jquery.serialize', 'jquery.populate', 'jquerypp'], function($, resources){
+define(['jquery', 'demo-services', 'encoignure', 'encoignure-ui', 'jquerypp'], function($, resources){
 
 var result = {		
 
@@ -15,7 +15,7 @@ var result = {
 		var items = resources.get('peopleItems')
 		var person = $.grep(items, function(it){ return it.id == args.id })[0];
 		
-		$('#people').find('form').populate(person).data('item', person)
+		$('#people').find('form').data('item', person).formParams(person)
 		
 		$('#people-details').find("a.next").attr('href', '#!/peoplemore/'+ person.id)
 		$('#people-more').find("a.back").attr('href', '#!/people/'+ person.id)		
@@ -61,9 +61,8 @@ $(document).on('viewinit', '#people', function(e){
 	
 	$view.find('form .btn').click(function(e){
 		e.preventDefault()
-		var $form = $view.find('form')
-		var item = $form.data('item')
-		$.extend(item, $form.formParams())
+		var $form = $view.find('form')	
+		$.extend($form.data('item'), $form.formParams())
 	})	
 });
 

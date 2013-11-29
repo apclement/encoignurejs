@@ -74,11 +74,7 @@ function showView(_effect) {
 		var afterShow = function(){
 			$view.removeClass(effectClass + ' out').addClass(effect+' animated in')
 			otherViews.rebind(endEvents, endHandler).removeClass(effectClass + ' in').addClass(effect+' animated out')
-		}
-		
-		//$view.rebind(endEvents, endHandler).removeClass('hidden')
-		//afterShow()
-		//setTimeout(function(){ afterShow() }, 50) 
+		}	
 		
 		$view.rebind(endEvents, endHandler).removeClass('hidden').animate({}, 0, afterShow)		
 	
