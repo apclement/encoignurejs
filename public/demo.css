@@ -38,16 +38,15 @@ body {
   background-color: #fafafa;  
 } 
 
-.loading-overlay {
+#loading-overlay {
  display: none;
- position: absolute;
+ position: fixed;
  z-index: 100;
  top: 0;
  left: 0;
  height: 100%;
  width: 100%;
- background: rgba(255, 255, 255, .7) url('images/loading.gif') 50% 50% no-repeat;
- border: 1px solid #ddd;
+ background: rgba(255, 255, 255, .5) url('images/loading.gif') 50% 50% no-repeat;
 }
 
 @media screen and (max-width: 701px) {  
@@ -57,10 +56,11 @@ body {
 }
 
 .itemlist {
+ border: 1px solid #ccc;
  border-top: 1px solid #aaa;
- border-left: 1px solid #ddd;
  width: 100%;
  overflow: auto;
+ overflow-x: hidden;
 }
 
 .itemlist ul {  
@@ -163,6 +163,7 @@ background-image: -webkit-linear-gradient(top, #edabab, #edabab 50%, rgba(59,0,0
   max-width: 1000px;
   margin: 0 auto; 
   padding: 0; 
+
 }
 
 .flex-container {
@@ -186,7 +187,9 @@ background-image: -webkit-linear-gradient(top, #edabab, #edabab 50%, rgba(59,0,0
   position: relative;
   padding: 1em 0;
   background-image: -webkit-linear-gradient(top, #fefefe, #ccc);
-  border-bottom: 1px solid #bbb; 
+  border-bottom: 1px solid #bbb;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
 }
 
 #header h1 {
@@ -201,15 +204,15 @@ background-image: -webkit-linear-gradient(top, #edabab, #edabab 50%, rgba(59,0,0
 }
 
 #header h1{ 
-  font-size: .9em;
-  
+  font-size: .9em;  
 }
 }
 
 /* menu */
 #menu {
   padding: 1px 0;
-  background-color: #ccc;		
+  background-color: #ccc;	
+  border-bottom: 1px solid #bbb;	
 }
 
 #menu a {

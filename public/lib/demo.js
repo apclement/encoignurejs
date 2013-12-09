@@ -36,19 +36,13 @@ $.routes.load(location.hash);
  
 $(document).ready(function(){
 
-	// loading overlay
-	//$('body').prepend($('<div>').addClass('loading-overlay'))
-	$("_body").on({      
-	  ajaxStart: function(e) { 
-		var $view = $('.view.in')
-		if (!$view.find('.loading-overlay').length){
-			$view.prepend($('<div>').addClass('loading-overlay'))
-		}
-		$view.find('.loading-overlay').fadeIn(300)
+	// loading overlay	
+	$("body").on({      
+	  ajaxStart: function(e) {		
+		$('#loading-overlay').show()
 	  },     
-	  ajaxStop: function() { 
-		var $view = $('.view.in')
-		$view.find('.loading-overlay').fadeOut(300) 
+	  ajaxStop: function() { 		
+		$('#loading-overlay').hide() 
 	  }    
 	});
 	
