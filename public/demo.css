@@ -1,4 +1,5 @@
 @import 'anim.css';
+@import 'loading-spinner.css';
 
 * {
   box-sizing: border-box;
@@ -18,12 +19,22 @@
 }
 
 a, a:visited {
-    color: #666;
+    color: #444;
 }
 
 a.a, a.a:visited {
     color: #B83F45;
     font-weight: bold;
+}
+
+/* generic components */
+#spinner {
+ display: none;
+ position: absolute;
+ right: 1%;
+ top: 50%;
+ margin-top: -12px;
+ z-index: 10;
 }
 
 html {
@@ -34,20 +45,13 @@ body {
   font-family: arial;
   font-size: .8em;  
   font-family: arial;
-  color: #666;
-  background-color: #fafafa;  
+  color: #444;
+  background-color: #fafafa; 
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0,0,0,.1) 0 0 1px;
 } 
 
-#loading-overlay {
- display: none;
- position: fixed;
- z-index: 100;
- top: 0;
- left: 0;
- height: 100%;
- width: 100%;
- background: rgba(255, 255, 255, .5) url('images/loading.gif') 50% 50% no-repeat;
-}
+
 
 @media screen and (max-width: 701px) {  
 	body {
@@ -175,6 +179,7 @@ background-image: -webkit-linear-gradient(top, #edabab, #edabab 50%, rgba(59,0,0
 
 .view {
   position: absolute; 
+  height: 100%;
 }
 
 .view.hidden {
@@ -327,6 +332,7 @@ section h1 {
     height: auto !important;
     display: block !important;
     -webkit-animation-name: none !important;
+	-webkit-box-flex: 0;
   }
   
   .btns {

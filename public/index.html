@@ -17,17 +17,19 @@
 	<header id='header'>
 		<h1>EncoignureJS Demo</h1>	
 		<a href='#!/menu' data-transition='flip' class='menubtn'></a>
+		<div id='spinner' />
 	</header>
-
-	<div id='container-sm' class='view-container flex-container'>
+	
+	<div class='view-container flex-container'>
 		<div id='menu' class='view'>
 			<ul>
 				<li><a href='#!/people' data-transition='flip-r'>People management</a></li>
 				<li><a href='#!/task' data-transition='flip-r'>Task management</a></li>
 			</ul>
 		</div>
-		<div id='container-lg' class='view-container view load-container'></div>
+		
+		<div class='view flex-container load-container' />
 	</div>
-	<div id='loading-overlay'></div>
+		
 </body>
 </html>

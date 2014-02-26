@@ -33,16 +33,29 @@ if (!window.location.hash){
 }
 
 $.routes.load(location.hash);
+
+// loading spinner
+
+$.fn.spinner = function(){
+	var $spinner = $("<div id='circularG'>")
+	for (var i = 1; i <= 8; i++){
+		$("<div class='circularG'>").attr('id', 'circularG_'+ i).appendTo($spinner)
+	}
+
+	$spinner.appendTo($(this))
+}
  
 $(document).ready(function(){
+
+	$('#spinner').spinner()
 
 	// loading overlay	
 	$("body").on({      
 	  ajaxStart: function(e) {		
-		$('#loading-overlay').show()
+		$('#spinner').show()
 	  },     
 	  ajaxStop: function() { 		
-		$('#loading-overlay').hide() 
+		$('#spinner').hide() 
 	  }    
 	});
 	
